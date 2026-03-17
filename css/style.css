@@ -1027,3 +1027,151 @@ footer input[type="email"] {
     height: 250px;
   }
 }
+
+/* Mejoras responsive adicionales */
+@media (max-width: 640px) {
+  /* Ajustes para móviles */
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  /* Optimizar textos largos */
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  /* Mejorar espaciado en móviles */
+  .py-6 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  
+  .px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  
+  /* Navegación horizontal mejorada */
+  #brand-nav {
+    scroll-snap-type: x mandatory;
+  }
+  
+  #brand-nav a {
+    scroll-snap-align: start;
+  }
+  
+  /* Sidebar móvil */
+  .lg\:hidden {
+    display: block !important;
+  }
+  
+  /* Footer responsive */
+  footer {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  /* Imágenes responsive */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Botones responsive */
+  button {
+    touch-action: manipulation;
+  }
+  
+  /* Formularios responsive */
+  input, textarea, select {
+    font-size: 16px; /* Previene zoom en iOS */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Ajustes específicos para pantallas muy pequeñas */
+  .text-2xl {
+    font-size: 1.5rem;
+  }
+  
+  .text-3xl {
+    font-size: 1.75rem;
+  }
+  
+  .text-4xl {
+    font-size: 2rem;
+  }
+  
+  /* Reducir padding en móviles pequeños */
+  .p-6 {
+    padding: 1rem;
+  }
+  
+  .p-8 {
+    padding: 1.5rem;
+  }
+  
+  /* Grid más compacto */
+  .grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  
+  /* Product cards más compactos */
+  .group.bg-white.rounded-xl {
+    padding: 1rem;
+  }
+}
+
+/* Optimizaciones para tablets */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  
+  /* Ajustar grid de productos para tablets */
+  .grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-3.xl\:grid-cols-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Mejoras de accesibilidad y UX */
+@media (hover: hover) {
+  /* Efectos hover solo en dispositivos que lo soportan */
+  .hover\:shadow-lg:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+}
+
+/* Prevenir horizontal scroll */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Contenedor principal */
+.main-content {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Imágenes con lazy loading */
+img[loading="lazy"] {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+img[loading="lazy"].loaded {
+  opacity: 1;
+}
+
+/* Mejoras para modo oscuro */
+@media (prefers-color-scheme: dark) {
+  .auto-dark {
+    background-color: #1a1a1a;
+    color: #ffffff;
+  }
+}
