@@ -433,6 +433,98 @@ button:focus, a:focus, input:focus {
 
 .footer-contact i { color: #0f172a; }
 
+/* Estilos modernos para el footer mejorado */
+.footer-link-modern {
+  color: #d1d5db;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.footer-link-modern:hover {
+  color: #60a5fa;
+  transform: translateX(4px);
+  text-decoration: none;
+}
+
+.footer-contact-modern {
+  color: #e5e7eb;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.footer-contact-modern:hover {
+  color: #60a5fa;
+  text-decoration: none;
+}
+
+.social-btn-modern {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #d1d5db;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 1.1rem;
+}
+
+.social-btn-modern:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.social-btn-modern.whatsapp:hover {
+  background: #25D366;
+  color: white;
+  border-color: #25D366;
+}
+
+.social-btn-modern:hover i {
+  transform: scale(1.1);
+}
+
+/* Animaciones adicionales para el footer */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.footer-animated { 
+  animation: fadeInUpSmall 360ms ease both;
+}
+
+/* Efectos hover para los iconos de contacto */
+.footer-contact-modern .group:hover .w-10 {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments for the new footer */
+@media (max-width: 768px) {
+  .social-btn-modern { 
+    width: 38px; 
+    height: 38px; 
+    font-size: 1rem;
+  }
+  
+  .footer-link-modern,
+  .footer-contact-modern {
+    font-size: 0.85rem;
+  }
+}
+
 /* Back to top */
 #back-to-top {
   cursor: pointer;

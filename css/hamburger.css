@@ -5,6 +5,7 @@
   display: inline-flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
 }
 
 .hamburger-lines > span {
@@ -14,6 +15,19 @@
   background: #0f172a;
   border-radius: 9999px;
   transition: transform 200ms ease, opacity 200ms ease;
+}
+
+/* Animación a X cuando está activo */
+.hamburger-lines.active > span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-lines.active > span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-lines.active > span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
 }
 
 /* Hover desktop: abrir el menú y overlay (solo cuando hay hover disponible) */

@@ -125,7 +125,7 @@
   <!-- Menú móvil desplegable - Lado derecho -->
     <div
     id="mobile-menu"
-    class="mobile-menu-panel fixed top-0 left-0 h-full bg-white shadow-xl z-50 transform -translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto"
+    class="mobile-menu-panel fixed top-0 left-0 h-full w-56 bg-white shadow-xl z-50 transform -translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto"
     role="dialog" aria-modal="true" aria-label="Menú móvil"
   >
     <!-- Botón de cerrar -->
@@ -232,7 +232,7 @@
               class="fas fa-chevron-down text-gray-500 group-open:rotate-180 transition-transform"
             ></i>
           </summary>
-          <div class="mt-2">
+          <div class="mt-2 max-h-60 overflow-y-auto">
             <ul class="flex flex-col gap-2">
               <!-- AMP -->
               <li class="hover:bg-blue-50 rounded transition-colors">
@@ -286,6 +286,17 @@
                   class="block px-3 py-1.5 text-sm text-blue-600 hover:underline font-medium"
                 >
                   Lista de precios CISCO
+                </a>
+              </li>
+
+              <!--Datatronix-->
+              <li class="hover:bg-blue-50 rounded transition-colors">
+                <a
+                  href="https://kevinnavarreteusnayo.github.io/lista-de-precios-datatronix/"
+                  target="_blank"
+                  class="block px-3 py-1.5 text-sm text-blue-600 hover:underline font-medium"
+                >
+                  Lista de precios Datatronix
                 </a>
               </li>
 
