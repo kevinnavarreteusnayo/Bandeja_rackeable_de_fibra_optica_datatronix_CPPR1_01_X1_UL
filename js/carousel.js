@@ -25,16 +25,30 @@ document.addEventListener("DOMContentLoaded", function() {
 
     let currentImageIndex = 0;
     const carouselImageElement = document.getElementById("brands-carousel");
+    const carouselMobileElement = document.getElementById("brands-carousel-mobile");
 
-    if (carouselImageElement) {
+    if (carouselImageElement || carouselMobileElement) {
         setInterval(() => {
             currentImageIndex = (currentImageIndex + 1) % carouselImages.length;
-            carouselImageElement.style.opacity = 0; // Start fading out
-            setTimeout(() => {
-                carouselImageElement.src = carouselImages[currentImageIndex];
-                carouselImageElement.style.opacity = 1; // Fade in new image
-            }, 500); // Half a second for the fade-out transition
-        }, 2000); // Change image every 2 seconds
+            
+            // Update desktop carousel
+            if (carouselImageElement) {
+                carouselImageElement.style.opacity = 0;
+                setTimeout(() => {
+                    carouselImageElement.src = carouselImages[currentImageIndex];
+                    carouselImageElement.style.opacity = 1;
+                }, 500);
+            }
+            
+            // Update mobile carousel
+            if (carouselMobileElement) {
+                carouselMobileElement.style.opacity = 0;
+                setTimeout(() => {
+                    carouselMobileElement.src = carouselImages[currentImageIndex];
+                    carouselMobileElement.style.opacity = 1;
+                }, 500);
+            }
+        }, 2000);
     }
 
     // Main product image carousel
@@ -50,11 +64,11 @@ document.addEventListener("DOMContentLoaded", function() {
     if (mainCarouselImageElement) {
         setInterval(() => {
             currentMainImageIndex = (currentMainImageIndex + 1) % mainCarouselImages.length;
-            mainCarouselImageElement.style.opacity = 0; // Start fading out
+            mainCarouselImageElement.style.opacity = 0;
             setTimeout(() => {
                 mainCarouselImageElement.src = mainCarouselImages[currentMainImageIndex];
-                mainCarouselImageElement.style.opacity = 1; // Fade in new image
-            }, 500); // Half a second for the fade-out transition
-        }, 2500); // Change image every 2.5 seconds
+                mainCarouselImageElement.style.opacity = 1;
+            }, 500);
+        }, 2500);
     }
 });
