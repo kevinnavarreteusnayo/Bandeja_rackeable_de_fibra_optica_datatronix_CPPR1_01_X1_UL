@@ -451,6 +451,11 @@
             alt="NetPeru Logo"
             class="h-12 mr-3"
           />
+          <img
+            src="icons/brands/datatronix.png"
+            alt="Datatronix Logo"
+            class="h-10 mr-3"
+          />
         </div>
 
         <!-- Info de contacto -->
@@ -540,58 +545,64 @@
       </div>
 
       <!-- Mobile Navbar -->
-      <div class="lg:hidden flex flex-col gap-2">
-        <!-- navbar superior  -->
-        <div class="flex justify-between items-center py-2">
+      <div class="lg:hidden flex flex-col">
+        <!-- navbar superior ultra compacto -->
+        <div class="flex justify-between items-center py-1 px-2 bg-white border-b">
           <!-- div izquierdo -->
-          <div class="flex gap-1">
+          <div class="flex items-center gap-1">
             <!-- boton hamburgesa -->
             <button
-              id="mobile-menu-button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Abrir menú móvil" class="p-2 rounded-full hover:bg-gray-300 transition-colors border-2 border-gray-600" data-translate-aria="mobile-menu-open">
-              <div class="hamburger-lines">
+              id="mobile-menu-button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Abrir menú móvil" class="p-1.5 rounded-full hover:bg-gray-100 transition-colors" data-translate-aria="mobile-menu-open">
+              <div class="hamburger-lines" style="transform: scale(0.8);">
                 <span></span>
                 <span></span>
                 <span></span>
               </div>
             </button>
 
-            <!-- Logo -->
-            <div class="flex items-center gap-2">
+            <!-- Logo compacto -->
+            <div class="flex items-center gap-1">
               <img
                 src="https://www.ds3comunicaciones.com/mikrotik/images/Logo1.jpg"
                 alt="NetPeru Logo"
-                class="h-10"
+                class="h-6"
               />
               <img
-                src="https://www.ds3comunicaciones.com/cisco/images/logo-cisco.gif"
-                alt="NetPeru Logo"
-                class="h-10"
-                loading="lazy"
+                src="icons/brands/datatronix.png"
+                alt="Datatronix Logo"
+                class="h-4"
               />
             </div>
           </div>
 
-          <!-- Botones buscar -->
-          <button
-            id="mobile-search-button" class="p-3 rounded-md hover:bg-gray-300 transition-colors border border-black flex gap-3 items-center" data-translate-aria="nav-search">
-            <i class="fas fa-search text-black"></i>
-          </button>
-          <button id="mobile-theme-toggle" class="p-3 rounded-md hover:bg-gray-300 transition-colors border border-black flex items-center theme-toggle" aria-pressed="false" aria-label="Alternar modo oscuro" data-translate-aria="nav-dark-mode">
-            <i class="fas fa-moon text-black" aria-hidden="true"></i>
-          </button>
+          <!-- Botones derecha ultra compactos -->
+          <div class="flex items-center gap-1">
+            <button
+              id="mobile-search-button" class="p-1.5 rounded-full hover:bg-gray-100 transition-colors" data-translate-aria="nav-search">
+              <i class="fas fa-search text-black text-xs"></i>
+            </button>
+            <button id="mobile-theme-toggle" class="p-1.5 rounded-full hover:bg-gray-100 transition-colors theme-toggle" aria-pressed="false" aria-label="Alternar modo oscuro" data-translate-aria="nav-dark-mode">
+              <i class="fas fa-moon text-black text-xs" aria-hidden="true"></i>
+            </button>
+          </div>
         </div>
 
-        <!-- nabvar inferior -->
-        <div class="py-2 pl-3">
-          <div class="flex items-start">
-            <i class="fas fa-phone-alt mt-1 mr-1 text-black"></i>
-            <p class="">996533223</p>
-            <i class="pl-4 fas fa-phone-alt mt-1 mr-1 text-black"></i>
-            <p class="">994428965</p>
+        <!-- navbar inferior - contacto ultra compacto -->
+        <div class="py-1 px-2 bg-gray-50 border-b">
+          <div class="flex justify-between items-center text-xs">
+            <div class="flex items-center gap-1">
+              <i class="fas fa-phone text-green-600 text-xs"></i>
+              <a href="tel:996533223" class="font-semibold text-black text-xs">996 533 223</a>
+            </div>
+            <div class="flex items-center gap-1">
+              <i class="fas fa-phone text-blue-600 text-xs"></i>
+              <a href="tel:994428965" class="font-semibold text-black text-xs">994 428 965</a>
+            </div>
           </div>
-          <div class="flex items-center">
-            <i class="fas fa-envelope mr-1 text-black"></i>
-            <span>netperu100@hotmail.com</span>
+          
+          <!-- Carrusel de marcas móvil ultra compacto -->
+          <div class="flex justify-center mt-1">
+            <img id="brands-carousel-mobile" src="icons/brands/cisco.gif" alt="brands carousel" class="h-6 w-auto object-contain" />
           </div>
         </div>
       </div>
@@ -2008,22 +2019,20 @@
           <!-- Producto 8 -->
           <a href="poner enlace aqui"
             class="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 border border-gray-200 hover:border-blue-500">
-            <div class="p-5 flex flex-col h-full">
-              <div class="flex-grow flex items-center justify-center mb-4 h-40">
+            <div class="p-3 sm:p-5 flex flex-col h-full">
+              <div class="flex-grow flex items-center justify-center mb-2 sm:mb-4 h-24 sm:h-40">
                 <img src="./imagenes/img_productos/producto8.png"
                   alt="producto8"
                   class="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105" />
               </div>
-              <div class="border-t pt-4">
-                <div class="flex justify-between flex-col items-center mb-2">
-                  <h3 class="text-lg font-bold text-gray-800">
-                    CABLE PATCH CORD SC DATATRONIX
-                  </h3>
-                </div>
-                <p class="text-sm text-gray-600 mt-2 group-hover:text-gray-800 transition-colors line-clamp-3">
+              <div class="text-center">
+                <h3 class="text-sm sm:text-base font-semibold text-gray-800 mb-1 sm:mb-2 group-hover:text-blue-600 transition-colors">
+                  CABLE PATCH CORD SC DATATRONIX
+                </h3>
+                <p class="text-xs sm:text-sm text-gray-600 mt-1 sm:mt-2 group-hover:text-gray-800 transition-colors line-clamp-2 sm:line-clamp-3">
                    Cable patch cord fibra óptica SC-SC monomodo 3 metros marca DATATRONIX
                 </p>
-                <div class="text-center mt-6 text-blue-600 font-semibold">
+                <div class="text-center mt-2 sm:mt-6 text-blue-600 font-semibold text-xs sm:text-sm">
                   Ver Producto
                 </div>
               </div>
@@ -2035,31 +2044,31 @@
   </main>
 
   <!-- FOOTER MEJORADO -->
-  <footer class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-8 px-4 sm:px-6 lg:px-8 w-full relative overflow-hidden">
+  <footer class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-3 px-2 sm:px-4 lg:px-8 w-full relative overflow-hidden">
     <!-- Background pattern -->
     <div class="absolute inset-0 opacity-5">
       <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.4"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
     </div>
     
-    <div class="w-full relative z-10 px-4">
-      <!-- Main content - más ancho horizontal -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 sm:gap-6 mb-6">
+    <div class="w-full relative z-10 px-2">
+      <!-- Main content - ultra compacto en móvil -->
+      <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-2 sm:gap-3 md:gap-4 mb-3">
         
         <!-- Columna 1: Logo -->
-        <div class="space-y-3">
-          <img src="https://www.ds3comunicaciones.com/mikrotik/images/Logo1.jpg" alt="DS3 Comunicaciones" class="w-28 h-auto rounded-lg shadow-lg" loading="lazy" />
-          <p class="text-xs text-gray-300 leading-relaxed">
-            Líderes en redes con 15+ años de experiencia.
+        <div class="space-y-1">
+          <img src="https://www.ds3comunicaciones.com/mikrotik/images/Logo1.jpg" alt="DS3 Comunicaciones" class="w-20 h-auto rounded-lg shadow-lg" loading="lazy" />
+          <p class="text-xs text-gray-300 leading-tight hidden sm:block">
+            Líderes en redes con 15+ años.
           </p>
         </div>
 
         <!-- Columna 2: Productos Principales -->
         <div>
-          <h4 class="text-sm font-bold text-white mb-2 flex items-center gap-1">
+          <h4 class="text-xs font-bold text-white mb-1 flex items-center gap-1">
             <i class="fas fa-box text-blue-400 text-xs"></i>
             Productos
           </h4>
-          <ul class="space-y-1 text-gray-300 text-xs">
+          <ul class="space-y-0.5 text-gray-300 text-xs">
             <li><a href="https://www.ds3comunicaciones.com/cisco/index.html" class="footer-link-modern"><i class="fas fa-chevron-right text-xs mr-1"></i>Cisco</a></li>
             <li><a href="https://www.ds3comunicaciones.com/ubiquiti/index.html" class="footer-link-modern"><i class="fas fa-chevron-right text-xs mr-1"></i>Ubiquiti</a></li>
             <li><a href="https://www.ds3comunicaciones.com/mikrotik/index.html" class="footer-link-modern"><i class="fas fa-chevron-right text-xs mr-1"></i>Mikrotik</a></li>
@@ -2069,11 +2078,11 @@
 
         <!-- Columna 3: Más Productos -->
         <div>
-          <h4 class="text-sm font-bold text-white mb-2 flex items-center gap-1">
+          <h4 class="text-xs font-bold text-white mb-1 flex items-center gap-1">
             <i class="fas fa-network-wired text-blue-400 text-xs"></i>
             Equipamiento
           </h4>
-          <ul class="space-y-1 text-gray-300 text-xs">
+          <ul class="space-y-0.5 text-gray-300 text-xs">
             <li><a href="#" class="footer-link-modern"><i class="fas fa-chevron-right text-xs mr-1"></i>Switches</a></li>
             <li><a href="#" class="footer-link-modern"><i class="fas fa-chevron-right text-xs mr-1"></i>Routers</a></li>
             <li><a href="#" class="footer-link-modern"><i class="fas fa-chevron-right text-xs mr-1"></i>Access Points</a></li>
@@ -2083,11 +2092,11 @@
 
         <!-- Columna 4: Servicios -->
         <div>
-          <h4 class="text-sm font-bold text-white mb-2 flex items-center gap-1">
+          <h4 class="text-xs font-bold text-white mb-1 flex items-center gap-1">
             <i class="fas fa-cog text-blue-400 text-xs"></i>
             Servicios
           </h4>
-          <ul class="space-y-1 text-gray-300 text-xs">
+          <ul class="space-y-0.5 text-gray-300 text-xs">
             <li><a href="https://www.ds3comunicaciones.com/soporte.html" class="footer-link-modern"><i class="fas fa-chevron-right text-xs mr-1"></i>Soporte Técnico</a></li>
             <li><a href="#" class="footer-link-modern"><i class="fas fa-chevron-right text-xs mr-1"></i>Instalación</a></li>
             <li><a href="#" class="footer-link-modern"><i class="fas fa-chevron-right text-xs mr-1"></i>Consultoría</a></li>
@@ -2097,25 +2106,25 @@
 
         <!-- Columna 5: Contacto -->
         <div>
-          <h4 class="text-sm font-bold text-white mb-2 flex items-center gap-1">
+          <h4 class="text-xs font-bold text-white mb-1 flex items-center gap-1">
             <i class="fas fa-phone-alt text-blue-400 text-xs"></i>
             Contacto
           </h4>
-          <div class="space-y-1.5 text-xs">
+          <div class="space-y-0.5 text-xs">
             <div class="flex items-center gap-1.5">
-              <i class="fas fa-phone text-green-400" style="font-size: 10px"></i>
+              <i class="fas fa-phone text-green-400" style="font-size: 10px;"></i>
               <a href="https://wa.me/994428965?text=Hola necesito ayuda" class="footer-contact-modern">994 428 965</a>
             </div>
             <div class="flex items-center gap-1.5">
-              <i class="fas fa-phone text-blue-400" style="font-size: 10px"></i>
+              <i class="fas fa-phone text-blue-400" style="font-size: 10px;"></i>
               <a href="https://wa.me/996533223?text=Hola necesito ayuda" class="footer-contact-modern">996 533 223</a>
             </div>
             <div class="flex items-center gap-1.5">
-              <i class="fas fa-envelope text-orange-400" style="font-size: 10px"></i>
+              <i class="fas fa-envelope text-orange-400" style="font-size: 10px;"></i>
               <a href="mailto:netperu100@hotmail.com" class="footer-contact-modern">Email</a>
             </div>
             <div class="flex items-center gap-1.5">
-              <i class="fas fa-clock text-purple-400" style="font-size: 10px"></i>
+              <i class="fas fa-clock text-purple-400" style="font-size: 10px;"></i>
               <span class="text-gray-400">Lun-Vie 9:00-18:00</span>
             </div>
           </div>
@@ -2123,38 +2132,38 @@
 
         <!-- Columna 6: Newsletter y Redes -->
         <div>
-          <h4 class="text-sm font-bold text-white mb-2 flex items-center gap-1">
+          <h4 class="text-xs font-bold text-white mb-1 flex items-center gap-1">
             <i class="fas fa-envelope text-blue-400 text-xs"></i>
             Conectados
           </h4>
-          <div class="bg-slate-800/50 rounded-lg p-2.5 border border-slate-700 mb-3">
-            <p class="text-xs text-gray-300 mb-2">
-              Recibe ofertas exclusivas.
+          <div class="bg-slate-800/50 rounded-lg p-1.5 border border-slate-700 mb-2">
+            <p class="text-xs text-gray-300 mb-1">
+              Ofertas exclusivas.
             </p>
-            <form action="https://www.ds3comunicaciones.com/subscribe" method="post" class="space-y-1.5">
+            <form action="https://www.ds3comunicaciones.com/subscribe" method="post" class="space-y-1">
               <input 
                 type="email" 
                 name="email" 
-                placeholder="tu@email.com" 
+                placeholder="Email" 
                 required 
-                class="w-full px-2 py-1.5 bg-slate-900/50 border border-slate-600 rounded text-white placeholder-gray-400 text-xs focus:outline-none focus:ring-1 focus:ring-blue-500" 
+                class="w-full px-1.5 py-1 bg-slate-900/50 border border-slate-600 rounded text-white placeholder-gray-400 text-xs focus:outline-none focus:ring-1 focus:ring-blue-500" 
               />
-              <button type="submit" class="w-full px-2 py-1.5 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded hover:from-blue-700 hover:to-blue-800 transition text-xs font-semibold">
+              <button type="submit" class="w-full px-1.5 py-1 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded hover:from-blue-700 hover:to-blue-800 transition text-xs font-semibold">
                 Suscribir
               </button>
             </form>
           </div>
-          <div class="flex items-center gap-1.5">
-            <a href="#" class="social-btn-modern" style="width: 28px; height: 28px; font-size: 0.7rem;" aria-label="Facebook">
+          <div class="flex items-center gap-1">
+            <a href="#" class="social-btn-modern" style="width: 24px; height: 24px; font-size: 0.6rem;" aria-label="Facebook">
               <i class="fab fa-facebook-f"></i>
             </a>
-            <a href="https://wa.me/994428965?text=Hola necesito ayuda" class="social-btn-modern whatsapp" style="width: 28px; height: 28px; font-size: 0.7rem;" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/994428965?text=Hola necesito ayuda" class="social-btn-modern whatsapp" style="width: 24px; height: 24px; font-size: 0.6rem;" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
               <i class="fab fa-whatsapp"></i>
             </a>
-            <a href="#" class="social-btn-modern" style="width: 28px; height: 28px; font-size: 0.7rem;" aria-label="LinkedIn">
+            <a href="#" class="social-btn-modern" style="width: 24px; height: 24px; font-size: 0.6rem;" aria-label="LinkedIn">
               <i class="fab fa-linkedin-in"></i>
             </a>
-            <a href="#" class="social-btn-modern" style="width: 28px; height: 28px; font-size: 0.7rem;" aria-label="YouTube">
+            <a href="#" class="social-btn-modern" style="width: 24px; height: 24px; font-size: 0.6rem;" aria-label="YouTube">
               <i class="fab fa-youtube"></i>
             </a>
           </div>
@@ -2162,19 +2171,19 @@
       </div>
 
       <!-- Divider -->
-      <div class="border-t border-slate-700 mb-4"></div>
+      <div class="border-t border-slate-700 mb-2"></div>
 
-      <!-- Bottom section compacto -->
-      <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+      <!-- Bottom section ultra compacto -->
+      <div class="flex flex-col md:flex-row items-center justify-between gap-2">
         <div class="text-center md:text-left">
           <p class="text-xs text-gray-400">
-            &copy; <span id="currentYear">2023</span> DS3 Comunicaciones. Todos los derechos reservados.
+            &copy; <span id="currentYear">2023</span> DS3 Comunicaciones.
           </p>
         </div>
         
-        <div class="flex items-center gap-4 text-xs">
+        <div class="flex items-center gap-3 text-xs">
           <a href="https://www.ds3comunicaciones.com/politica-privacidad" class="text-gray-400 hover:text-white transition-colors">
-            Política de Privacidad
+            Privacidad
           </a>
           <a href="#" class="text-gray-400 hover:text-white transition-colors">
             Términos

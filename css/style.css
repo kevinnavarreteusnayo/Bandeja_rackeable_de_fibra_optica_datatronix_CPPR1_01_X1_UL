@@ -1090,6 +1090,57 @@ footer input[type="email"] {
   input, textarea, select {
     font-size: 16px; /* Previene zoom en iOS */
   }
+  
+  /* Mejoras específicas para navbar móvil */
+  .lg:hidden .border-gray-400 {
+    border-color: rgba(156, 163, 175, 0.5);
+  }
+  
+  .lg:hidden .hover\:bg-gray-200:hover {
+    background-color: rgba(229, 231, 235, 0.8);
+  }
+  
+  /* Carrusel móvil */
+  #brands-carousel-mobile {
+    max-height: 32px;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  /* Footer móvil - grid más compacto */
+  footer .grid-cols-2 {
+    gap: 0.75rem;
+  }
+  
+  footer .text-xs {
+    font-size: 0.7rem;
+  }
+  
+  footer .space-y-1 > * + * {
+    margin-top: 0.25rem;
+  }
+  
+  /* Contact info móvil más compacto */
+  footer .space-y-1\.5 > * + * {
+    margin-top: 0.375rem;
+  }
+  
+  /* Botones sociales móvil */
+  .social-btn-modern {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 0.6rem !important;
+  }
+  
+  /* Newsletter móvil */
+  footer input[type="email"] {
+    font-size: 0.75rem !important;
+    padding: 0.5rem !important;
+  }
+  
+  footer button[type="submit"] {
+    font-size: 0.7rem !important;
+    padding: 0.5rem !important;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1120,9 +1171,134 @@ footer input[type="email"] {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
   
-  /* Product cards más compactos */
-  .group.bg-white.rounded-xl {
-    padding: 1rem;
+  /* Optimizaciones generales para celular */
+  @media (max-width: 640px) {
+    /* Reducir padding general */
+    .container {
+      padding-left: 0.75rem !important;
+      padding-right: 0.75rem !important;
+    }
+    
+    /* Headers más pequeños */
+    h1 { font-size: 1.5rem !important; }
+    h2 { font-size: 1.25rem !important; }
+    h3 { font-size: 1.125rem !important; }
+    
+    /* Secciones más compactas */
+    section {
+      padding-top: 2rem !important;
+      padding-bottom: 2rem !important;
+    }
+    
+    /* Cards y contenedores más pequeños */
+    .p-6 {
+      padding: 1rem !important;
+    }
+    
+    .p-8 {
+      padding: 1.25rem !important;
+    }
+    
+    /* Espaciado reducido */
+    .gap-6 {
+      gap: 1rem !important;
+    }
+    
+    .mb-6 {
+      margin-bottom: 1rem !important;
+    }
+    
+    .mb-8 {
+      margin-bottom: 1.5rem !important;
+    }
+    
+    /* Botones más compactos */
+    button {
+      padding: 0.5rem 1rem !important;
+      font-size: 0.875rem !important;
+    }
+    
+    /* Imágenes principales más pequeñas */
+    .h-48 {
+      height: 8rem !important;
+    }
+    
+    .h-64 {
+      height: 10rem !important;
+    }
+    
+    /* Grids más compactos */
+    .grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-3 {
+      grid-template-columns: 1fr !important;
+      gap: 0.75rem !important;
+    }
+    
+    /* Sidebar móvil optimizado */
+    .lg\:hidden .bg-white {
+      padding: 0.75rem !important;
+    }
+    
+    /* Tablas responsive */
+    table {
+      font-size: 0.75rem !important;
+    }
+    
+    /* Badges más pequeños */
+    .badge {
+      padding: 0.25rem 0.5rem !important;
+      font-size: 0.625rem !important;
+    }
+  }
+  
+  /* Product cards en móvil - ultra compactos */
+  @media (max-width: 640px) {
+    .group.bg-white.rounded-xl {
+      padding: 0.75rem !important;
+    }
+    
+    .group.bg-white.rounded-xl .p-5 {
+      padding: 0.75rem !important;
+    }
+    
+    .group.bg-white.rounded-xl .h-40 {
+      height: 6rem !important;
+    }
+    
+    .group.bg-white.rounded-xl .mb-4 {
+      margin-bottom: 0.5rem !important;
+    }
+    
+    .group.bg-white.rounded-xl .mb-2 {
+      margin-bottom: 0.25rem !important;
+    }
+    
+    .group.bg-white.rounded-xl .mt-6 {
+      margin-top: 0.5rem !important;
+    }
+    
+    .group.bg-white.rounded-xl .mt-2 {
+      margin-top: 0.25rem !important;
+    }
+    
+    .group.bg-white.rounded-xl .text-lg {
+      font-size: 0.875rem !important;
+    }
+    
+    .group.bg-white.rounded-xl .text-sm {
+      font-size: 0.75rem !important;
+    }
+    
+    .group.bg-white.rounded-xl .pt-4 {
+      padding-top: 0.5rem !important;
+    }
+    
+    .group.bg-white.rounded-xl .border-t {
+      border-width: 1px !important;
+    }
+    
+    .group.bg-white.rounded-xl img {
+      max-height: 5rem !important;
+    }
   }
 }
 
