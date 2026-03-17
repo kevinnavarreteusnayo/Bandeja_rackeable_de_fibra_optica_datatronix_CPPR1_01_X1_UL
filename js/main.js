@@ -48,17 +48,17 @@ function viewImage(imageSrc) {
     modal.id = 'image-modal';
     modal.className = 'fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 hidden';
     modal.innerHTML = `
-      <div class="relative max-w-5xl max-h-screen w-full px-4">
-        <div class="modal-inner relative mx-auto bg-transparent max-h-screen flex items-center justify-center">
-          <img id="modal-image" src="" alt="Imagen ampliada" class="modal-img max-h-[90vh] max-w-full object-contain select-none" />
+      <div class="relative max-w-6xl max-h-screen w-full px-6 py-6">
+        <div class="modal-inner relative mx-auto bg-transparent max-h-[85vh] flex items-center justify-center">
+          <img id="modal-image" src="" alt="Imagen ampliada" class="modal-img max-h-[75vh] max-w-[85%] object-contain select-none" />
         </div>
-        <button id="modal-close" class="absolute top-4 right-4 text-white text-3xl" aria-label="Cerrar imagen"><i class="fas fa-times"></i></button>
-        <button id="modal-prev" class="absolute left-4 top-1/2 -translate-y-1/2 text-white text-3xl" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
-        <button id="modal-next" class="absolute right-4 top-1/2 -translate-y-1/2 text-white text-3xl" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
+        <button id="modal-close" class="absolute top-4 right-4 text-white text-3xl hover:text-gray-300 transition-colors" aria-label="Cerrar imagen"><i class="fas fa-times"></i></button>
+        <button id="modal-prev" class="absolute left-4 top-1/2 -translate-y-1/2 text-white text-3xl hover:text-gray-300 transition-colors bg-black/30 rounded-full p-2" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+        <button id="modal-next" class="absolute right-4 top-1/2 -translate-y-1/2 text-white text-3xl hover:text-gray-300 transition-colors bg-black/30 rounded-full p-2" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
         <div class="absolute bottom-6 right-6 flex gap-2">
-          <button id="zoom-out" class="px-3 py-2 bg-white/10 text-white rounded">-</button>
-          <button id="zoom-in" class="px-3 py-2 bg-white/10 text-white rounded">+</button>
-          <button id="zoom-reset" class="px-3 py-2 bg-white/10 text-white rounded">Reset</button>
+          <button id="zoom-out" class="px-3 py-2 bg-black/60 text-white rounded hover:bg-black/80 transition-colors text-sm font-medium">-</button>
+          <button id="zoom-in" class="px-3 py-2 bg-black/60 text-white rounded hover:bg-black/80 transition-colors text-sm font-medium">+</button>
+          <button id="zoom-reset" class="px-3 py-2 bg-black/60 text-white rounded hover:bg-black/80 transition-colors text-sm font-medium">Reset</button>
         </div>
       </div>
     `;
@@ -77,11 +77,25 @@ function viewImage(imageSrc) {
     let scale = 1, originX = 0, originY = 0, isPanning = false, startX = 0, startY = 0;
 
     function applyTransform() {
-      img.style.transform = `translate(${originX}px, ${originY}px) scale(${scale})`;
+      // Solo aplicar transform si es necesario
+      if (scale !== 1 || originX !== 0 || originY !== 0) {
+        img.style.transform = `translate(${originX}px, ${originY}px) scale(${scale})`;
+      } else {
+        img.style.transform = 'none';
+      }
     }
 
-    function changeZoom(factor) { scale = Math.min(6, Math.max(0.5, scale * factor)); applyTransform(); }
-    function resetZoom() { scale = 1; originX = 0; originY = 0; applyTransform(); }
+    function changeZoom(factor) { 
+      scale = Math.min(6, Math.max(0.5, scale * factor)); 
+      applyTransform(); 
+    }
+    
+    function resetZoom() { 
+      scale = 1; 
+      originX = 0; 
+      originY = 0; 
+      applyTransform(); 
+    }
 
     img.addEventListener('wheel', function(e) {
       e.preventDefault();
@@ -91,24 +105,68 @@ function viewImage(imageSrc) {
 
     img.addEventListener('mousedown', function(e) {
       if (scale <= 1) return;
-      isPanning = true; startX = e.clientX - originX; startY = e.clientY - originY;
+      e.preventDefault(); // Prevenir comportamiento por defecto
+      isPanning = true; 
+      startX = e.clientX - originX; 
+      startY = e.clientY - originY;
       img.style.cursor = 'grabbing';
     });
-    window.addEventListener('mousemove', function(e) {
+    
+    // Solo escuchar mousemove cuando el modal está visible
+    function handleMouseMove(e) {
       if (!isPanning) return;
-      originX = e.clientX - startX; originY = e.clientY - startY; applyTransform();
-    });
-    window.addEventListener('mouseup', function() { isPanning = false; img.style.cursor = 'grab'; });
+      e.preventDefault();
+      originX = e.clientX - startX; 
+      originY = e.clientY - startY; 
+      applyTransform();
+    }
+    
+    function handleMouseUp() {
+      isPanning = false; 
+      if (img) img.style.cursor = 'grab';
+    }
+    
+    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mouseup', handleMouseUp);
+    
+    // Limpiar eventos cuando se cierra el modal
+    const originalCloseImageModal = closeImageModal;
+    closeImageModal = function() {
+      // Resetear variables
+      scale = 1;
+      originX = 0;
+      originY = 0;
+      isPanning = false;
+      if (img) {
+        img.style.transform = 'none';
+        img.style.cursor = 'grab';
+      }
+      originalCloseImageModal();
+    };
   }
 
   const modal = document.getElementById('image-modal');
   const modalImage = document.getElementById('modal-image');
+  const prevBtn = document.getElementById('modal-prev');
+  const nextBtn = document.getElementById('modal-next');
+  
   // set image and show
   modalImage.src = imageSrc;
   modal.classList.remove('hidden');
+  
+  // Mostrar/ocultar flechas según cantidad de imágenes
+  if (productImages && productImages.length > 1) {
+    prevBtn.style.display = 'flex';
+    nextBtn.style.display = 'flex';
+  } else {
+    prevBtn.style.display = 'none';
+    nextBtn.style.display = 'none';
+  }
+  
   // reset zoom/transform
   modalImage.style.transform = '';
   modalImage.style.cursor = 'grab';
+  
   // set current index
   const idx = productImages.findIndex(u => u === imageSrc);
   currentImageIndex = idx >= 0 ? idx : 0;
@@ -128,20 +186,28 @@ function closeImageModal() {
  * Navega a la imagen anterior
  */
 function previousImage() {
-  if (!productImages || productImages.length === 0) return;
+  if (!productImages || productImages.length <= 1) return;
   currentImageIndex = (currentImageIndex - 1 + productImages.length) % productImages.length;
   const modalImage = document.getElementById('modal-image');
-  if (modalImage) modalImage.src = productImages[currentImageIndex];
+  if (modalImage) {
+    modalImage.src = productImages[currentImageIndex];
+    // Resetear zoom al cambiar de imagen
+    resetZoom();
+  }
 }
 
 /**
  * Navega a la siguiente imagen
  */
 function nextImage() {
-  if (!productImages || productImages.length === 0) return;
+  if (!productImages || productImages.length <= 1) return;
   currentImageIndex = (currentImageIndex + 1) % productImages.length;
   const modalImage = document.getElementById('modal-image');
-  if (modalImage) modalImage.src = productImages[currentImageIndex];
+  if (modalImage) {
+    modalImage.src = productImages[currentImageIndex];
+    // Resetear zoom al cambiar de imagen
+    resetZoom();
+  }
 }
 
 // ============================================
@@ -149,10 +215,19 @@ function nextImage() {
 // ============================================
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Cerrar modal con ESC
+  // Cerrar modal con ESC y navegación con flechas
   document.addEventListener('keydown', function(event) {
+    const modal = document.getElementById('image-modal');
+    if (!modal || modal.classList.contains('hidden')) return;
+    
     if (event.key === 'Escape') {
       closeImageModal();
+    } else if (event.key === 'ArrowLeft') {
+      event.preventDefault();
+      previousImage();
+    } else if (event.key === 'ArrowRight') {
+      event.preventDefault();
+      nextImage();
     }
   });
 

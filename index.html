@@ -26,7 +26,7 @@
   <script src="./js/carousel.js" defer></script>
 
   <!-- titulo de la pagina -->
-  <title>
+  <title data-translate="breadcrumb-product-title">
     Bandeja para fibra rackeable 1RU patch panel de fibra con bandeja deslizable para 24 puertos SC has 48 hilos LC marca Datatronix modelo CPPR1-01-X1-UL
   </title>
 
@@ -99,6 +99,62 @@
     }
     /* Si quieres que el número principal mantenga color acento, puedes usar var(--accent) en lugar de #ffffff:
        html.dark .topbar .phone-primary { color: var(--accent) !important; } */
+
+    /* Selector de idioma en modo oscuro */
+    html.dark #language-selector-btn {
+      background: var(--action-bg) !important;
+      border: 1px solid var(--border) !important;
+    }
+    
+    html.dark #language-selector-btn .fas,
+    html.dark #language-selector-btn #current-language {
+      color: var(--text) !important;
+    }
+    
+    html.dark .absolute.right-0.mt-2.w-32 {
+      background: var(--surface) !important;
+      border: 1px solid var(--border) !important;
+    }
+    
+    html.dark .absolute.right-0.mt-2.w-32 button {
+      color: var(--text) !important;
+    }
+    
+    html.dark .absolute.right-0.mt-2.w-32 button:hover {
+      background: var(--panel) !important;
+    }
+    
+    html.dark .absolute.right-0.mt-2.w-32 span {
+      color: var(--text) !important;
+    }
+
+    /* Selector de moneda en modo oscuro */
+    html.dark .relative.group .p-2.rounded-full:first-child {
+      background: var(--action-bg) !important;
+      border: 1px solid var(--border) !important;
+    }
+    
+    html.dark .relative.group .p-2.rounded-full:first-child .fas,
+    html.dark .relative.group .p-2.rounded-full:first-child span {
+      color: var(--text) !important;
+    }
+    
+    html.dark .relative.group:nth-child(2) .absolute.right-0.mt-2.w-32 {
+      background: var(--surface) !important;
+      border: 1px solid var(--border) !important;
+    }
+    
+    html.dark .relative.group:nth-child(2) .absolute.right-0.mt-2.w-32 button {
+      color: var(--text) !important;
+    }
+    
+    html.dark .relative.group:nth-child(2) .absolute.right-0.mt-2.w-32 button:hover {
+      background: var(--panel) !important;
+    }
+    
+    html.dark .relative.group:nth-child(2) .absolute.right-0.mt-2.w-32 span {
+      color: var(--text) !important;
+    }
 
     /* action buttons (search, dark toggle) */
     .action-btn {
@@ -299,6 +355,85 @@
     html.dark .text-black { color: white !important; }
     html.dark .text-black a { color: white !important; }
 
+    /* Sidebar de "Listas de Precios" con soporte para modo oscuro */
+    html.dark #links-sidebar {
+      background: linear-gradient(180deg, rgba(6,18,28,0.8), rgba(10,24,34,0.85)) !important;
+      border-color: rgba(255,255,255,0.04) !important;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6) !important;
+    }
+    
+    html.dark #links-sidebar .text-gray-900 {
+      color: var(--text) !important;
+    }
+    
+    html.dark #links-sidebar .border-blue-600 {
+      border-color: var(--accent) !important;
+    }
+    
+    html.dark #links-sidebar .text-blue-600 {
+      color: var(--accent) !important;
+    }
+    
+    html.dark #links-sidebar .bg-white {
+      background: var(--input-bg) !important;
+      border-color: var(--border) !important;
+    }
+    
+    html.dark #links-sidebar .text-blue-700 {
+      color: var(--muted) !important;
+    }
+    
+    html.dark #links-sidebar .hover\:text-blue-900:hover {
+      color: var(--text) !important;
+    }
+    
+    html.dark #links-sidebar .hover\:bg-blue-100:hover {
+      background: rgba(96,165,250,0.1) !important;
+    }
+    
+    html.dark #links-sidebar .text-blue-500 {
+      color: var(--accent) !important;
+    }
+
+    /* Dark mode para el nuevo footer */
+    html.dark footer {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%) !important;
+      color: #e2e8f0 !important;
+    }
+
+    html.dark .footer-link-modern {
+      color: #94a3b8 !important;
+    }
+
+    html.dark .footer-link-modern:hover {
+      color: #60a5fa !important;
+    }
+
+    html.dark .footer-contact-modern {
+      color: #cbd5e1 !important;
+    }
+
+    html.dark .footer-contact-modern:hover {
+      color: #60a5fa !important;
+    }
+
+    html.dark .social-btn-modern {
+      background: rgba(255, 255, 255, 0.05) !important;
+      border-color: rgba(255, 255, 255, 0.1) !important;
+      color: #94a3b8 !important;
+    }
+
+    html.dark .social-btn-modern:hover {
+      background: rgba(255, 255, 255, 0.15) !important;
+      color: #ffffff !important;
+      border-color: rgba(255, 255, 255, 0.2) !important;
+    }
+
+    html.dark .social-btn-modern.whatsapp:hover {
+      background: #25D366 !important;
+      border-color: #25D366 !important;
+    }
+
     /* Fin estilos */
   </style>
 </head>
@@ -350,20 +485,57 @@
         <!-- Botón de búsqueda -->
         <div class="flex items-center space-x-2">
           <!-- Theme toggle -->
-          <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 transition-colors theme-toggle" aria-pressed="false" aria-label="Alternar modo oscuro">
+          <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 transition-colors theme-toggle" aria-pressed="false" aria-label="Alternar modo oscuro" data-translate-aria="nav-dark-mode">
             <i class="fas fa-moon text-black" aria-hidden="true"></i>
           </button>
 
           <button
             id="search-button"
             class="p-2 rounded-full hover:bg-gray-100 transition-colors"
+            data-translate-aria="nav-search"
           >
             <i class="fas fa-search text-black"></i>
           </button>
 
-          <a href="https://wa.me/51994428965?text=Hola,%20me%20gustaría%20información%20sobre%20sus%20productos" target="_blank" class="p-2 rounded-full hover:bg-gray-100 transition-colors">
-            <i class="fab fa-whatsapp text-green-500"></i>
-          </a>
+          <!-- Selector de idioma -->
+          <div class="relative group">
+            <button class="p-2 rounded-full hover:bg-gray-100 transition-colors flex items-center gap-1" id="language-selector-btn">
+              <i class="fas fa-globe text-black"></i>
+              <span class="text-xs text-black" id="current-language">ES</span>
+            </button>
+            <div class="absolute right-0 mt-2 w-32 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <button onclick="window.translationSystem.setLanguage('es')" class="w-full text-left px-3 py-2 text-sm hover:bg-gray-100 flex items-center gap-2">
+                <span>🇪🇸</span>
+                <span data-translate="lang-spanish">Español</span>
+              </button>
+              <button onclick="window.translationSystem.setLanguage('en')" class="w-full text-left px-3 py-2 text-sm hover:bg-gray-100 flex items-center gap-2">
+                <span>🇺🇸</span>
+                <span data-translate="lang-english">English</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Selector de moneda -->
+          <div class="relative group">
+            <button class="p-2 rounded-full hover:bg-gray-100 transition-colors flex items-center gap-1">
+              <i class="fas fa-dollar-sign text-black"></i>
+              <span class="text-xs text-black">USD</span>
+            </button>
+            <div class="absolute right-0 mt-2 w-32 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <button onclick="translateCurrency.setCurrency('PEN')" class="w-full text-left px-3 py-2 text-sm hover:bg-gray-100 flex items-center gap-2">
+                <span>🇵🇪</span>
+                <span data-translate="currency-pen">PEN - Soles</span>
+              </button>
+              <button onclick="translateCurrency.setCurrency('USD')" class="w-full text-left px-3 py-2 text-sm hover:bg-gray-100 flex items-center gap-2">
+                <span>🇺🇸</span>
+                <span data-translate="currency-usd">USD - Dólares</span>
+              </button>
+              <button onclick="translateCurrency.setCurrency('EUR')" class="w-full text-left px-3 py-2 text-sm hover:bg-gray-100 flex items-center gap-2">
+                <span>🇪🇺</span>
+                <span data-translate="currency-eur">EUR - Euros</span>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -375,13 +547,12 @@
           <div class="flex gap-1">
             <!-- boton hamburgesa -->
             <button
-              id="mobile-menu-button"
-              aria-controls="mobile-menu"
-              aria-expanded="false"
-              aria-label="Abrir menú móvil"
-              class="p-3 rounded-full hover:bg-gray-300 transition-colors border-2 border-gray-600"
-            >
-              <i class="fas fa-bars text-black" aria-hidden="true"></i>
+              id="mobile-menu-button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Abrir menú móvil" class="p-2 rounded-full hover:bg-gray-300 transition-colors border-2 border-gray-600" data-translate-aria="mobile-menu-open">
+              <div class="hamburger-lines">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
             </button>
 
             <!-- Logo -->
@@ -402,12 +573,10 @@
 
           <!-- Botones buscar -->
           <button
-            id="mobile-search-button"
-            class="p-3 rounded-md hover:bg-gray-300 transition-colors border border-black flex gap-3 items-center"
-          >
+            id="mobile-search-button" class="p-3 rounded-md hover:bg-gray-300 transition-colors border border-black flex gap-3 items-center" data-translate-aria="nav-search">
             <i class="fas fa-search text-black"></i>
           </button>
-          <button id="mobile-theme-toggle" class="p-3 rounded-md hover:bg-gray-300 transition-colors border border-black flex items-center theme-toggle" aria-pressed="false" aria-label="Alternar modo oscuro">
+          <button id="mobile-theme-toggle" class="p-3 rounded-md hover:bg-gray-300 transition-colors border border-black flex items-center theme-toggle" aria-pressed="false" aria-label="Alternar modo oscuro" data-translate-aria="nav-dark-mode">
             <i class="fas fa-moon text-black" aria-hidden="true"></i>
           </button>
         </div>
@@ -431,12 +600,12 @@
     <!-- Menú móvil desplegable - Lado derecho -->
       <div
       id="mobile-menu"
-      class="fixed top-0 left-0 h-screen w-80 bg-white shadow-xl z-60 transform -translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto"
+      class="fixed top-0 left-0 h-screen w-56 bg-white shadow-xl z-60 transform -translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto"
       role="dialog" aria-modal="true" aria-label="Menú móvil"
     >
       <!-- Botón de cerrar -->
         <div class="flex justify-end p-4">
-        <button id="close-menu" aria-label="Cerrar menú" class="text-gray-500 hover:text-gray-700">
+        <button id="close-menu" aria-label="Cerrar menú" class="text-gray-500 hover:text-gray-700" data-translate-aria="mobile-menu-close">
           <i class="fas fa-times text-2xl" aria-hidden="true"></i>
         </button>
       </div>
@@ -472,49 +641,49 @@
               href="https://ds3comunicaciones.com/cisco/precios_cisco_b.html"
               class="menu-link border-b w-full block py-2 font-medium text-blue-500 hover:text-blue-600 transition-colors duration-200 text-sm md:text-base"
             >
-              Lista Completa
+              <span data-translate="mobile-menu-full-list">Lista Completa</span>
             </a>
 
             <a
               href="http://ds3comunicaciones.com/cisco/precios_cisco_access_point_b.html"
               class="menu-link border-b w-full block py-2 font-medium text-blue-500 hover:text-blue-600 transition-colors duration-200 text-sm md:text-base"
             >
-              Access Point
+              <span data-translate="mobile-menu-access-point">Access Point</span>
             </a>
 
             <a
               href="http://ds3comunicaciones.com/cisco/precios_cisco_switch_small_bussines_b.html"
               class="menu-link border-b w-full block py-2 font-medium text-blue-500 hover:text-blue-600 transition-colors duration-200 text-sm md:text-base"
             >
-              Switch Small Business
+              <span data-translate="mobile-menu-switch-small">Switch Small Business</span>
             </a>
 
             <a
               href="http://ds3comunicaciones.com/cisco/precios_cisco_switch_catalyst_b.html"
               class="menu-link border-b w-full block py-2 font-medium text-blue-500 hover:text-blue-600 transition-colors duration-200 text-sm md:text-base"
             >
-              Switch Catalyst
+              <span data-translate="mobile-menu-switch-catalyst">Switch Catalyst</span>
             </a>
 
             <a
               href="http://ds3comunicaciones.com/cisco/precios_cisco_meraki_b.html"
               class="menu-link border-b w-full block py-2 font-medium text-blue-500 hover:text-blue-600 transition-colors duration-200 text-sm md:text-base"
             >
-              Cisco Meraki
+              <span data-translate="mobile-menu-meraki">Cisco Meraki</span>
             </a>
 
             <a
               href="http://ds3comunicaciones.com/cisco/precios_cisco_nexus_b.html"
               class="menu-link border-b w-full block py-2 font-medium text-blue-500 hover:text-blue-600 transition-colors duration-200 text-sm md:text-base"
             >
-              Cisco Nexus
+              <span data-translate="mobile-menu-nexus">Cisco Nexus</span>
             </a>
 
             <a
               href="http://ds3comunicaciones.com/cisco/precios_cisco_router_b.html"
               class="menu-link border-b w-full block py-2 font-medium text-blue-500 hover:text-blue-600 transition-colors duration-200 text-sm md:text-base"
             >
-              Routers
+              <span data-translate="mobile-menu-routers">Routers</span>
             </a>
 
             <!-- Segunda fila -->
@@ -522,42 +691,39 @@
               href="http://ds3comunicaciones.com/cisco/precios_cisco_telefonos_b.html"
               class="menu-link border-b w-full block py-2 font-medium text-blue-500 hover:text-blue-600 transition-colors duration-200 text-sm md:text-base"
             >
-              Teléfonos Cisco
+              <span data-translate="mobile-menu-phones">Teléfonos Cisco</span>
             </a>
 
             <a
               href="http://ds3comunicaciones.com/cisco/precios_cisco_modulo_transceiver_fibra_b.html"
               class="menu-link border-b w-full block py-2 font-medium text-blue-500 hover:text-blue-600 transition-colors duration-200 text-sm md:text-base"
             >
-              Módulo/Transceiver de Fibra
+              <span data-translate="mobile-menu-transceiver">Módulo/Transceiver de Fibra</span>
             </a>
 
             <a
               href="http://ds3comunicaciones.com/cisco/precios_cisco_accesorios_b.html"
               class="menu-link border-b w-full block py-2 font-medium text-blue-500 hover:text-blue-600 transition-colors duration-200 text-sm md:text-base"
             >
-              Accesorios
+              <span data-translate="mobile-menu-accessories">Accesorios</span>
             </a>
 
             <a
               href="http://ds3comunicaciones.com/cisco/precios_cisco_switch_industrial_b.html"
               class="menu-link border-b w-full block py-2 font-medium text-blue-500 hover:text-blue-600 transition-colors duration-200 text-sm md:text-base"
             >
-              Switch Industrial
+              <span data-translate="mobile-menu-switch-industrial">Switch Industrial</span>
             </a>
           </div>
         </div>
 
         <!-- Lista de precios (desplegable) -->
-        <div class="">
+        <div>
           <details class="group">
             <summary
-              class="flex justify-between items-center cursor-pointer list-none py-3 border-b"
-            >
-              <span class="font-bold text-gray-800">Lista de Precios</span>
-              <i
-                class="fas fa-chevron-down text-gray-500 group-open:rotate-180 transition-transform"
-              ></i>
+              class="flex justify-between items-center cursor-pointer list-none py-3 border-b">
+              <span class="font-bold text-gray-800" data-translate="mobile-menu-lists">Lista de Precios</span>
+              <i class="fas fa-chevron-down text-gray-500 group-open:rotate-180 transition-transform"></i>
             </summary>
             <div class="mt-2">
               <ul class="flex flex-col gap-2">
@@ -613,6 +779,17 @@
                     class="block px-3 py-1.5 text-sm text-blue-600 hover:underline font-medium"
                   >
                     Lista de precios CISCO
+                  </a>
+                </li>
+
+                <!--Datatronix-->
+                <li class="hover:bg-blue-50 rounded transition-colors">
+                  <a
+                    href="https://kevinnavarreteusnayo.github.io/lista-de-precios-datatronix/"
+                    target="_blank"
+                    class="block px-3 py-1.5 text-sm text-blue-600 hover:underline font-medium"
+                  >
+                    Lista de precios Datatronix
                   </a>
                 </li>
 
@@ -765,14 +942,14 @@
     <div class="overlay-card" role="document">
       <div class="overlay-top">
         <div style="flex:1" class="overlay-search">
-          <input id="overlay-search-input" type="search" placeholder="Buscar productos, marcas o códigos..." aria-label="Buscar productos marcas o códigos" />
-          <button id="overlay-search-btn" class="px-4 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700">
+          <input id="overlay-search-input" type="search" placeholder="Buscar productos, marcas o códigos..." aria-label="Buscar productos marcas o códigos" data-translate-placeholder="search-placeholder" data-translate-aria="search-placeholder" />
+          <button id="overlay-search-btn" class="px-4 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700" data-translate="search-button">
             Buscar
           </button>
         </div>
         <div class="overlay-actions">
-          <button id="overlay-clear" class="px-3 py-2 rounded-md border border-gray-200 text-gray-700" aria-label="Limpiar búsqueda">Limpiar</button>
-          <button id="close-search" class="action-btn" aria-label="Cerrar búsqueda">
+          <button id="overlay-clear" class="px-3 py-2 rounded-md border border-gray-200 text-gray-700" aria-label="Limpiar búsqueda" data-translate="search-clear" data-translate-aria="search-clear">Limpiar</button>
+          <button id="close-search" class="action-btn" aria-label="Cerrar búsqueda" data-translate-aria="search-close">
             <i class="fa-solid fa-xmark"></i>
           </button>
         </div>
@@ -783,7 +960,7 @@
         <div class="icon-card" data-href="https://www.ds3comunicaciones.com/cisco/catalys_9200l.html" tabindex="0">
           <i class="fa-solid fa-layer-group text-blue-600 fa-2x"></i>
           <div>
-            <div class="font-semibold text-sm">Switch Catalyst</div>
+            <div class="font-semibold text-sm" data-translate="menu-switch-catalyst">Switch Catalyst</div>
             <div class="text-xs text-slate-500">Catalyst family</div>
           </div>
         </div>
@@ -791,7 +968,7 @@
         <div class="icon-card" data-href="https://www.ds3comunicaciones.com/cisco/bussines_sg350.html" tabindex="0">
           <i class="fa-solid fa-building text-blue-600 fa-2x"></i>
           <div>
-            <div class="font-semibold text-sm">Cisco Business</div>
+            <div class="font-semibold text-sm" data-translate="menu-switch-small">Cisco Business</div>
             <div class="text-xs text-slate-500">Small business</div>
           </div>
         </div>
@@ -799,7 +976,7 @@
         <div class="icon-card" data-href="https://www.ds3comunicaciones.com/cisco/precios_cisco_switch_industrial_b.html" tabindex="0">
           <i class="fa-solid fa-industry text-blue-600 fa-2x"></i>
           <div>
-            <div class="font-semibold text-sm">Switch Industrial</div>
+            <div class="font-semibold text-sm" data-translate="menu-switch-industrial">Switch Industrial</div>
             <div class="text-xs text-slate-500">Rugged</div>
           </div>
         </div>
@@ -807,7 +984,7 @@
         <div class="icon-card" data-href="https://www.ds3comunicaciones.com/cisco/precios_cisco_access_point_b.html" tabindex="0">
           <i class="fa-solid fa-wifi text-blue-600 fa-2x"></i>
           <div>
-            <div class="font-semibold text-sm">Aironet</div>
+            <div class="font-semibold text-sm" data-translate="mobile-menu-access-point">Aironet</div>
             <div class="text-xs text-slate-500">Access points</div>
           </div>
         </div>
@@ -815,7 +992,7 @@
         <div class="icon-card" data-href="https://www.ds3comunicaciones.com/cisco/precios_cisco_telefonos_b.html" tabindex="0">
           <i class="fa-solid fa-phone text-blue-600 fa-2x"></i>
           <div>
-            <div class="font-semibold text-sm">Teléfono</div>
+            <div class="font-semibold text-sm" data-translate="mobile-menu-phones">Teléfono</div>
             <div class="text-xs text-slate-500">IP Phones</div>
           </div>
         </div>
@@ -823,7 +1000,7 @@
         <div class="icon-card" data-href="https://ds3comunicaciones.com/cisco/precios_cisco_meraki_b.html" tabindex="0">
           <i class="fa-solid fa-cloud text-blue-600 fa-2x"></i>
           <div>
-            <div class="font-semibold text-sm">Meraki</div>
+            <div class="font-semibold text-sm" data-translate="mobile-menu-meraki">Meraki</div>
             <div class="text-xs text-slate-500">Cloud managed</div>
           </div>
         </div>
@@ -850,7 +1027,7 @@
           <div class="icon-container h-7 w-7 flex items-center justify-center">
             <img src="./icons/Switch Catalyst.ico" class="nav-icon max-h-full max-w-full" alt="Switch Catalyst" />
           </div>
-          <span class="text-sm font-semibold text-gray-700 whitespace-nowrap hover:text-blue-600">Cables de Fibra</span>
+          <span class="text-sm font-semibold text-gray-700 whitespace-nowrap hover:text-blue-600" data-translate="menu-fiber-cables">Cables de Fibra</span>
         </a>
 
         <!-- Item 2 -->
@@ -859,7 +1036,7 @@
           <div class="icon-container h-7 w-7 flex items-center justify-center">
             <img src="./icons/Cisco Business.ico" class="nav-icon max-h-full max-w-full" alt="Cisco Business" />
           </div>
-          <span class="text-sm font-semibold text-gray-700 whitespace-nowrap hover:text-blue-600">Patch cords /pigtails</span>
+          <span class="text-sm font-semibold text-gray-700 whitespace-nowrap hover:text-blue-600" data-translate="menu-patch-cords">Patch cords /pigtails</span>
         </a>
 
         <!-- Item 3 -->
@@ -868,7 +1045,7 @@
           <div class="icon-container h-7 w-7 flex items-center justify-center">
             <img src="./icons/Switch Industrial.ico" class="nav-icon max-h-full max-w-full" alt="Switch Industrial" />
           </div>
-          <span class="text-sm font-semibold text-gray-700 whitespace-nowrap hover:text-blue-600">Bandeja</span>
+          <span class="text-sm font-semibold text-gray-700 whitespace-nowrap hover:text-blue-600" data-translate="menu-tray">Bandeja</span>
         </a>
 
         <!-- Item 4 -->
@@ -887,7 +1064,7 @@
                 fill="white" stroke="black" stroke-width="2" />
             </svg>
           </div>
-          <span class="text-sm font-semibold text-gray-700 whitespace-nowrap hover:text-blue-600">Mufas</span>
+          <span class="text-sm font-semibold text-gray-700 whitespace-nowrap hover:text-blue-600" data-translate="menu-splices">Mufas</span>
         </a>
       </div>
     </div>
@@ -898,21 +1075,21 @@
     <!-- CASCADA DE NAVEGACIÓN RESPONSIVE "MARCA | PRODUCTO | NOMBRE" -->
     <div
       class="border-b border-gray-200 px-4 md:px-6 py-3 text-xs md:text-sm text-slate-600 flex flex-nowrap items-center gap-2 overflow-x-auto scrollbar-hide whitespace-nowrap bg-white shadow-sm">
-      <a href="https://www.ds3comunicaciones.com/index.html" class="flex-shrink-0 hover:text-blue-600 transition font-medium" title="Inicio" aria-label="Inicio">
+      <a href="https://www.ds3comunicaciones.com/index.html" class="flex-shrink-0 hover:text-blue-600 transition font-medium" title="Inicio" aria-label="Inicio" data-translate-title="breadcrumb-home" data-translate-aria="breadcrumb-home">
         <i class="fa-solid fa-house text-[0.9em]"></i>
       </a>
       <span class="text-gray-400 flex-shrink-0"><i class="fa-solid fa-chevron-right text-[0.7em]"></i></span>
-      <a href="https://www.ds3comunicaciones.com/datatronix/index.html"
-        class="flex-shrink-0 hover:underline hover:text-blue-600 transition font-medium">
+      <a href="https://kevinnavarreteusnayo.github.io/lista-de-precios-datatronix/"
+        class="flex-shrink-0 hover:underline hover:text-blue-600 transition font-medium" data-translate="breadcrumb-datatronix">
         Datatronix
       </a>
       <span class="text-gray-400 flex-shrink-0"><i class="fa-solid fa-chevron-right text-[0.7em]"></i></span>
       <a href="https://www.ds3comunicaciones.com/panduit/index.html#cables"
-        class="flex-shrink-0 hover:underline hover:text-blue-600 transition font-medium">
+        class="flex-shrink-0 hover:underline hover:text-blue-600 transition font-medium" data-translate="breadcrumb-tray-network">
         Bandeja de Red
       </a>
       <span class="text-gray-400 flex-shrink-0"><i class="fa-solid fa-chevron-right text-[0.7em]"></i></span>
-      <span class="text-slate-800 font-semibold flex-shrink-0 text-blue-600">
+      <span class="text-slate-800 font-semibold flex-shrink-0 text-blue-600" data-translate="breadcrumb-product-title">
         Bandeja rackeable de fibra optica — Datatronix — Código CPPR1-01-X1-UL
       </span>
     </div>
@@ -925,7 +1102,7 @@
           class="hidden lg:block bg-white p-4 rounded-xl shadow-md w-full lg:w-64 h-fit sticky top-20">
           <!-- Título -->
           <h2 class="text-lg font-bold text-gray-800 mb-4 pb-3 border-b-2 border-blue-600">
-            <i class="fas fa-icons mr-2 text-blue-600"></i>Nuestras Marcas
+            <i class="fas fa-icons mr-2 text-blue-600"></i><span data-translate="sidebar-brands-title">Nuestras Marcas</span>
           </h2>
 
           <!-- Contenedor de marcas - responsive -->
@@ -955,6 +1132,13 @@
             <a href="https://www.ds3comunicaciones.com/cisco/index.html"
               class="flex items-center justify-center p-3 rounded-lg hover:bg-blue-50 transition-all duration-300 hover:shadow-md">
               <img src="./icons/brands/cisco.gif" alt="Cisco"
+                class="max-w-[120px] max-h-10 w-auto h-auto object-contain" />
+            </a>
+
+            <!-- Marca Datatronix -->
+            <a href="https://kevinnavarreteusnayo.github.io/lista-de-precios-datatronix/"
+              class="flex items-center justify-center p-3 rounded-lg hover:bg-blue-50 transition-all duration-300 hover:shadow-md">
+              <img src="./icons/brands/datatronix.png" alt="Datatronix"
                 class="max-w-[120px] max-h-10 w-auto h-auto object-contain" />
             </a>
 
@@ -1023,7 +1207,7 @@
             </div>
 
             <a href="#" id="ver-mas-marcas" class="mt-2 p-3 rounded-lg bg-blue-100 text-blue-600 font-semibold text-center hover:bg-blue-200 transition-all duration-300">
-              <i class="fas fa-ellipsis-h mr-2"></i>Ver más marcas
+              <i class="fas fa-ellipsis-h mr-2"></i><span data-translate="sidebar-more-brands">Ver más marcas</span>
             </a>
           </div>
         </aside>
@@ -1035,11 +1219,11 @@
             <div id="information-section" class="flex flex-col gap-8">
               <!-- Título y descripción centrada -->
               <div class="text-center mb-4">
-                <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4 leading-tight">
+                <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4 leading-tight" data-translate="main-title">
                   Bandeja para Fibra
                 </h1>
                 
-                <p class="text-gray-600 text-base md:text-lg mb-6 max-w-3xl mx-auto">
+                <p class="text-gray-600 text-base md:text-lg mb-6 max-w-3xl mx-auto" data-translate="main-description">
                   Descripción técnica: Bandeja rackeable de fibra optica — Datatronix — Código CPPR1-01-X1-UL.
                 </p>
               </div>
@@ -1062,16 +1246,17 @@
                                                   <img id="img_main"
                                                   src="./imagenes/caja.png"
                                                   alt="Cable UTP AMP Categoria 6" 
-                                                  class="max-h-full max-w-full object-contain cursor-pointer transition-all duration-300 group-hover:scale-110 drop-shadow-lg" />                        
+                                                  class="max-h-full max-w-full object-contain cursor-pointer transition-all duration-300 group-hover:scale-110 drop-shadow-lg"
+                                                  onclick="viewImage(this.src)" data-translate-alt="main-image-alt" />                        
                         <!-- Badge de zoom -->
                         <div class="absolute top-3 right-3 bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center gap-1 shadow-lg">
                           <i class="fas fa-search-plus"></i>
-                          <span class="hidden sm:inline">Zoom</span>
+                          <span class="hidden sm:inline" data-translate="zoom-badge">Zoom</span>
                         </div>
 
                         <!-- Indicador de vista -->
                         <div class="absolute bottom-3 left-3 bg-black/60 text-white px-3 py-1 rounded-lg text-xs font-medium">
-                          <span id="current-view">Vista del producto</span>
+                          <span id="current-view" data-translate="product-view">Vista del producto</span>
                         </div>
                       </div>
                     </div>
@@ -1082,32 +1267,32 @@
                     <div class="mt-4 flex flex-wrap gap-3 justify-center">
                       <div class="flex items-center gap-2 px-3 py-2 bg-blue-50 rounded-lg border border-blue-200">
                         <i class="fas fa-camera text-blue-600"></i>
-                        <span class="text-xs text-gray-700"><strong>3</strong> vistas</span>
+                        <span class="text-xs text-gray-700"><strong>3</strong> <span data-translate="views-count">vistas</span></span>
                       </div>
                       <div class="flex items-center gap-2 px-3 py-2 bg-green-50 rounded-lg border border-green-200">
                         <i class="fas fa-check-circle text-green-600"></i>
-                        <span class="text-xs text-gray-700">Alta resolución</span>
+                        <span class="text-xs text-gray-700" data-translate="high-resolution">Alta resolución</span>
                       </div>
                       <div class="flex items-center gap-2 px-3 py-2 bg-orange-50 rounded-lg border border-orange-200">
                         <i class="fas fa-expand text-orange-600"></i>
-                        <span class="text-xs text-gray-700">Zoom disponible</span>
+                        <span class="text-xs text-gray-700" data-translate="zoom-available">Zoom disponible</span>
                       </div>
                     </div>
 
                     <!-- Precio y botón de compra - Debajo de imágenes -->
-                    <div class="mt-8 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg p-6 border-2 border-blue-200">
-                      <div class="flex items-baseline gap-2 mb-4">
-                        <span class="text-4xl font-bold text-blue-600">$65.00</span>
-                        <span class="text-sm text-gray-600">USD</span>
+                    <div id="price-panel" class="mt-8 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg p-6 border-2 border-blue-200">
+                      <div class="flex items-baseline gap-2 mb-4 price-container">
+                        <span class="text-4xl font-bold text-blue-600 price-amount" data-price="65.00">65.00</span>
+                        <span class="text-sm text-gray-600 price-currency">USD</span>
                       </div>
                       <div class="badge badge-success mb-4">
-                        <i class="fas fa-check-circle mr-2"></i>En stock disponible
+                        <i class="fas fa-check-circle mr-2"></i><span data-translate="in-stock">En stock disponible</span>
                       </div>
                       <a href="https://www.ds3comunicaciones.com/pedido.html"
                         class="w-full inline-flex items-center justify-center gap-2 bg-blue-600 text-white font-bold rounded-lg px-6 py-3 hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl"
                         target="_blank" rel="noopener noreferrer">
                         <i class="fas fa-shopping-cart"></i>
-                        Comprar ahora
+                        <span data-translate="buy-now">Comprar ahora</span>
                       </a>
                     </div>
                   </div>
@@ -1115,27 +1300,28 @@
               </div>
             </div>
 
+            
             <!-- Sección de galería de imágenes (oculta inicialmente) -->
             <div id="images-section" class="hidden">
-              <h2 class="text-2xl font-bold text-gray-800 mb-6">Galería de imágenes</h2>
+              <h2 class="text-2xl font-bold text-gray-800 mb-6" data-translate="gallery-title">Galería de imágenes</h2>
               <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="bg-gray-100 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300">
                   <img src="./imagenes/bandeja.png"
                     alt="Vista frontal"
                     class="w-full h-64 object-contain p-4 cursor-pointer hover:scale-105 transition-transform duration-300"
-                    onclick="viewImage(this.src)" />
+                    onclick="viewImage(this.src)" data-translate-alt="img-front" />
                 </div>
                 <div class="bg-gray-100 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300">
                   <img src="./imagenes/caja.png"
                     alt="Vista frontal ampliada"
                     class="w-full h-64 object-contain p-4 cursor-pointer hover:scale-105 transition-transform duration-300"
-                    onclick="viewImage(this.src)" />
+                    onclick="viewImage(this.src)" data-translate-alt="img-front-large" />
                 </div>
                 <div class="bg-gray-100 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300">
                   <img src="./imagenes/accesorios.png"
                     alt="Vista posterior"
                     class="w-full h-64 object-contain p-4 cursor-pointer hover:scale-105 transition-transform duration-300"
-                    onclick="viewImage(this.src)" />
+                    onclick="viewImage(this.src)" data-translate-alt="img-back" />
                 </div>
               </div>
             </div>
@@ -1145,15 +1331,15 @@
 
               <div class="inline-flex rounded-md shadow-sm">
                 <button id="product-tab"
-                  class="px-6 py-2 text-xs md:text-sm font-medium rounded-l-lg bg-blue-600 text-white focus:z-10 focus:outline-none">
+                  class="px-6 py-2 text-xs md:text-sm font-medium rounded-l-lg bg-blue-600 text-white focus:z-10 focus:outline-none" data-translate="tab-product">
                   Producto
                 </button>
                 <button id="images-tab"
-                  class="px-6 py-2 text-xs md:text-sm font-medium bg-gray-100 text-gray-700 focus:z-10 focus:outline-none">
+                  class="px-6 py-2 text-xs md:text-sm font-medium bg-gray-100 text-gray-700 focus:z-10 focus:outline-none" data-translate="tab-images">
                   Imágenes
                 </button>
                 <button id="downloads-tab"
-                  class="px-6 py-2 text-xs md:text-sm font-medium rounded-r-lg bg-gray-100 text-gray-700 focus:z-10 focus:outline-none">
+                  class="px-6 py-2 text-xs md:text-sm font-medium rounded-r-lg bg-gray-100 text-gray-700 focus:z-10 focus:outline-none" data-translate="tab-downloads">
                   Descargas
                 </button>
               </div>
@@ -1161,19 +1347,19 @@
 
             <!-- Sección de descargas (oculta inicialmente) -->
             <div id="downloads-section" class="hidden">
-              <h2 class="text-2xl font-bold text-gray-800 mb-6">Descargas disponibles</h2>
+              <h2 class="text-2xl font-bold text-gray-800 mb-6" data-translate="downloads-title">Descargas disponibles</h2>
               <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 <!-- Ficha técnica PDF -->
                 <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 border-l-4 border-red-500">
                   <div class="p-6 text-center">
                     <i class="fas fa-file-pdf text-red-500 text-4xl mb-4"></i>
-                    <h3 class="font-bold text-gray-800 mb-2">Ficha Técnica</h3>
-                    <p class="text-gray-600 text-sm mb-4">Especificaciones técnicas detalladas del producto</p>
+                    <h3 class="font-bold text-gray-800 mb-2" data-translate="download-datasheet">Ficha Técnica</h3>
+                    <p class="text-gray-600 text-sm mb-4" data-translate="download-datasheet-desc">Especificaciones técnicas detalladas del producto</p>
                     <a href="https://1drv.ms/b/c/aa02e2bbc278ad2b/IQB9hLRFM_kVQaVU5FBDrdWXAWEW6ovQhKvhlek82lEr2fs?e=wP54Zw"
                       class="inline-flex items-center gap-2 bg-red-50 text-red-600 border border-red-200 rounded-lg px-4 py-2 hover:bg-red-100 transition-all duration-300 font-medium w-full justify-center"
                       target="_blank" rel="noopener noreferrer" aria-label="Descargar ficha técnica en PDF">
                       <i class="fas fa-download"></i>
-                      <span>Descargar</span>
+                      <span data-translate="download-button">Descargar</span>
                     </a>
                   </div>
                 </div>
@@ -1182,13 +1368,13 @@
                 <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 border-l-4 border-blue-500">
                   <div class="p-6 text-center">
                     <i class="fas fa-book text-blue-500 text-4xl mb-4"></i>
-                    <h3 class="font-bold text-gray-800 mb-2">Manual de Usuario</h3>
-                    <p class="text-gray-600 text-sm mb-4">Guía completa de instalación y configuración</p>
+                    <h3 class="font-bold text-gray-800 mb-2" data-translate="download-manual">Manual de Usuario</h3>
+                    <p class="text-gray-600 text-sm mb-4" data-translate="download-manual-desc">Guía completa de instalación y configuración</p>
                     <a href="https://www.datatronix.com/content/dam/datatronix/en/products/media/5/35/735/8735/110838735.pdf"
                       class="inline-flex items-center gap-2 bg-blue-50 text-blue-600 border border-blue-200 rounded-lg px-4 py-2 hover:bg-blue-100 transition-all duration-300 font-medium w-full justify-center"
                       target="_blank" rel="noopener noreferrer" aria-label="Descargar manual en PDF">
                       <i class="fas fa-download"></i>
-                      <span>Descargar</span>
+                      <span data-translate="download-button">Descargar</span>
                     </a>
                   </div>
                 </div>
@@ -1197,13 +1383,13 @@
                 <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 border-l-4 border-green-500">
                   <div class="p-6 text-center">
                     <i class="fas fa-file-alt text-green-500 text-4xl mb-4"></i>
-                    <h3 class="font-bold text-gray-800 mb-2">Especificaciones</h3>
-                    <p class="text-gray-600 text-sm mb-4">Especificaciones técnicas en detalle</p>
+                    <h3 class="font-bold text-gray-800 mb-2" data-translate="download-specs">Especificaciones</h3>
+                    <p class="text-gray-600 text-sm mb-4" data-translate="download-specs-desc">Especificaciones técnicas en detalle</p>
                     <a href="https://www.datatronix.com/content/dam/datatronix/en/products/media/5/35/735/8735/110838735.pdf"
                       class="inline-flex items-center gap-2 bg-green-50 text-green-600 border border-green-200 rounded-lg px-4 py-2 hover:bg-green-100 transition-all duration-300 font-medium w-full justify-center"
                       target="_blank" rel="noopener noreferrer" aria-label="Descargar especificaciones en PDF">
                       <i class="fas fa-download"></i>
-                      <span>Descargar</span>
+                      <span data-translate="download-button">Descargar</span>
                     </a>
                   </div>
                 </div>
@@ -1215,13 +1401,13 @@
               <!-- Dimensiones -->
               <details open class="group border border-gray-200 rounded-lg overflow-hidden shadow-sm">
                 <summary class="flex items-center justify-between p-4 bg-gray-50 hover:bg-gray-100 cursor-pointer transition-colors">
-                  <h3 class="font-semibold text-black flex items-center">
+                  <h3 class="font-semibold text-black flex items-center" data-translate="dimensions">
                     <svg class="w-5 h-5 mr-2 text-blue-600 transition-transform group-open:rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                     </svg>
                     Dimensiones
                   </h3>
-                  <span class="text-blue-600 text-xs text-nowrap font-medium">Ver detalles</span>
+                  <span class="text-blue-600 text-xs text-nowrap font-medium" data-translate="view-details">Ver detalles</span>
                 </summary>
                 <div class="p-4 bg-white grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div class="flex items-start"><div class="flex-shrink-0 h-5 w-5 text-blue-500 mt-0.5"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg></div><div class="ml-2"><p class="text-gray-700"><span class="font-medium">Profundidad:</span> 205 mm</p></div></div>
@@ -1234,11 +1420,11 @@
               <!-- Capacidad -->
               <details class="group border border-gray-200 rounded-lg overflow-hidden shadow-sm">
                 <summary class="flex items-center justify-between p-4 bg-gray-50 hover:bg-gray-100 cursor-pointer transition-colors">
-                  <h3 class="font-semibold text-black flex items-center">
+                  <h3 class="font-semibold text-black flex items-center" data-translate="capacity">
                     <svg class="w-5 h-5 mr-2 text-blue-600 transition-transform group-open:rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                     Capacidad
                   </h3>
-                  <span class="text-blue-600 text-xs text-nowrap font-medium">Ver detalles</span>
+                  <span class="text-blue-600 text-xs text-nowrap font-medium" data-translate="view-details">Ver detalles</span>
                 </summary>
                 <div class="p-4 bg-white grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div class="flex items-start"><div class="flex-shrink-0 h-5 w-5 text-blue-500 mt-0.5"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg></div><div class="ml-2"><p class="text-gray-700"><span class="font-medium">Capacidad máxima:</span></p></div></div>
@@ -1250,11 +1436,11 @@
               <!-- Compatibilidad de adaptadores -->
               <details class="group border border-gray-200 rounded-lg overflow-hidden shadow-sm">
                 <summary class="flex items-center justify-between p-4 bg-gray-50 hover:bg-gray-100 cursor-pointer transition-colors">
-                  <h3 class="font-semibold text-black flex items-center">
+                  <h3 class="font-semibold text-black flex items-center" data-translate="adapter-compatibility">
                     <svg class="w-5 h-5 mr-2 text-blue-600 transition-transform group-open:rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                     Compatibilidad de adaptadores
                   </h3>
-                  <span class="text-blue-600 text-xs text-nowrap font-medium">Ver detalles</span>
+                  <span class="text-blue-600 text-xs text-nowrap font-medium" data-translate="view-details">Ver detalles</span>
                 </summary>
                 <div class="p-4 bg-white grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div class="flex items-start"><div class="flex-shrink-0 h-5 w-5 text-blue-500 mt-0.5"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg></div><div class="ml-2"><p class="text-gray-700">SC simplex</p></div></div>
@@ -1266,11 +1452,11 @@
               <!-- Tipo de cables soportados -->
               <details class="group border border-gray-200 rounded-lg overflow-hidden shadow-sm">
                 <summary class="flex items-center justify-between p-4 bg-gray-50 hover:bg-gray-100 cursor-pointer transition-colors">
-                  <h3 class="font-semibold text-black flex items-center">
+                  <h3 class="font-semibold text-black flex items-center" data-translate="cable-types">
                     <svg class="w-5 h-5 mr-2 text-blue-600 transition-transform group-open:rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                     Tipo de cables soportados
                   </h3>
-                  <span class="text-blue-600 text-xs text-nowrap font-medium">Ver detalles</span>
+                  <span class="text-blue-600 text-xs text-nowrap font-medium" data-translate="view-details">Ver detalles</span>
                 </summary>
                 <div class="p-4 bg-white grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div class="flex items-start"><div class="flex-shrink-0 h-5 w-5 text-blue-500 mt-0.5"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg></div><div class="ml-2"><p class="text-gray-700">Cable loose tube (tubo holgado)</p></div></div>
@@ -1283,11 +1469,11 @@
               <!-- Construcción -->
               <details class="group border border-gray-200 rounded-lg overflow-hidden shadow-sm">
                 <summary class="flex items-center justify-between p-4 bg-gray-50 hover:bg-gray-100 cursor-pointer transition-colors">
-                  <h3 class="font-semibold text-black flex items-center">
+                  <h3 class="font-semibold text-black flex items-center" data-translate="construction">
                     <svg class="w-5 h-5 mr-2 text-blue-600 transition-transform group-open:rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                     Construcción
                   </h3>
-                  <span class="text-blue-600 text-xs text-nowrap font-medium">Ver detalles</span>
+                  <span class="text-blue-600 text-xs text-nowrap font-medium" data-translate="view-details">Ver detalles</span>
                 </summary>
                 <div class="p-4 bg-white grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div class="flex items-start"><div class="flex-shrink-0 h-5 w-5 text-blue-500 mt-0.5"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg></div><div class="ml-2"><p class="text-gray-700">Material: acero</p></div></div>
@@ -1327,19 +1513,11 @@
               </details>
             </div>
           </div>
-
-          <!-- Modal para imágenes -->
-          <div id="image-modal"
-            class="fixed hidden inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4">
-            <span class="absolute top-4 right-4 text-white text-3xl cursor-pointer"
-              onclick="closeModal()">&times;</span>
-            <img id="modal-image" class="max-w-full max-h-full" src="" alt="Imagen ampliada" />
-          </div>
         </div>
 
-        <!-- SIDEBAR DE LISTA DE PRECIOS (oculto en móvil) -->
+        <!-- SIDEBAR DE LISTA DE PRECIOS (tercera columna independiente) -->
         <aside id="links-sidebar"
-          class="hidden lg:block w-full md:w-1/5 lg:w-1/6 bg-gradient-to-b from-white to-blue-50 p-4 rounded-xl shadow-lg h-[80vh] overflow-y-auto scrollbar-hide border border-blue-100">
+          class="hidden lg:block w-full lg:w-80 bg-gradient-to-b from-white to-blue-50 p-4 rounded-xl shadow-lg h-[80vh] overflow-y-auto scrollbar-hide border border-blue-100 sticky top-20">
           <div class="links-section">
             <!-- Encabezado mejorado -->
             <div class="mb-4">
@@ -1399,6 +1577,15 @@
                   class="flex items-center gap-2 px-3 py-2 text-sm text-blue-700 hover:text-blue-900 font-medium hover:bg-blue-100 rounded-lg transition-colors">
                   <i class="fas fa-tag text-blue-500 text-xs"></i>
                   <span class="font-bold">CISCO</span>
+                </a>
+              </li>
+
+              <!-- Datatronix -->
+              <li class="price-item hover:shadow-md rounded-lg transition-all duration-200" data-brand="Datatronix">
+                <a href="https://kevinnavarreteusnayo.github.io/lista-de-precios-datatronix/" target="_blank" rel="noopener noreferrer"
+                  class="flex items-center gap-2 px-3 py-2 text-sm text-blue-700 hover:text-blue-900 font-medium hover:bg-blue-100 rounded-lg transition-colors">
+                  <i class="fas fa-tag text-blue-500 text-xs"></i>
+                  <span class="font-bold">Datatronix</span>
                 </a>
               </li>
 
@@ -1513,31 +1700,30 @@
           </div>
         </aside>
 
-        <!-- Script para búsqueda en tiempo real -->
-        <script>
-          const searchInput = document.getElementById('searchPrices');
-          const pricesList = document.querySelectorAll('.price-item');
-          
-          if (searchInput) {
-            searchInput.addEventListener('keyup', function(e) {
-              const searchTerm = e.target.value.toLowerCase();
-              pricesList.forEach(item => {
-                const brand = item.getAttribute('data-brand').toLowerCase();
-                if (brand.includes(searchTerm)) {
-                  item.style.display = '';
-                } else {
-                  item.style.display = 'none';
-                }
-              });
-            });
-          }
-        </script>
       </div>
     </div>
 
-    <!-- PRODUCTOS SIMILARES A ESTE  -->
-    <section class="py-8 bg-gray-50">
-      <div class="container mx-auto px-4 max-w-6xl">
+    <!-- Script para búsqueda en tiempo real -->
+    <script>
+      const searchInput = document.getElementById('searchPrices');
+      const pricesList = document.querySelectorAll('.price-item');
+      
+      if (searchInput) {
+        searchInput.addEventListener('keyup', function(e) {
+          const searchTerm = e.target.value.toLowerCase();
+          pricesList.forEach(item => {
+            const brand = item.getAttribute('data-brand').toLowerCase();
+            if (brand.includes(searchTerm)) {
+              item.style.display = '';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
+      }
+    </script>
+    <section class="py-8 bg-gray-50 w-full">
+      <div class="container mx-auto px-4 w-full max-w-full">
         <!-- Encabezado -->
         <div class="text-center mb-8">
           <h2 class="text-2xl md:text-3xl font-bold text-white bg-[#049FD9] py-4 px-6 rounded-lg shadow-md inline-block">
@@ -1546,7 +1732,7 @@
         </div>
 
          <!-- Grid de productos -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
 
           <!-- Producto 1 -->
           <a href="poner enlace aqui"
@@ -1695,70 +1881,206 @@
               </div>
             </div>
           </a>
+
+          <!-- Producto 7 -->
+          <a href="poner enlace aqui"
+            class="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 border border-gray-200 hover:border-blue-500">
+            <div class="p-5 flex flex-col h-full">
+              <div class="flex-grow flex items-center justify-center mb-4 h-40">
+                <img src="./imagenes/img_productos/producto7.png"
+                  alt="producto7"
+                  class="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105" />
+              </div>
+              <div class="border-t pt-4">
+                <div class="flex justify-between flex-col items-center mb-2">
+                  <h3 class="text-lg font-bold text-gray-800">
+                    CONECTOR ÓPTICO SC DATATRONIX
+                  </h3>
+                </div>
+                <p class="text-sm text-gray-600 mt-2 group-hover:text-gray-800 transition-colors line-clamp-2">
+                   Conector óptico SC monomodo para fibra óptica marca DATATRONIX
+                </p>
+                <div class="text-center mt-6 text-blue-600 font-semibold">
+                  Ver Producto
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Producto 8 -->
+          <a href="poner enlace aqui"
+            class="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 border border-gray-200 hover:border-blue-500">
+            <div class="p-5 flex flex-col h-full">
+              <div class="flex-grow flex items-center justify-center mb-4 h-40">
+                <img src="./imagenes/img_productos/producto8.png"
+                  alt="producto8"
+                  class="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105" />
+              </div>
+              <div class="border-t pt-4">
+                <div class="flex justify-between flex-col items-center mb-2">
+                  <h3 class="text-lg font-bold text-gray-800">
+                    CABLE PATCH CORD SC DATATRONIX
+                  </h3>
+                </div>
+                <p class="text-sm text-gray-600 mt-2 group-hover:text-gray-800 transition-colors line-clamp-2">
+                   Cable patch cord fibra óptica SC-SC monomodo 3 metros marca DATATRONIX
+                </p>
+                <div class="text-center mt-6 text-blue-600 font-semibold">
+                  Ver Producto
+                </div>
+              </div>
+            </div>
+          </a>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- FOOTER -->
-  <footer class="bg-gradient-to-tr from-gray-50 to-white/80 py-12 px-4 sm:px-6 lg:px-8 w-full">
-    <div class="max-w-7xl mx-auto">
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 items-start">
-        <!-- Columna 1: Logo y descripción -->
-        <div class="space-y-4">
-          <img src="https://www.ds3comunicaciones.com/mikrotik/images/Logo1.jpg" alt="DS3 Comunicaciones" class="w-36 h-auto rounded-md shadow-sm" loading="lazy" />
-          <p class="text-sm text-gray-600">Proveemos soluciones de redes y comunicaciones con soporte profesional y stock disponible para entrega rápida.</p>
-
-          <div class="flex items-center gap-3 mt-2">
-            <a href="#" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://wa.me/994428965?text=Hola nesecito ayuda" class="social-btn whatsapp" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
-            <a href="mailto:netperu100@hotmail.com" class="ml-3 text-sm text-gray-700 hover:text-blue-600" aria-label="Correo">netperu100@hotmail.com</a>
-          </div>
+  <!-- FOOTER MEJORADO -->
+  <footer class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-8 px-4 sm:px-6 lg:px-8 w-full relative overflow-hidden">
+    <!-- Background pattern -->
+    <div class="absolute inset-0 opacity-5">
+      <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.4"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+    </div>
+    
+    <div class="w-full relative z-10 px-4">
+      <!-- Main content - más ancho horizontal -->
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-6">
+        
+        <!-- Columna 1: Logo -->
+        <div class="space-y-3">
+          <img src="https://www.ds3comunicaciones.com/mikrotik/images/Logo1.jpg" alt="DS3 Comunicaciones" class="w-28 h-auto rounded-lg shadow-lg" loading="lazy" />
+          <p class="text-xs text-gray-300 leading-relaxed">
+            Líderes en redes con 15+ años de experiencia.
+          </p>
         </div>
 
-        <!-- Columna 2: Links rápidos -->
+        <!-- Columna 2: Productos Principales -->
         <div>
-          <h4 class="text-lg font-semibold text-gray-800 mb-3">Enlaces útiles</h4>
-          <ul class="space-y-2 text-gray-600">
-            <li><a href="https://www.ds3comunicaciones.com/soporte.html" class="footer-link">Soporte Técnico</a></li>
-            <li><a href="https://www.ds3comunicaciones.com/cisco/index.html" class="footer-link">Cisco</a></li>
-            <li><a href="https://www.ds3comunicaciones.com/ubiquiti/index.html" class="footer-link">Ubiquiti</a></li>
-            <li><a href="https://www.ds3comunicaciones.com/trendnet/MediaConvert.html" class="footer-link">Media Converter</a></li>
-            <li><a href="https://www.ds3comunicaciones.com/l-com/AccessPoint.html" class="footer-link">Access Point</a></li>
+          <h4 class="text-sm font-bold text-white mb-2 flex items-center gap-1">
+            <i class="fas fa-box text-blue-400 text-xs"></i>
+            Productos
+          </h4>
+          <ul class="space-y-1 text-gray-300 text-xs">
+            <li><a href="https://www.ds3comunicaciones.com/cisco/index.html" class="footer-link-modern"><i class="fas fa-chevron-right text-xs mr-1"></i>Cisco</a></li>
+            <li><a href="https://www.ds3comunicaciones.com/ubiquiti/index.html" class="footer-link-modern"><i class="fas fa-chevron-right text-xs mr-1"></i>Ubiquiti</a></li>
+            <li><a href="https://www.ds3comunicaciones.com/mikrotik/index.html" class="footer-link-modern"><i class="fas fa-chevron-right text-xs mr-1"></i>Mikrotik</a></li>
+            <li><a href="https://www.ds3comunicaciones.com/trendnet/MediaConvert.html" class="footer-link-modern"><i class="fas fa-chevron-right text-xs mr-1"></i>Media Converters</a></li>
           </ul>
         </div>
 
-        <!-- Columna 3: Newsletter / CTA -->
+        <!-- Columna 3: Más Productos -->
         <div>
-          <h4 class="text-lg font-semibold text-gray-800 mb-3">Recibe ofertas</h4>
-          <p class="text-sm text-gray-600 mb-3">Suscríbete para recibir descuentos, novedades y soporte exclusivo.</p>
-          <form action="https://www.ds3comunicaciones.com/subscribe" method="post" class="flex gap-2">
-            <input type="email" name="email" placeholder="Tu correo" required class="w-full px-3 py-2 rounded-md border border-gray-200 focus:ring-2 focus:ring-blue-200" />
-            <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition">Suscribir</button>
-          </form>
-
-          <div class="mt-4 text-sm text-gray-500">Protegemos tu privacidad. Sin spam.</div>
+          <h4 class="text-sm font-bold text-white mb-2 flex items-center gap-1">
+            <i class="fas fa-network-wired text-blue-400 text-xs"></i>
+            Equipamiento
+          </h4>
+          <ul class="space-y-1 text-gray-300 text-xs">
+            <li><a href="#" class="footer-link-modern"><i class="fas fa-chevron-right text-xs mr-1"></i>Switches</a></li>
+            <li><a href="#" class="footer-link-modern"><i class="fas fa-chevron-right text-xs mr-1"></i>Routers</a></li>
+            <li><a href="#" class="footer-link-modern"><i class="fas fa-chevron-right text-xs mr-1"></i>Access Points</a></li>
+            <li><a href="#" class="footer-link-modern"><i class="fas fa-chevron-right text-xs mr-1"></i>Fibra Óptica</a></li>
+          </ul>
         </div>
 
-        <!-- Columna 4: Contacto y horario -->
+        <!-- Columna 4: Servicios -->
         <div>
-          <h4 class="text-lg font-semibold text-gray-800 mb-3">Contacto</h4>
-          <div class="space-y-3 text-gray-700">
-            <a href="https://wa.me/994428965?text=Hola nesecito ayuda" class="flex items-center gap-2 footer-contact" target="_blank" rel="noopener noreferrer"><i class="fas fa-phone-alt"></i> 994 428 965</a>
-            <a href="https://wa.me/996533223?text=Hola nesecito ayuda" class="flex items-center gap-2 footer-contact" target="_blank" rel="noopener noreferrer"><i class="fas fa-phone-alt"></i> 996 533 223</a>
-            <div class="pt-2">
-              <h5 class="font-medium">Horario</h5>
-              <p class="text-sm text-gray-600">Lun-Vie 9:00–18:00 · Sáb 9:00–13:00</p>
+          <h4 class="text-sm font-bold text-white mb-2 flex items-center gap-1">
+            <i class="fas fa-cog text-blue-400 text-xs"></i>
+            Servicios
+          </h4>
+          <ul class="space-y-1 text-gray-300 text-xs">
+            <li><a href="https://www.ds3comunicaciones.com/soporte.html" class="footer-link-modern"><i class="fas fa-chevron-right text-xs mr-1"></i>Soporte Técnico</a></li>
+            <li><a href="#" class="footer-link-modern"><i class="fas fa-chevron-right text-xs mr-1"></i>Instalación</a></li>
+            <li><a href="#" class="footer-link-modern"><i class="fas fa-chevron-right text-xs mr-1"></i>Consultoría</a></li>
+            <li><a href="#" class="footer-link-modern"><i class="fas fa-chevron-right text-xs mr-1"></i>Mantenimiento</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 5: Contacto -->
+        <div>
+          <h4 class="text-sm font-bold text-white mb-2 flex items-center gap-1">
+            <i class="fas fa-phone-alt text-blue-400 text-xs"></i>
+            Contacto
+          </h4>
+          <div class="space-y-1.5 text-xs">
+            <div class="flex items-center gap-1.5">
+              <i class="fas fa-phone text-green-400" style="font-size: 10px"></i>
+              <a href="https://wa.me/994428965?text=Hola necesito ayuda" class="footer-contact-modern">994 428 965</a>
             </div>
+            <div class="flex items-center gap-1.5">
+              <i class="fas fa-phone text-blue-400" style="font-size: 10px"></i>
+              <a href="https://wa.me/996533223?text=Hola necesito ayuda" class="footer-contact-modern">996 533 223</a>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <i class="fas fa-envelope text-orange-400" style="font-size: 10px"></i>
+              <a href="mailto:netperu100@hotmail.com" class="footer-contact-modern">Email</a>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <i class="fas fa-clock text-purple-400" style="font-size: 10px"></i>
+              <span class="text-gray-400">Lun-Vie 9:00-18:00</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Columna 6: Newsletter y Redes -->
+        <div>
+          <h4 class="text-sm font-bold text-white mb-2 flex items-center gap-1">
+            <i class="fas fa-envelope text-blue-400 text-xs"></i>
+            Conectados
+          </h4>
+          <div class="bg-slate-800/50 rounded-lg p-2.5 border border-slate-700 mb-3">
+            <p class="text-xs text-gray-300 mb-2">
+              Recibe ofertas exclusivas.
+            </p>
+            <form action="https://www.ds3comunicaciones.com/subscribe" method="post" class="space-y-1.5">
+              <input 
+                type="email" 
+                name="email" 
+                placeholder="tu@email.com" 
+                required 
+                class="w-full px-2 py-1.5 bg-slate-900/50 border border-slate-600 rounded text-white placeholder-gray-400 text-xs focus:outline-none focus:ring-1 focus:ring-blue-500" 
+              />
+              <button type="submit" class="w-full px-2 py-1.5 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded hover:from-blue-700 hover:to-blue-800 transition text-xs font-semibold">
+                Suscribir
+              </button>
+            </form>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <a href="#" class="social-btn-modern" style="width: 28px; height: 28px; font-size: 0.7rem;" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://wa.me/994428965?text=Hola necesito ayuda" class="social-btn-modern whatsapp" style="width: 28px; height: 28px; font-size: 0.7rem;" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="#" class="social-btn-modern" style="width: 28px; height: 28px; font-size: 0.7rem;" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="social-btn-modern" style="width: 28px; height: 28px; font-size: 0.7rem;" aria-label="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
           </div>
         </div>
       </div>
 
-      <div class="border-t border-gray-200 mt-8 pt-6 flex flex-col-reverse sm:flex-row items-center justify-between gap-3">
-        <p class="text-sm text-gray-500">&copy; <span id="currentYear">2023</span> DS3 Comunicaciones. Todos los derechos reservados.</p>
-        <div class="flex items-center gap-3">
-          <a href="https://www.ds3comunicaciones.com/politica-privacidad" class="text-sm footer-link">Política de privacidad</a>
-          <a href="#" id="back-to-top" class="text-sm text-blue-600 hover:underline">Volver arriba</a>
+      <!-- Divider -->
+      <div class="border-t border-slate-700 mb-4"></div>
+
+      <!-- Bottom section compacto -->
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="text-center md:text-left">
+          <p class="text-xs text-gray-400">
+            &copy; <span id="currentYear">2023</span> DS3 Comunicaciones. Todos los derechos reservados.
+          </p>
+        </div>
+        
+        <div class="flex items-center gap-4 text-xs">
+          <a href="https://www.ds3comunicaciones.com/politica-privacidad" class="text-gray-400 hover:text-white transition-colors">
+            Política de Privacidad
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white transition-colors">
+            Términos
+          </a>
         </div>
       </div>
     </div>
@@ -1766,6 +2088,7 @@
 
   <!-- CARGA DE JAVASCRIPT  SECUNDARIA-->
   <script src="./js/change_tabs.js"></script>
+  <script src="./js/translation.js"></script>
 
   <!-- Inline JS implementing functionality for search overlay, dark mode and enhancements (kept inside index.html) -->
   <script>
@@ -1937,6 +2260,7 @@
       }
     })();
   </script>
+  <script src="js/translate-currency.js"></script>
 </body>
 
 </html>

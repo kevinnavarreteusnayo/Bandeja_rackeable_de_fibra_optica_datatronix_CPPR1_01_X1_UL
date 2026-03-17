@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
         "icons/brands/andrew.jpg",
         "icons/brands/BELDEN.jpg",
         "icons/brands/cisco.gif",
+        "icons/brands/datatronix.png",
         "icons/brands/D-Link.jpg",
         "icons/brands/Dahua.jpg",
         "icons/brands/dixon.jpg",

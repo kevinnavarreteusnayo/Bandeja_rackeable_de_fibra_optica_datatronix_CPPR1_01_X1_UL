@@ -104,20 +104,37 @@ function initializeMobileMenu() {
 
     if (!mobileMenuButton || !mobileMenu) return;
 
-    mobileMenuButton.addEventListener('click', () => {
+    // Función para abrir el menú
+    function openMobileMenu() {
         mobileMenu.classList.remove('-translate-x-full');
         mobileMenu.classList.remove('hidden');
         if (menuOverlay) menuOverlay.classList.remove('hidden');
         document.body.style.overflow = 'hidden';
         mobileMenuButton.setAttribute('aria-expanded', 'true');
         
-        // Cambiar ícono
-        const icon = mobileMenuButton.querySelector('i');
-        if (icon) {
-            icon.classList.remove('fa-bars');
-            icon.classList.add('fa-times');
+        // Cambiar hamburguesa a X
+        const hamburgerLines = mobileMenuButton.querySelector('.hamburger-lines');
+        if (hamburgerLines) {
+            hamburgerLines.classList.add('active');
         }
-    });
+    }
+
+    // Función para cerrar el menú
+    function closeMobileMenu() {
+        mobileMenu.classList.add('-translate-x-full');
+        if (menuOverlay) menuOverlay.classList.add('hidden');
+        document.body.style.overflow = '';
+        
+        // Cambiar X a hamburguesa
+        const hamburgerLines = mobileMenuButton.querySelector('.hamburger-lines');
+        if (hamburgerLines) {
+            hamburgerLines.classList.remove('active');
+        }
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+    }
+
+    // Event listeners
+    mobileMenuButton.addEventListener('click', openMobileMenu);
 
     if (closeMenuButton) {
         closeMenuButton.addEventListener('click', closeMobileMenu);
@@ -127,19 +144,12 @@ function initializeMobileMenu() {
         menuOverlay.addEventListener('click', closeMobileMenu);
     }
 
-    function closeMobileMenu() {
-        mobileMenu.classList.add('-translate-x-full');
-        if (menuOverlay) menuOverlay.classList.add('hidden');
-        document.body.style.overflow = '';
-        
-        // Cambiar ícono
-        const icon = mobileMenuButton.querySelector('i');
-        if (icon) {
-            icon.classList.remove('fa-times');
-            icon.classList.add('fa-bars');
+    // Cerrar menú con tecla Escape
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && !mobileMenu.classList.contains('-translate-x-full')) {
+            closeMobileMenu();
         }
-        mobileMenuButton.setAttribute('aria-expanded', 'false');
-    }
+    });
 }
 
 function initializeSearchModal() {
