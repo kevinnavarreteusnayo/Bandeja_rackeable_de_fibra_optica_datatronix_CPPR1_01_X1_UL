@@ -16,14 +16,14 @@
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- css  -->
-  <link rel="stylesheet" href="./css/style.css" />
-  <link rel="stylesheet" href="./css/hamburger.css" />
-  <link rel="stylesheet" href="./css/carousel.css" />
+  <link rel="stylesheet" href="css/style.css?v=20240317" />
+  <link rel="stylesheet" href="./css/hamburger.css?v=20240317" />
+  <link rel="stylesheet" href="./css/carousel.css?v=20240317" />
   <!-- carga del navbar -->
-  <script src="./js/nav.js"></script>
+  <script src="./js/nav.js?v=20240317"></script>
   <!-- Scripts de interactividad -->
-  <script src="./js/main.js" defer></script>
-  <script src="./js/carousel.js" defer></script>
+  <script src="./js/main.js?v=20240317" defer></script>
+  <script src="./js/carousel.js?v=20240317" defer></script>
 
   <!-- titulo de la pagina -->
   <title data-translate="breadcrumb-product-title">
@@ -323,7 +323,7 @@
     /* Target específico de la tarjeta de precio / compra:
        le añadimos un ID para poder aplicar un fondo oscuro adecuado. */
     #price-panel {
-      /* valor por defecto luz */
+      background: transparent; /* valor por defecto luz */
     }
     html.dark #price-panel {
       background: linear-gradient(90deg, rgba(6,18,28,0.6), rgba(10,24,34,0.65)) !important;
@@ -432,6 +432,18 @@
     html.dark .social-btn-modern.whatsapp:hover {
       background: #25D366 !important;
       border-color: #25D366 !important;
+    }
+
+    /* Clase para iconos pequeños del footer */
+    .footer-icon-small {
+      font-size: 10px;
+    }
+    
+    /* Clase para botones sociales pequeños */
+    .social-btn-small {
+      width: 24px;
+      height: 24px;
+      font-size: 0.6rem;
     }
 
     /* Fin estilos */
@@ -2112,19 +2124,19 @@
           </h4>
           <div class="space-y-0.5 text-xs">
             <div class="flex items-center gap-1.5">
-              <i class="fas fa-phone text-green-400" style="font-size: 10px;"></i>
+              <i class="fas fa-phone text-green-400 footer-icon-small"></i>
               <a href="https://wa.me/994428965?text=Hola necesito ayuda" class="footer-contact-modern">994 428 965</a>
             </div>
             <div class="flex items-center gap-1.5">
-              <i class="fas fa-phone text-blue-400" style="font-size: 10px;"></i>
+              <i class="fas fa-phone text-blue-400 footer-icon-small"></i>
               <a href="https://wa.me/996533223?text=Hola necesito ayuda" class="footer-contact-modern">996 533 223</a>
             </div>
             <div class="flex items-center gap-1.5">
-              <i class="fas fa-envelope text-orange-400" style="font-size: 10px;"></i>
+              <i class="fas fa-envelope text-orange-400 footer-icon-small"></i>
               <a href="mailto:netperu100@hotmail.com" class="footer-contact-modern">Email</a>
             </div>
             <div class="flex items-center gap-1.5">
-              <i class="fas fa-clock text-purple-400" style="font-size: 10px;"></i>
+              <i class="fas fa-clock text-purple-400 footer-icon-small"></i>
               <span class="text-gray-400">Lun-Vie 9:00-18:00</span>
             </div>
           </div>
@@ -2154,16 +2166,16 @@
             </form>
           </div>
           <div class="flex items-center gap-1">
-            <a href="#" class="social-btn-modern" style="width: 24px; height: 24px; font-size: 0.6rem;" aria-label="Facebook">
+            <a href="#" class="social-btn-modern social-btn-small" aria-label="Facebook">
               <i class="fab fa-facebook-f"></i>
             </a>
-            <a href="https://wa.me/994428965?text=Hola necesito ayuda" class="social-btn-modern whatsapp" style="width: 24px; height: 24px; font-size: 0.6rem;" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/994428965?text=Hola necesito ayuda" class="social-btn-modern whatsapp social-btn-small" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
               <i class="fab fa-whatsapp"></i>
             </a>
-            <a href="#" class="social-btn-modern" style="width: 24px; height: 24px; font-size: 0.6rem;" aria-label="LinkedIn">
+            <a href="#" class="social-btn-modern social-btn-small" aria-label="LinkedIn">
               <i class="fab fa-linkedin-in"></i>
             </a>
-            <a href="#" class="social-btn-modern" style="width: 24px; height: 24px; font-size: 0.6rem;" aria-label="YouTube">
+            <a href="#" class="social-btn-modern social-btn-small" aria-label="YouTube">
               <i class="fab fa-youtube"></i>
             </a>
           </div>
