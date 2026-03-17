@@ -1219,11 +1219,11 @@
             <div id="information-section" class="flex flex-col gap-8">
               <!-- Título y descripción centrada -->
               <div class="text-center mb-4">
-                <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4 leading-tight" data-translate="main-title">
+                <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-4 leading-tight" data-translate="main-title">
                   Bandeja para Fibra
                 </h1>
                 
-                <p class="text-gray-600 text-base md:text-lg mb-6 max-w-3xl mx-auto" data-translate="main-description">
+                <p class="text-gray-600 text-sm sm:text-base md:text-lg mb-6 max-w-3xl mx-auto" data-translate="main-description">
                   Descripción técnica: Bandeja rackeable de fibra optica — Datatronix — Código CPPR1-01-X1-UL.
                 </p>
               </div>
@@ -1242,20 +1242,20 @@
 
                     <!-- Contenedor de imagen -->
                     <div class="relative bg-white rounded-xl shadow-lg overflow-hidden border-2 border-gray-200 hover:border-blue-400 transition-colors duration-300">
-                      <div class="w-full h-64 sm:h-80 md:h-96 lg:h-[450px] flex items-center justify-center bg-white relative group">
+                      <div class="w-full h-48 sm:h-64 md:h-80 lg:h-96 xl:h-[450px] flex items-center justify-center bg-white relative group">
                                                   <img id="img_main"
                                                   src="./imagenes/caja.png"
                                                   alt="Cable UTP AMP Categoria 6" 
                                                   class="max-h-full max-w-full object-contain cursor-pointer transition-all duration-300 group-hover:scale-110 drop-shadow-lg"
                                                   onclick="viewImage(this.src)" data-translate-alt="main-image-alt" />                        
                         <!-- Badge de zoom -->
-                        <div class="absolute top-3 right-3 bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center gap-1 shadow-lg">
+                        <div class="absolute top-2 sm:top-3 right-2 sm:right-3 bg-blue-600 text-white px-2 sm:px-3 py-1 rounded-full text-xs font-semibold flex items-center gap-1 shadow-lg">
                           <i class="fas fa-search-plus"></i>
                           <span class="hidden sm:inline" data-translate="zoom-badge">Zoom</span>
                         </div>
 
                         <!-- Indicador de vista -->
-                        <div class="absolute bottom-3 left-3 bg-black/60 text-white px-3 py-1 rounded-lg text-xs font-medium">
+                        <div class="absolute bottom-2 sm:bottom-3 left-2 sm:left-3 bg-black/60 text-white px-2 sm:px-3 py-1 rounded-lg text-xs font-medium">
                           <span id="current-view" data-translate="product-view">Vista del producto</span>
                         </div>
                       </div>
@@ -1264,32 +1264,32 @@
 
 
                     <!-- Información de imagen -->
-                    <div class="mt-4 flex flex-wrap gap-3 justify-center">
-                      <div class="flex items-center gap-2 px-3 py-2 bg-blue-50 rounded-lg border border-blue-200">
-                        <i class="fas fa-camera text-blue-600"></i>
-                        <span class="text-xs text-gray-700"><strong>3</strong> <span data-translate="views-count">vistas</span></span>
+                    <div class="mt-3 sm:mt-4 flex flex-wrap gap-2 sm:gap-3 justify-center">
+                      <div class="flex items-center gap-1 sm:gap-2 px-2 sm:px-3 py-1 sm:py-2 bg-blue-50 rounded-lg border border-blue-200">
+                        <i class="fas fa-camera text-blue-600 text-xs sm:text-sm"></i>
+                        <span class="text-xs sm:text-sm text-gray-700"><strong>3</strong> <span data-translate="views-count">vistas</span></span>
                       </div>
-                      <div class="flex items-center gap-2 px-3 py-2 bg-green-50 rounded-lg border border-green-200">
-                        <i class="fas fa-check-circle text-green-600"></i>
-                        <span class="text-xs text-gray-700" data-translate="high-resolution">Alta resolución</span>
+                      <div class="flex items-center gap-1 sm:gap-2 px-2 sm:px-3 py-1 sm:py-2 bg-green-50 rounded-lg border border-green-200">
+                        <i class="fas fa-check-circle text-green-600 text-xs sm:text-sm"></i>
+                        <span class="text-xs sm:text-sm text-gray-700" data-translate="high-resolution">Alta resolución</span>
                       </div>
-                      <div class="flex items-center gap-2 px-3 py-2 bg-orange-50 rounded-lg border border-orange-200">
-                        <i class="fas fa-expand text-orange-600"></i>
-                        <span class="text-xs text-gray-700" data-translate="zoom-available">Zoom disponible</span>
+                      <div class="flex items-center gap-1 sm:gap-2 px-2 sm:px-3 py-1 sm:py-2 bg-orange-50 rounded-lg border border-orange-200">
+                        <i class="fas fa-expand text-orange-600 text-xs sm:text-sm"></i>
+                        <span class="text-xs sm:text-sm text-gray-700" data-translate="zoom-available">Zoom disponible</span>
                       </div>
                     </div>
 
                     <!-- Precio y botón de compra - Debajo de imágenes -->
-                    <div id="price-panel" class="mt-8 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg p-6 border-2 border-blue-200">
-                      <div class="flex items-baseline gap-2 mb-4 price-container">
-                        <span class="text-4xl font-bold text-blue-600 price-amount" data-price="65.00">65.00</span>
+                    <div id="price-panel" class="mt-6 sm:mt-8 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg p-4 sm:p-6 border-2 border-blue-200">
+                      <div class="flex items-baseline gap-2 mb-3 sm:mb-4 price-container">
+                        <span class="text-3xl sm:text-4xl font-bold text-blue-600 price-amount" data-price="65.00">65.00</span>
                         <span class="text-sm text-gray-600 price-currency">USD</span>
                       </div>
-                      <div class="badge badge-success mb-4">
+                      <div class="badge badge-success mb-3 sm:mb-4">
                         <i class="fas fa-check-circle mr-2"></i><span data-translate="in-stock">En stock disponible</span>
                       </div>
                       <a href="https://www.ds3comunicaciones.com/pedido.html"
-                        class="w-full inline-flex items-center justify-center gap-2 bg-blue-600 text-white font-bold rounded-lg px-6 py-3 hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+                        class="w-full inline-flex items-center justify-center gap-2 bg-blue-600 text-white font-bold rounded-lg px-4 sm:px-6 py-2 sm:py-3 hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl text-sm sm:text-base"
                         target="_blank" rel="noopener noreferrer">
                         <i class="fas fa-shopping-cart"></i>
                         <span data-translate="buy-now">Comprar ahora</span>
@@ -1303,43 +1303,43 @@
             
             <!-- Sección de galería de imágenes (oculta inicialmente) -->
             <div id="images-section" class="hidden">
-              <h2 class="text-2xl font-bold text-gray-800 mb-6" data-translate="gallery-title">Galería de imágenes</h2>
-              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <h2 class="text-xl sm:text-2xl font-bold text-gray-800 mb-4 sm:mb-6" data-translate="gallery-title">Galería de imágenes</h2>
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                 <div class="bg-gray-100 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300">
                   <img src="./imagenes/bandeja.png"
                     alt="Vista frontal"
-                    class="w-full h-64 object-contain p-4 cursor-pointer hover:scale-105 transition-transform duration-300"
+                    class="w-full h-48 sm:h-64 object-contain p-2 sm:p-4 cursor-pointer hover:scale-105 transition-transform duration-300"
                     onclick="viewImage(this.src)" data-translate-alt="img-front" />
                 </div>
                 <div class="bg-gray-100 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300">
                   <img src="./imagenes/caja.png"
                     alt="Vista frontal ampliada"
-                    class="w-full h-64 object-contain p-4 cursor-pointer hover:scale-105 transition-transform duration-300"
+                    class="w-full h-48 sm:h-64 object-contain p-2 sm:p-4 cursor-pointer hover:scale-105 transition-transform duration-300"
                     onclick="viewImage(this.src)" data-translate-alt="img-front-large" />
                 </div>
                 <div class="bg-gray-100 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300">
                   <img src="./imagenes/accesorios.png"
                     alt="Vista posterior"
-                    class="w-full h-64 object-contain p-4 cursor-pointer hover:scale-105 transition-transform duration-300"
+                    class="w-full h-48 sm:h-64 object-contain p-2 sm:p-4 cursor-pointer hover:scale-105 transition-transform duration-300"
                     onclick="viewImage(this.src)" data-translate-alt="img-back" />
                 </div>
               </div>
             </div>
 
             <!-- Controles de pestañas mejorados -->
-            <div class="flex justify-center gap-4 mt-8 mb-8">
+            <div class="flex justify-center gap-2 sm:gap-4 mt-6 sm:mt-8 mb-6 sm:mb-8">
 
               <div class="inline-flex rounded-md shadow-sm">
                 <button id="product-tab"
-                  class="px-6 py-2 text-xs md:text-sm font-medium rounded-l-lg bg-blue-600 text-white focus:z-10 focus:outline-none" data-translate="tab-product">
+                  class="px-3 sm:px-6 py-2 text-xs sm:text-sm font-medium rounded-l-lg bg-blue-600 text-white focus:z-10 focus:outline-none" data-translate="tab-product">
                   Producto
                 </button>
                 <button id="images-tab"
-                  class="px-6 py-2 text-xs md:text-sm font-medium bg-gray-100 text-gray-700 focus:z-10 focus:outline-none" data-translate="tab-images">
+                  class="px-3 sm:px-6 py-2 text-xs sm:text-sm font-medium bg-gray-100 text-gray-700 focus:z-10 focus:outline-none" data-translate="tab-images">
                   Imágenes
                 </button>
                 <button id="downloads-tab"
-                  class="px-6 py-2 text-xs md:text-sm font-medium rounded-r-lg bg-gray-100 text-gray-700 focus:z-10 focus:outline-none" data-translate="tab-downloads">
+                  class="px-3 sm:px-6 py-2 text-xs sm:text-sm font-medium rounded-r-lg bg-gray-100 text-gray-700 focus:z-10 focus:outline-none" data-translate="tab-downloads">
                   Descargas
                 </button>
               </div>
@@ -1347,16 +1347,16 @@
 
             <!-- Sección de descargas (oculta inicialmente) -->
             <div id="downloads-section" class="hidden">
-              <h2 class="text-2xl font-bold text-gray-800 mb-6" data-translate="downloads-title">Descargas disponibles</h2>
-              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <h2 class="text-xl sm:text-2xl font-bold text-gray-800 mb-4 sm:mb-6" data-translate="downloads-title">Descargas disponibles</h2>
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
                 <!-- Ficha técnica PDF -->
                 <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 border-l-4 border-red-500">
-                  <div class="p-6 text-center">
-                    <i class="fas fa-file-pdf text-red-500 text-4xl mb-4"></i>
-                    <h3 class="font-bold text-gray-800 mb-2" data-translate="download-datasheet">Ficha Técnica</h3>
-                    <p class="text-gray-600 text-sm mb-4" data-translate="download-datasheet-desc">Especificaciones técnicas detalladas del producto</p>
+                  <div class="p-4 sm:p-6 text-center">
+                    <i class="fas fa-file-pdf text-red-500 text-3xl sm:text-4xl mb-3 sm:mb-4"></i>
+                    <h3 class="font-bold text-gray-800 mb-2 text-sm sm:text-base" data-translate="download-datasheet">Ficha Técnica</h3>
+                    <p class="text-gray-600 text-xs sm:text-sm mb-3 sm:mb-4" data-translate="download-datasheet-desc">Especificaciones técnicas detalladas del producto</p>
                     <a href="https://1drv.ms/b/c/aa02e2bbc278ad2b/IQB9hLRFM_kVQaVU5FBDrdWXAWEW6ovQhKvhlek82lEr2fs?e=wP54Zw"
-                      class="inline-flex items-center gap-2 bg-red-50 text-red-600 border border-red-200 rounded-lg px-4 py-2 hover:bg-red-100 transition-all duration-300 font-medium w-full justify-center"
+                      class="inline-flex items-center gap-2 bg-red-50 text-red-600 border border-red-200 rounded-lg px-3 sm:px-4 py-2 hover:bg-red-100 transition-all duration-300 font-medium w-full justify-center text-xs sm:text-sm"
                       target="_blank" rel="noopener noreferrer" aria-label="Descargar ficha técnica en PDF">
                       <i class="fas fa-download"></i>
                       <span data-translate="download-button">Descargar</span>
@@ -1703,6 +1703,104 @@
       </div>
     </div>
 
+    <!-- Sidebar móvil de lista de precios (visible solo en móvil) -->
+    <div class="lg:hidden px-4 md:px-6 py-6">
+      <div class="bg-white rounded-xl shadow-lg p-4">
+        <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center gap-2 border-b-2 border-blue-600 pb-3">
+          <i class="fas fa-file-invoice-dollar text-blue-600"></i>
+          Listas de Precios
+        </h3>
+        
+        <!-- Barra de búsqueda móvil -->
+        <div class="mb-4">
+          <input type="text" id="searchPricesMobile" placeholder="Buscar marca..."
+            class="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white">
+        </div>
+
+        <!-- Lista de precios móvil -->
+        <ul id="pricesListMobile" class="grid grid-cols-1 gap-2 max-h-60 overflow-y-auto">
+          <!-- AMP -->
+          <li class="price-item-mobile hover:shadow-md rounded-lg transition-all duration-200" data-brand="AMP">
+            <a href="https://www.ds3comunicaciones.com/AMP/precios_amp.html" target="_blank" rel="noopener noreferrer"
+              class="flex items-center gap-2 px-3 py-2 text-sm text-blue-700 hover:text-blue-900 font-medium hover:bg-blue-100 rounded-lg transition-colors">
+              <i class="fas fa-tag text-blue-500 text-xs"></i>
+              <span>AMP</span>
+            </a>
+          </li>
+
+          <!-- Amphenol -->
+          <li class="price-item-mobile hover:shadow-md rounded-lg transition-all duration-200" data-brand="Amphenol">
+            <a href="https://www.ds3comunicaciones.com/amphenol/precios_amphenol.html" target="_blank" rel="noopener noreferrer"
+              class="flex items-center gap-2 px-3 py-2 text-sm text-blue-700 hover:text-blue-900 font-medium hover:bg-blue-100 rounded-lg transition-colors">
+              <i class="fas fa-tag text-blue-500 text-xs"></i>
+              <span>Amphenol</span>
+            </a>
+          </li>
+
+          <!-- CISCO -->
+          <li class="price-item-mobile hover:shadow-md rounded-lg transition-all duration-200" data-brand="CISCO">
+            <a href="https://www.ds3comunicaciones.com/cisco/precios_cisco.html" target="_blank" rel="noopener noreferrer"
+              class="flex items-center gap-2 px-3 py-2 text-sm text-blue-700 hover:text-blue-900 font-medium hover:bg-blue-100 rounded-lg transition-colors">
+              <i class="fas fa-tag text-blue-500 text-xs"></i>
+              <span class="font-bold">CISCO</span>
+            </a>
+          </li>
+
+          <!-- Datatronix -->
+          <li class="price-item-mobile hover:shadow-md rounded-lg transition-all duration-200" data-brand="Datatronix">
+            <a href="https://kevinnavarreteusnayo.github.io/lista-de-precios-datatronix/" target="_blank" rel="noopener noreferrer"
+              class="flex items-center gap-2 px-3 py-2 text-sm text-blue-700 hover:text-blue-900 font-medium hover:bg-blue-100 rounded-lg transition-colors">
+              <i class="fas fa-tag text-blue-500 text-xs"></i>
+              <span class="font-bold">Datatronix</span>
+            </a>
+          </li>
+
+          <!-- Mikrotik -->
+          <li class="price-item-mobile hover:shadow-md rounded-lg transition-all duration-200" data-brand="Mikrotik">
+            <a href="https://www.ds3comunicaciones.com/mikrotik/precios_mikrotik.html" target="_blank" rel="noopener noreferrer"
+              class="flex items-center gap-2 px-3 py-2 text-sm text-blue-700 hover:text-blue-900 font-medium hover:bg-blue-100 rounded-lg transition-colors">
+              <i class="fas fa-tag text-blue-500 text-xs"></i>
+              <span>Mikrotik</span>
+            </a>
+          </li>
+
+          <!-- Ubiquiti -->
+          <li class="price-item-mobile hover:shadow-md rounded-lg transition-all duration-200" data-brand="Ubiquiti">
+            <a href="https://www.ds3comunicaciones.com/ubiquiti/precios_ubiquiti.html" target="_blank" rel="noopener noreferrer"
+              class="flex items-center gap-2 px-3 py-2 text-sm text-blue-700 hover:text-blue-900 font-medium hover:bg-blue-100 rounded-lg transition-colors">
+              <i class="fas fa-tag text-blue-500 text-xs"></i>
+              <span>Ubiquiti</span>
+            </a>
+          </li>
+        </ul>
+        
+        <!-- Botón para ver más marcas móvil -->
+        <button class="mt-4 w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium">
+          <i class="fas fa-list mr-2"></i>Ver todas las marcas
+        </button>
+      </div>
+    </div>
+
+    <!-- Script para búsqueda móvil -->
+    <script>
+      const searchInputMobile = document.getElementById('searchPricesMobile');
+      const pricesListMobile = document.querySelectorAll('.price-item-mobile');
+      
+      if (searchInputMobile) {
+        searchInputMobile.addEventListener('keyup', function(e) {
+          const searchTerm = e.target.value.toLowerCase();
+          pricesListMobile.forEach(item => {
+            const brand = item.getAttribute('data-brand').toLowerCase();
+            if (brand.includes(searchTerm)) {
+              item.style.display = '';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
+      }
+    </script>
+
     <!-- Script para búsqueda en tiempo real -->
     <script>
       const searchInput = document.getElementById('searchPrices');
@@ -1732,7 +1830,7 @@
         </div>
 
          <!-- Grid de productos -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 w-full">
 
           <!-- Producto 1 -->
           <a href="poner enlace aqui"
@@ -1749,7 +1847,7 @@
                     TAPAS CIEGAS PLÁSTICAS SC SIMPLEX DATATRONIX
                   </h3>
                 </div>
-                <p class="text-sm text-gray-600 mt-2 group-hover:text-gray-800 transition-colors line-clamp-2">
+                <p class="text-sm text-gray-600 mt-2 group-hover:text-gray-800 transition-colors line-clamp-3">
                    tapas ciegas plásticas para adaptadores SC simplex - LC dubplex marca DATATRONIX
                 </p>
                 <div class="text-center mt-6 text-blue-600 font-semibold">
@@ -1773,7 +1871,7 @@
                     TAPAS CIEGAS SC DUPLEX DATATRONIX
                   </h3>
                 </div>
-                <p class="text-sm text-gray-600 mt-2 group-hover:text-gray-800 transition-colors line-clamp-2">
+                <p class="text-sm text-gray-600 mt-2 group-hover:text-gray-800 transition-colors line-clamp-3">
                    Tapas ciegas SC duplex plásticas para adaptadores SC duplex marca DATATRONIX
                 </p>
                 <div class="text-center mt-6 text-blue-600 font-semibold">
@@ -1798,7 +1896,7 @@
                     SPOOL ORDENAMIENTO DE FIBRA DATATRONIX
                   </h3>
                 </div>
-                <p class="text-sm text-gray-600 mt-2 group-hover:text-gray-800 transition-colors line-clamp-2">
+                <p class="text-sm text-gray-600 mt-2 group-hover:text-gray-800 transition-colors line-clamp-3">
                    Spool rojo de ordenamiento de fibra óptica marca DATATRONIX
                 </p>
                 <div class="text-center mt-6 text-blue-600 font-semibold">
@@ -1823,7 +1921,7 @@
                     BANDEJA DE FUSIÓN DATATRONIX
                   </h3>
                 </div>
-                <p class="text-sm text-gray-600 mt-2 group-hover:text-gray-800 transition-colors line-clamp-2">
+                <p class="text-sm text-gray-600 mt-2 group-hover:text-gray-800 transition-colors line-clamp-3">
                    Bandeja de fusión de fibra óptica roja para bandeja DATATRONIX
                 </p>
                 <div class="text-center mt-6 text-blue-600 font-semibold">
@@ -1848,7 +1946,7 @@
                   DROP FTTH 1 HILO DATATRONIX
                   </h3>
                 </div>
-                <p class="text-sm text-gray-600 mt-2 group-hover:text-gray-800 transition-colors line-clamp-2">
+                <p class="text-sm text-gray-600 mt-2 group-hover:text-gray-800 transition-colors line-clamp-3">
                    Bobina de 2,000 metros de cable drop Monomodo FTTH de 1 hilo 9/125 um marca DATATRONIX
                 </p>
                 <div class="text-center mt-6 text-blue-600 font-semibold">
@@ -1872,7 +1970,7 @@
                   DROP FTTH 2 HILOS DATATRONIX
                   </h3>
                 </div>
-                <p class="text-sm text-gray-600 mt-2 group-hover:text-gray-800 transition-colors line-clamp-2">
+                <p class="text-sm text-gray-600 mt-2 group-hover:text-gray-800 transition-colors line-clamp-3">
                    Bobina de 2,000 metros de Cable DROP Monomodo FTTH de 2 hilos 9/125 um con chaqueta CMR azul marca DATATRONIX
                 </p>
                 <div class="text-center mt-6 text-blue-600 font-semibold">
@@ -1922,7 +2020,7 @@
                     CABLE PATCH CORD SC DATATRONIX
                   </h3>
                 </div>
-                <p class="text-sm text-gray-600 mt-2 group-hover:text-gray-800 transition-colors line-clamp-2">
+                <p class="text-sm text-gray-600 mt-2 group-hover:text-gray-800 transition-colors line-clamp-3">
                    Cable patch cord fibra óptica SC-SC monomodo 3 metros marca DATATRONIX
                 </p>
                 <div class="text-center mt-6 text-blue-600 font-semibold">
@@ -1945,7 +2043,7 @@
     
     <div class="w-full relative z-10 px-4">
       <!-- Main content - más ancho horizontal -->
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 sm:gap-6 mb-6">
         
         <!-- Columna 1: Logo -->
         <div class="space-y-3">
