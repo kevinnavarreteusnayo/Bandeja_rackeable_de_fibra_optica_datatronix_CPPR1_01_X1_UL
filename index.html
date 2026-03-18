@@ -546,6 +546,82 @@
       border-color: var(--border) !important;
       box-shadow: 0 8px 30px rgba(0,0,0,0.6) !important;
     }
+    
+    /* Asegurar visibilidad de nombres de productos en modo oscuro */
+    html.dark .stock-grid h3,
+    html.dark .stock-grid .text-lg,
+    html.dark .stock-grid .font-bold {
+      color: var(--text) !important;
+      visibility: visible !important;
+      display: block !important;
+    }
+    
+    html.dark .stock-grid h3[data-translate],
+    html.dark .stock-grid .text-lg[data-translate] {
+      color: var(--text) !important;
+      visibility: visible !important;
+      display: block !important;
+    }
+    
+    /* Asegurar visibilidad en modo claro */
+    .stock-grid h3,
+    .stock-grid .text-lg,
+    .stock-grid .font-bold {
+      visibility: visible !important;
+      display: block !important;
+      color: #1f2937 !important;
+    }
+    
+    /* Asegurar visibilidad de textos debajo de iconos */
+    #search-overlay .icon-card .font-semibold,
+    #search-overlay .icon-card .text-sm,
+    #search-overlay .icon-card div div {
+      color: var(--text) !important;
+      visibility: visible !important;
+      display: block !important;
+    }
+    
+    html.dark #search-overlay .icon-card .font-semibold,
+    html.dark #search-overlay .icon-card .text-sm,
+    html.dark #search-overlay .icon-card div div {
+      color: var(--text) !important;
+      visibility: visible !important;
+      display: block !important;
+    }
+    
+    /* Forzar texto negro en tema claro para iconos de navegación */
+    .nav-item span {
+      color: #000000 !important;
+    }
+    
+    /* Para los iconos de navegación de marca */
+    .nav-item {
+      position: relative;
+      transition: all 0.3s ease;
+    }
+    
+    .nav-item:hover {
+      transform: translateY(-2px);
+      background-color: rgba(59, 130, 246, 0.1);
+    }
+    
+    .nav-item:hover .nav-icon {
+      transform: scale(1.1);
+      transition: transform 0.3s ease;
+    }
+    
+    .nav-item:hover span {
+      color: #2563eb !important;
+      font-weight: 700 !important;
+    }
+    
+    html.dark .nav-item:hover {
+      background-color: rgba(59, 130, 246, 0.2);
+    }
+    
+    html.dark .nav-item:hover span {
+      color: #ffffff !important;
+    }
 
     /* View indicator */
     html.dark #current-view { color: var(--text) !important; background: rgba(255,255,255,0.06) !important; }
@@ -679,12 +755,67 @@
       font-size: 10px;
     }
     
-    /* Class for small social buttons */
-    .social-btn-small {
-      width: 24px;
-      height: 24px;
-      font-size: 0.6rem;
+    /* Responsive adjustments for the new footer */
+    @media (max-width: 768px) {
+      .social-btn-modern { 
+        width: 38px; 
+        height: 38px; 
+        font-size: 1rem;
+      }
+      
+      .footer-link-modern,
+      .footer-contact-modern {
+        font-size: 0.85rem;
+      }
+      
+      /* Nombres de productos responsive */
+      .stock-grid .text-lg {
+        font-size: 1rem !important;
+        line-height: 1.3 !important;
+      }
+      
+      .stock-grid h3 {
+        font-size: 1rem !important;
+        text-align: center !important;
+      }
     }
+    
+    @media (max-width: 640px) {
+      /* Nombres de productos más pequeños en móvil */
+      .stock-grid .text-lg {
+        font-size: 0.9rem !important;
+      }
+      
+      .stock-grid h3 {
+        font-size: 1rem !important;
+        padding: 6px 4px !important;
+        margin-bottom: 6px !important;
+      }
+      
+      /* Asegurar visibilidad en móvil */
+      .stock-grid h3,
+      .stock-grid .text-lg,
+      .stock-grid .font-bold {
+        visibility: visible !important;
+        display: block !important;
+        color: #1f2937 !important;
+      }
+      
+      html.dark .stock-grid h3,
+      html.dark .stock-grid .text-lg,
+      html.dark .stock-grid .font-bold {
+        color: var(--text) !important;
+        visibility: visible !important;
+        display: block !important;
+      }
+    }
+
+    /* Icon visibility for dark/light mode */
+    .dark-icon-hidden { display: block; }
+    .light-icon-hidden { display: none; }
+    
+    html.dark .dark-icon-hidden { display: none; }
+    html.dark .light-icon-hidden { display: block; }
 
     /* End styles */
   </style>
@@ -1285,49 +1416,63 @@
       <!-- Horizontal scroll container -->
       <div id="brand-nav" class="nav-container flex justify-evenly overflow-x-auto md:py-3 px-4 space-x-2 scrollbar-hide">
         <!-- Item 1 -->
-        <a href="https://www.ds3comunicaciones.com/cisco/catalys_9200l.html"
-          class="nav-item flex items-center p-2 rounded-lg min-w-fit flex-shrink-0 space-x-2 transition-all duration-300">
-          <div class="icon-container h-7 w-7 flex items-center justify-center">
-            <img src="./icons/Switch Catalyst.ico" class="nav-icon max-h-full max-w-full" alt="Switch Catalyst" />
+        <a href="https://www.ds3comunicaciones.com/ubiquiti/index.html"
+          class="nav-item flex flex-col items-center p-3 rounded-lg min-w-fit flex-shrink-0 transition-all duration-300" data-title="UniFi">
+          <div class="icon-container h-16 w-20 flex items-center justify-center">
+            <img src="./icons/unifi.ico" class="nav-icon h-12 w-16 dark-icon-hidden" alt="UniFi" />
+            <img src="./icons/unifiwh.ico" class="nav-icon h-12 w-16 light-icon-hidden" alt="UniFi" />
           </div>
-          <span class="text-sm font-semibold text-gray-700 whitespace-nowrap hover:text-blue-600" data-translate="menu-fiber-cables">Cables de Fibra</span>
+          <span class="text-xs font-semibold text-black dark:text-gray-300 mt-1">UniFi</span>
         </a>
 
         <!-- Item 2 -->
-        <a href="https://www.ds3comunicaciones.com/cisco/bussines_sg350.html"
-          class="nav-item flex items-center p-2 rounded-lg min-w-fit flex-shrink-0 space-x-2 transition-all duration-300">
-          <div class="icon-container h-7 w-7 flex items-center justify-center">
-            <img src="./icons/Cisco Business.ico" class="nav-icon max-h-full max-w-full" alt="Cisco Business" />
+        <a href="https://www.ds3comunicaciones.com/ubiquiti/index.html"
+          class="nav-item flex flex-col items-center p-3 rounded-lg min-w-fit flex-shrink-0 transition-all duration-300" data-title="PowerBeam">
+          <div class="icon-container h-16 w-20 flex items-center justify-center">
+            <img src="./icons/PBeam.ico" class="nav-icon h-12 w-16 dark-icon-hidden" alt="PowerBeam" />
+            <img src="./icons/PBeamwh.ico" class="nav-icon h-12 w-16 light-icon-hidden" alt="PowerBeam" />
           </div>
-          <span class="text-sm font-semibold text-gray-700 whitespace-nowrap hover:text-blue-600" data-translate="menu-patch-cords">Patch cords /pigtails</span>
+          <span class="text-xs font-semibold text-black dark:text-gray-300 mt-1">PowerBeam</span>
         </a>
 
         <!-- Item 3 -->
-        <a href="https://www.ds3comunicaciones.com/cisco/precios_cisco_switch_industrial_b.html"
-          class="nav-item flex items-center p-2 rounded-lg min-w-fit flex-shrink-0 space-x-2 transition-all duration-300">
-          <div class="icon-container h-7 w-7 flex items-center justify-center">
-            <img src="./icons/Switch Industrial.ico" class="nav-icon max-h-full max-w-full" alt="Switch Industrial" />
+        <a href="https://www.ds3comunicaciones.com/ubiquiti/index.html"
+          class="nav-item flex flex-col items-center p-3 rounded-lg min-w-fit flex-shrink-0 transition-all duration-300" data-title="airFiber">
+          <div class="icon-container h-16 w-20 flex items-center justify-center">
+            <img src="./icons/airFiber.ico" class="nav-icon h-12 w-16 dark-icon-hidden" alt="airFiber" />
+            <img src="./icons/airFiberwh.ico" class="nav-icon h-12 w-16 light-icon-hidden" alt="airFiber" />
           </div>
-          <span class="text-sm font-semibold text-gray-700 whitespace-nowrap hover:text-blue-600" data-translate="menu-tray">Bandeja</span>
+          <span class="text-xs font-semibold text-black dark:text-gray-300 mt-1">airFiber</span>
         </a>
 
         <!-- Item 4 -->
-        <a href="https://www.ds3comunicaciones.com/cisco/precios_cisco_access_point_b.html"
-          class="nav-item flex items-center p-2 rounded-lg min-w-fit flex-shrink-0 space-x-2 transition-all duration-300">
-          <div class="icon-container h-7 w-7 flex items-center justify-center">
-            <svg width="24" height="24" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M21 42C32.598 42 42 32.598 42 21C42 9.40202 32.598 0 21 0C9.40202 0 0 9.40202 0 21C0 32.598 9.40202 42 21 42Z"
-                fill="white" stroke="black" stroke-width="2" />
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M27 21C27 24.3137 24.3137 27 21 27C17.6863 27 15 24.3137 15 21C15 17.6863 17.6863 15 21 15C24.3137 15 27 17.6863 27 21Z"
-                fill="black" />
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M29 21C29 25.4183 25.4183 29 21 29C16.5817 29 13 25.4183 13 21C13 16.5817 16.5817 13 21 13C25.4183 13 29 16.5817 29 21Z"
-                fill="white" stroke="black" stroke-width="2" />
-            </svg>
+        <a href="https://www.ds3comunicaciones.com/mikrotik/index.html"
+          class="nav-item flex flex-col items-center p-3 rounded-lg min-w-fit flex-shrink-0 transition-all duration-300" data-title="Antenas">
+          <div class="icon-container h-16 w-20 flex items-center justify-center">
+            <img src="./icons/antena.ico" class="nav-icon h-12 w-16 dark-icon-hidden" alt="Antenas" />
+            <img src="./icons/antenawh.ico" class="nav-icon h-12 w-16 light-icon-hidden" alt="Antenas" />
           </div>
-          <span class="text-sm font-semibold text-gray-700 whitespace-nowrap hover:text-blue-600" data-translate="menu-splices">Mufas</span>
+          <span class="text-xs font-semibold text-black dark:text-gray-300 mt-1">Antenas</span>
+        </a>
+
+        <!-- Item 5 -->
+        <a href="https://www.ds3comunicaciones.com/ubiquiti/index.html"
+          class="nav-item flex flex-col items-center p-3 rounded-lg min-w-fit flex-shrink-0 transition-all duration-300" data-title="LTU 5GHz">
+          <div class="icon-container h-16 w-20 flex items-center justify-center">
+            <img src="./icons/LTU5GHZ.ico" class="nav-icon h-12 w-16 dark-icon-hidden" alt="LTU5GHZ" />
+            <img src="./icons/LTU5GHZwh.ico" class="nav-icon h-12 w-16 light-icon-hidden" alt="LTU5GHZ" />
+          </div>
+          <span class="text-xs font-semibold text-black dark:text-gray-300 mt-1">LTU 5GHz</span>
+        </a>
+
+        <!-- Item 6 -->
+        <a href="https://www.ds3comunicaciones.com/cisco/index.html"
+          class="nav-item flex flex-col items-center p-3 rounded-lg min-w-fit flex-shrink-0 transition-all duration-300" data-title="Switching">
+          <div class="icon-container h-16 w-20 flex items-center justify-center">
+            <img src="./icons/Switching.ico" class="nav-icon h-12 w-16 dark-icon-hidden" alt="Switching" />
+            <img src="./icons/Switchingwh.ico" class="nav-icon h-12 w-16 light-icon-hidden" alt="Switching" />
+          </div>
+          <span class="text-xs font-semibold text-black dark:text-gray-300 mt-1">Switching</span>
         </a>
       </div>
     </div>
@@ -1990,13 +2135,13 @@
         </div>
 
          <!-- Grid de productos -->
-        <div class="stock-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 w-full">
+        <div class="stock-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full max-w-4xl mx-auto">
 
           <!-- Producto 1 -->
           <a href="poner enlace aqui"
             class="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 border border-gray-200 hover:border-blue-500">
-            <div class="p-5 flex flex-col h-full">
-              <div class="flex-grow flex items-center justify-center mb-4 h-40">
+            <div class="p-8 flex flex-col h-full min-h-[360px]">
+              <div class="flex-grow flex items-center justify-center mb-8 h-60">
                 <img src="./imagenes/img_productos/producto1.png"
                   alt="producto1"
                   class="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105" />
@@ -2004,7 +2149,7 @@
               <div class="border-t pt-4">
                 <div class="flex justify-between flex-col items-center mb-2">
                   <h3 class="text-lg font-bold text-gray-800" data-translate="product-1-title">
-                    TAPAS CIEGAS PLÁSTICAS SC SIMPLEX DATATRONIX
+                    UniFi
                   </h3>
                 </div>
                 <p class="text-sm text-gray-600 mt-2 group-hover:text-gray-800 transition-colors line-clamp-3" data-translate="product-1-desc">
@@ -2019,8 +2164,8 @@
           <!-- Producto 2-->
           <a href="poner enlace aqui"
             class="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 border border-gray-200 hover:border-blue-500">
-            <div class="p-5 flex flex-col h-full">
-              <div class="flex-grow flex items-center justify-center mb-4 h-40">
+            <div class="p-6 flex flex-col h-full min-h-[320px]">
+              <div class="flex-grow flex items-center justify-center mb-6 h-52">
                 <img src="./imagenes/img_productos/producto2.png"
                   alt="producto2"
                   class="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105" />
@@ -2028,7 +2173,7 @@
               <div class="border-t pt-4">
                 <div class="flex justify-between flex-col items-center mb-2">
                   <h3 class="text-lg font-bold text-gray-800" data-translate="product-2-title">
-                    TAPAS CIEGAS SC DUPLEX DATATRONIX
+                    PowerBeam
                   </h3>
                 </div>
                 <p class="text-sm text-gray-600 mt-2 group-hover:text-gray-800 transition-colors line-clamp-3" data-translate="product-2-desc">
@@ -2044,8 +2189,8 @@
           <!-- Producto 3 -->
           <a href="poner enlaace aqui"
             class="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 border border-gray-200 hover:border-blue-500">
-            <div class="p-5 flex flex-col h-full">
-              <div class="flex-grow flex items-center justify-center mb-4 h-40">
+            <div class="p-6 flex flex-col h-full min-h-[320px]">
+              <div class="flex-grow flex items-center justify-center mb-6 h-52">
                 <img src="./imagenes/img_productos/producto3.png"
                   alt="producto3"
                   class="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105" />
@@ -2053,7 +2198,7 @@
               <div class="border-t pt-4">
                 <div class="flex justify-between flex-col items-center mb-2">
                   <h3 class="text-lg font-bold text-gray-800" data-translate="product-3-title">
-                    SPOOL ORDENAMIENTO DE FIBRA DATATRONIX
+                    airFiber
                   </h3>
                 </div>
                 <p class="text-sm text-gray-600 mt-2 group-hover:text-gray-800 transition-colors line-clamp-3" data-translate="product-3-desc">
@@ -2069,8 +2214,8 @@
           <!-- Producto 4 -->
           <a href="poner enlace aqui"
             class="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 border border-gray-200 hover:border-blue-500">
-            <div class="p-5 flex flex-col h-full">
-              <div class="flex-grow flex items-center justify-center mb-4 h-40">
+            <div class="p-6 flex flex-col h-full min-h-[320px]">
+              <div class="flex-grow flex items-center justify-center mb-6 h-52">
                 <img src="./imagenes/img_productos/producto4.png"
                   alt="producto4"
                   class="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105" />
@@ -2078,7 +2223,7 @@
               <div class="border-t pt-4">
                 <div class="flex justify-between flex-col items-center mb-2">
                   <h3 class="text-lg font-bold text-gray-800" data-translate="product-4-title">
-                    BANDEJA DE FUSIÓN DATATRONIX
+                    Antenas
                   </h3>
                 </div>
                 <p class="text-sm text-gray-600 mt-2 group-hover:text-gray-800 transition-colors line-clamp-3" data-translate="product-4-desc">
@@ -2094,8 +2239,8 @@
           <!-- Producto 5 -->
           <a href="poner enlace aqui"
             class="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 border border-gray-200 hover:border-blue-500">
-            <div class="p-5 flex flex-col h-full">
-              <div class="flex-grow flex items-center justify-center mb-4 h-40">
+            <div class="p-6 flex flex-col h-full min-h-[320px]">
+              <div class="flex-grow flex items-center justify-center mb-6 h-52">
                 <img src="./imagenes/img_productos/producto5.png"
                   alt="producto5"
                   class="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105" />
@@ -2103,7 +2248,7 @@
               <div class="border-t pt-4">
                 <div class="flex justify-between flex-col items-center mb-2">
                   <h3 class="text-lg font-bold text-gray-800" data-translate="product-5-title">
-                    DROP FTTH 1 HILO DATATRONIX
+                    LTU 5GHz
                   </h3>
                 </div>
                 <p class="text-sm text-gray-600 mt-2 group-hover:text-gray-800 transition-colors line-clamp-3" data-translate="product-5-desc">
@@ -2118,8 +2263,8 @@
           <!-- Producto 6 -->
           <a href="poner enlace aqui"
             class="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 border border-gray-200 hover:border-blue-500">
-            <div class="p-5 flex flex-col h-full">
-              <div class="flex-grow flex items-center justify-center mb-4 h-40">
+            <div class="p-6 flex flex-col h-full min-h-[320px]">
+              <div class="flex-grow flex items-center justify-center mb-6 h-52">
                 <img src="./imagenes/img_productos/producto6.png"
                   alt="producto6"
                   class="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105" />
@@ -2127,7 +2272,7 @@
               <div class="border-t pt-4">
                 <div class="flex justify-between flex-col items-center mb-2">
                   <h3 class="text-lg font-bold text-gray-800" data-translate="product-6-title">
-                    DROP FTTH 2 HILOS DATATRONIX
+                    Switching
                   </h3>
                 </div>
                 <p class="text-sm text-gray-600 mt-2 group-hover:text-gray-800 transition-colors line-clamp-3" data-translate="product-6-desc">
@@ -2143,8 +2288,8 @@
           <!-- Producto 7 -->
           <a href="poner enlace aqui"
             class="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 border border-gray-200 hover:border-blue-500">
-            <div class="p-5 flex flex-col h-full">
-              <div class="flex-grow flex items-center justify-center mb-4 h-40">
+            <div class="p-6 flex flex-col h-full min-h-[320px]">
+              <div class="flex-grow flex items-center justify-center mb-6 h-52">
                 <img src="./imagenes/img_productos/producto7.png"
                   alt="producto7"
                   class="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105" />
@@ -2168,8 +2313,8 @@
           <!-- Producto 8 -->
           <a href="poner enlace aqui"
             class="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 border border-gray-200 hover:border-blue-500">
-            <div class="p-3 sm:p-5 flex flex-col h-full">
-              <div class="flex-grow flex items-center justify-center mb-2 sm:mb-4 h-24 sm:h-40">
+            <div class="p-6 flex flex-col h-full min-h-[320px]">
+              <div class="flex-grow flex items-center justify-center mb-6 h-52">
                 <img src="./imagenes/img_productos/producto8.png"
                   alt="producto8"
                   class="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105" />
