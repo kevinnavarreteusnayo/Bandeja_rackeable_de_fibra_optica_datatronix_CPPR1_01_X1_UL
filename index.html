@@ -332,37 +332,94 @@
       .gap-4.sm\:gap-6 { gap: 12px; }
       
       /* Grid de productos en stock optimizado para móvil - 2 filas de 4 */
+      .stock-grid { 
+        grid-template-columns: repeat(4, 1fr) !important; 
+        gap: 6px !important; 
+      }
+      
       .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-3.xl\:grid-cols-4.w-full { 
-        grid-template-columns: repeat(4, 1fr); 
-        gap: 8px; 
+        grid-template-columns: repeat(4, 1fr) !important; 
+        gap: 6px !important; 
       }
       
       /* Productos individuales en el grid de stock */
+      .stock-grid .group {
+        min-height: 160px !important;
+      }
+      .stock-grid .p-5 {
+        padding: 6px !important;
+      }
+      .stock-grid .h-40 {
+        height: 50px !important;
+      }
+      .stock-grid .text-lg {
+        font-size: 0.65rem !important;
+        line-height: 1.0 !important;
+      }
+      .stock-grid .text-sm {
+        font-size: 0.55rem !important;
+        line-height: 0.9 !important;
+      }
+      .stock-grid .border-t {
+        border-top: 1px solid #e5e7eb !important;
+      }
+      .stock-grid .pt-4 {
+        padding-top: 3px !important;
+      }
+      .stock-grid .mt-6 {
+        margin-top: 3px !important;
+      }
+      
       .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-3.xl\:grid-cols-4.w-full .group {
-        min-height: 180px;
+        min-height: 160px !important;
       }
       .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-3.xl\:grid-cols-4.w-full .p-5 {
-        padding: 8px;
+        padding: 6px !important;
       }
       .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-3.xl\:grid-cols-4.w-full .h-40 {
-        height: 60px;
+        height: 50px !important;
       }
       .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-3.xl\:grid-cols-4.w-full .text-lg {
-        font-size: 0.7rem;
-        line-height: 1.1;
+        font-size: 0.65rem !important;
+        line-height: 1.0 !important;
       }
       .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-3.xl\:grid-cols-4.w-full .text-sm {
-        font-size: 0.6rem;
-        line-height: 1.0;
+        font-size: 0.55rem !important;
+        line-height: 0.9 !important;
       }
       .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-3.xl\:grid-cols-4.w-full .border-t {
-        border-top: 1px solid #e5e7eb;
+        border-top: 1px solid #e5e7eb !important;
       }
       .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-3.xl\:grid-cols-4.w-full .pt-4 {
-        padding-top: 4px;
+        padding-top: 3px !important;
       }
       .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-3.xl\:grid-cols-4.w-full .mt-6 {
-        margin-top: 4px;
+        margin-top: 3px !important;
+      }
+      
+      /* Asegurar que el grid de productos en stock use 4 columnas en móvil */
+      section[class*="bg-gray-50"] .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-3.xl\:grid-cols-4 {
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 6px !important;
+      }
+      
+      /* Optimización adicional para productos en stock móvil */
+      section[class*="bg-gray-50"] .grid .group {
+        min-height: 160px !important;
+      }
+      section[class*="bg-gray-50"] .grid .p-5 {
+        padding: 6px !important;
+      }
+      section[class*="bg-gray-50"] .grid .h-40 {
+        height: 50px !important;
+      }
+      section[class*="bg-gray-50"] .grid .text-lg {
+        font-size: 0.65rem !important;
+        line-height: 1.0 !important;
+      }
+      section[class*="bg-gray-50"] .grid .text-sm {
+        font-size: 0.55rem !important;
+        line-height: 0.9 !important;
       }
       
       /* Optimizaciones adicionales para móvil */
@@ -1681,311 +1738,7 @@
           </div>
         </div>
 
-        <!-- SIDEBAR DE LISTA DE PRECIOS (tercera columna independiente) -->
-        <aside id="links-sidebar"
-          class="hidden lg:block w-full lg:w-80 bg-gradient-to-b from-white to-blue-50 p-4 rounded-xl shadow-lg h-[80vh] overflow-y-auto scrollbar-hide border border-blue-100 sticky top-20">
-          <div class="links-section">
-            <!-- Encabezado mejorado -->
-            <div class="mb-4">
-              <h3 class="text-lg font-bold text-gray-900 flex items-center gap-2 border-b-2 border-blue-600 pb-3">
-                <i class="fas fa-file-invoice-dollar text-blue-600"></i>
-                Listas de Precios
-              </h3>
-            </div>
 
-            <!-- Barra de búsqueda -->
-            <div class="mb-4">
-              <input type="text" id="searchPrices" placeholder="Buscar marca..."
-                class="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white">
-            </div>
-
-            <!-- Contenedor con lista mejorada -->
-            <ul id="pricesList" class="grid grid-cols-1 gap-2">
-              <!-- AMP -->
-              <li class="price-item hover:shadow-md rounded-lg transition-all duration-200" data-brand="AMP">
-                <a href="https://www.ds3comunicaciones.com/AMP/precios_amp.html" target="_blank" rel="noopener noreferrer"
-                  class="flex items-center gap-2 px-3 py-2 text-sm text-blue-700 hover:text-blue-900 font-medium hover:bg-blue-100 rounded-lg transition-colors">
-                  <i class="fas fa-tag text-blue-500 text-xs"></i>
-                  <span>AMP</span>
-                </a>
-              </li>
-
-              <!-- Amphenol -->
-              <li class="price-item hover:shadow-md rounded-lg transition-all duration-200" data-brand="Amphenol">
-                <a href="https://www.ds3comunicaciones.com/amphenol/precios_amphenol.html" target="_blank" rel="noopener noreferrer"
-                  class="flex items-center gap-2 px-3 py-2 text-sm text-blue-700 hover:text-blue-900 font-medium hover:bg-blue-100 rounded-lg transition-colors">
-                  <i class="fas fa-tag text-blue-500 text-xs"></i>
-                  <span>Amphenol</span>
-                </a>
-              </li>
-
-              <!-- Andrew -->
-              <li class="price-item hover:shadow-md rounded-lg transition-all duration-200" data-brand="Andrew">
-                <a href="https://www.ds3comunicaciones.com/andrew/precios_andrew.html" target="_blank" rel="noopener noreferrer"
-                  class="flex items-center gap-2 px-3 py-2 text-sm text-blue-700 hover:text-blue-900 font-medium hover:bg-blue-100 rounded-lg transition-colors">
-                  <i class="fas fa-tag text-blue-500 text-xs"></i>
-                  <span>Andrew</span>
-                </a>
-              </li>
-
-              <!-- APC -->
-              <li class="price-item hover:shadow-md rounded-lg transition-all duration-200" data-brand="APC">
-                <a href="https://www.ds3comunicaciones.com/apc/precios_apc.html" target="_blank" rel="noopener noreferrer"
-                  class="flex items-center gap-2 px-3 py-2 text-sm text-blue-700 hover:text-blue-900 font-medium hover:bg-blue-100 rounded-lg transition-colors">
-                  <i class="fas fa-tag text-blue-500 text-xs"></i>
-                  <span>APC</span>
-                </a>
-              </li>
-
-              <!-- CISCO -->
-              <li class="price-item hover:shadow-md rounded-lg transition-all duration-200" data-brand="CISCO">
-                <a href="https://www.ds3comunicaciones.com/cisco/precios_cisco.html" target="_blank" rel="noopener noreferrer"
-                  class="flex items-center gap-2 px-3 py-2 text-sm text-blue-700 hover:text-blue-900 font-medium hover:bg-blue-100 rounded-lg transition-colors">
-                  <i class="fas fa-tag text-blue-500 text-xs"></i>
-                  <span class="font-bold">CISCO</span>
-                </a>
-              </li>
-
-              <!-- Datatronix -->
-              <li class="price-item hover:shadow-md rounded-lg transition-all duration-200" data-brand="Datatronix">
-                <a href="https://kevinnavarreteusnayo.github.io/lista-de-precios-datatronix/" target="_blank" rel="noopener noreferrer"
-                  class="flex items-center gap-2 px-3 py-2 text-sm text-blue-700 hover:text-blue-900 font-medium hover:bg-blue-100 rounded-lg transition-colors">
-                  <i class="fas fa-tag text-blue-500 text-xs"></i>
-                  <span class="font-bold">Datatronix</span>
-                </a>
-              </li>
-
-              <!-- D-Link -->
-              <li class="price-item hover:shadow-md rounded-lg transition-all duration-200" data-brand="D-Link">
-                <a href="https://www.ds3comunicaciones.com/dlink/precios_dlink.html" target="_blank" rel="noopener noreferrer"
-                  class="flex items-center gap-2 px-3 py-2 text-sm text-blue-700 hover:text-blue-900 font-medium hover:bg-blue-100 rounded-lg transition-colors">
-                  <i class="fas fa-tag text-blue-500 text-xs"></i>
-                  <span>D-Link</span>
-                </a>
-              </li>
-
-              <!-- Dixon -->
-              <li class="price-item hover:shadow-md rounded-lg transition-all duration-200" data-brand="Dixon">
-                <a href="https://www.ds3comunicaciones.com/dixon/precios_dixon.html" target="_blank" rel="noopener noreferrer"
-                  class="flex items-center gap-2 px-3 py-2 text-sm text-blue-700 hover:text-blue-900 font-medium hover:bg-blue-100 rounded-lg transition-colors">
-                  <i class="fas fa-tag text-blue-500 text-xs"></i>
-                  <span>Dixon</span>
-                </a>
-              </li>
-
-              <!-- Energit -->
-              <li class="price-item hover:shadow-md rounded-lg transition-all duration-200" data-brand="Energit">
-                <a href="https://www.ds3comunicaciones.com/Energit/precios_energit.html" target="_blank" rel="noopener noreferrer"
-                  class="flex items-center gap-2 px-3 py-2 text-sm text-blue-700 hover:text-blue-900 font-medium hover:bg-blue-100 rounded-lg transition-colors">
-                  <i class="fas fa-tag text-blue-500 text-xs"></i>
-                  <span>Energit</span>
-                </a>
-              </li>
-
-              <!-- Fibra -->
-              <li class="price-item hover:shadow-md rounded-lg transition-all duration-200" data-brand="Fibra">
-                <a href="https://www.ds3comunicaciones.com/FibreFab/precios_fibrefab.html" target="_blank" rel="noopener noreferrer"
-                  class="flex items-center gap-2 px-3 py-2 text-sm text-blue-700 hover:text-blue-900 font-medium hover:bg-blue-100 rounded-lg transition-colors">
-                  <i class="fas fa-tag text-blue-500 text-xs"></i>
-                  <span>Fibra</span>
-                </a>
-              </li>
-
-              <!-- HP -->
-              <li class="price-item hover:shadow-md rounded-lg transition-all duration-200" data-brand="HP">
-                <a href="https://www.ds3comunicaciones.com/hp/precios_hp.html" target="_blank" rel="noopener noreferrer"
-                  class="flex items-center gap-2 px-3 py-2 text-sm text-blue-700 hover:text-blue-900 font-medium hover:bg-blue-100 rounded-lg transition-colors">
-                  <i class="fas fa-tag text-blue-500 text-xs"></i>
-                  <span>HP</span>
-                </a>
-              </li>
-
-              <!-- Mikrotik -->
-              <li class="price-item hover:shadow-md rounded-lg transition-all duration-200" data-brand="Mikrotik">
-                <a href="https://www.ds3comunicaciones.com/mikrotik/precios_mikrotik.html" target="_blank" rel="noopener noreferrer"
-                  class="flex items-center gap-2 px-3 py-2 text-sm text-blue-700 hover:text-blue-900 font-medium hover:bg-blue-100 rounded-lg transition-colors">
-                  <i class="fas fa-tag text-blue-500 text-xs"></i>
-                  <span>Mikrotik</span>
-                </a>
-              </li>
-
-              <!-- Nexxt Solutions -->
-              <li class="price-item hover:shadow-md rounded-lg transition-all duration-200" data-brand="Nexxt Solutions">
-                <a href="https://www.ds3comunicaciones.com/nexxt_solutions/precios_nexxt_solutions.html" target="_blank" rel="noopener noreferrer"
-                  class="flex items-center gap-2 px-3 py-2 text-sm text-blue-700 hover:text-blue-900 font-medium hover:bg-blue-100 rounded-lg transition-colors">
-                  <i class="fas fa-tag text-blue-500 text-xs"></i>
-                  <span>Nexxt Solutions</span>
-                </a>
-              </li>
-
-              <!-- Panduit -->
-              <li class="price-item hover:shadow-md rounded-lg transition-all duration-200" data-brand="Panduit">
-                <a href="https://www.ds3comunicaciones.com/panduit/precios_panduit.html" target="_blank" rel="noopener noreferrer"
-                  class="flex items-center gap-2 px-3 py-2 text-sm text-blue-700 hover:text-blue-900 font-medium hover:bg-blue-100 rounded-lg transition-colors">
-                  <i class="fas fa-tag text-blue-500 text-xs"></i>
-                  <span>Panduit</span>
-                </a>
-              </li>
-
-              <!-- Siemon -->
-              <li class="price-item hover:shadow-md rounded-lg transition-all duration-200" data-brand="Siemon">
-                <a href="https://www.ds3comunicaciones.com/siemon/precios_siemon.html" target="_blank" rel="noopener noreferrer"
-                  class="flex items-center gap-2 px-3 py-2 text-sm text-blue-700 hover:text-blue-900 font-medium hover:bg-blue-100 rounded-lg transition-colors">
-                  <i class="fas fa-tag text-blue-500 text-xs"></i>
-                  <span>Siemon</span>
-                </a>
-              </li>
-
-              <!-- Teldor -->
-              <li class="price-item hover:shadow-md rounded-lg transition-all duration-200" data-brand="Teldor">
-                <a href="https://www.ds3comunicaciones.com/Teldor/precios_teldor.html" target="_blank" rel="noopener noreferrer"
-                  class="flex items-center gap-2 px-3 py-2 text-sm text-blue-700 hover:text-blue-900 font-medium hover:bg-blue-100 rounded-lg transition-colors">
-                  <i class="fas fa-tag text-blue-500 text-xs"></i>
-                  <span>Teldor</span>
-                </a>
-              </li>
-
-              <!-- TRENDnet -->
-              <li class="price-item hover:shadow-md rounded-lg transition-all duration-200" data-brand="TRENDnet">
-                <a href="https://www.ds3comunicaciones.com/trendnet/precios_trendnet.html" target="_blank" rel="noopener noreferrer"
-                  class="flex items-center gap-2 px-3 py-2 text-sm text-blue-700 hover:text-blue-900 font-medium hover:bg-blue-100 rounded-lg transition-colors">
-                  <i class="fas fa-tag text-blue-500 text-xs"></i>
-                  <span>TRENDnet</span>
-                </a>
-              </li>
-
-              <!-- Ubiquiti -->
-              <li class="price-item hover:shadow-md rounded-lg transition-all duration-200" data-brand="Ubiquiti">
-                <a href="https://www.ds3comunicaciones.com/ubiquiti/precios_ubiquiti.html" target="_blank" rel="noopener noreferrer"
-                  class="flex items-center gap-2 px-3 py-2 text-sm text-blue-700 hover:text-blue-900 font-medium hover:bg-blue-100 rounded-lg transition-colors">
-                  <i class="fas fa-tag text-blue-500 text-xs"></i>
-                  <span>Ubiquiti</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </aside>
-
-      </div>
-    </div>
-
-    <!-- Sidebar móvil de lista de precios (visible solo en móvil) -->
-    <div class="lg:hidden px-4 md:px-6 py-6">
-      <div class="bg-white rounded-xl shadow-lg p-4">
-        <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center gap-2 border-b-2 border-blue-600 pb-3">
-          <i class="fas fa-file-invoice-dollar text-blue-600"></i>
-          Listas de Precios
-        </h3>
-        
-        <!-- Barra de búsqueda móvil -->
-        <div class="mb-4">
-          <input type="text" id="searchPricesMobile" placeholder="Buscar marca..."
-            class="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white">
-        </div>
-
-        <!-- Lista de precios móvil -->
-        <ul id="pricesListMobile" class="grid grid-cols-1 gap-2 max-h-60 overflow-y-auto">
-          <!-- AMP -->
-          <li class="price-item-mobile hover:shadow-md rounded-lg transition-all duration-200" data-brand="AMP">
-            <a href="https://www.ds3comunicaciones.com/AMP/precios_amp.html" target="_blank" rel="noopener noreferrer"
-              class="flex items-center gap-2 px-3 py-2 text-sm text-blue-700 hover:text-blue-900 font-medium hover:bg-blue-100 rounded-lg transition-colors">
-              <i class="fas fa-tag text-blue-500 text-xs"></i>
-              <span>AMP</span>
-            </a>
-          </li>
-
-          <!-- Amphenol -->
-          <li class="price-item-mobile hover:shadow-md rounded-lg transition-all duration-200" data-brand="Amphenol">
-            <a href="https://www.ds3comunicaciones.com/amphenol/precios_amphenol.html" target="_blank" rel="noopener noreferrer"
-              class="flex items-center gap-2 px-3 py-2 text-sm text-blue-700 hover:text-blue-900 font-medium hover:bg-blue-100 rounded-lg transition-colors">
-              <i class="fas fa-tag text-blue-500 text-xs"></i>
-              <span>Amphenol</span>
-            </a>
-          </li>
-
-          <!-- CISCO -->
-          <li class="price-item-mobile hover:shadow-md rounded-lg transition-all duration-200" data-brand="CISCO">
-            <a href="https://www.ds3comunicaciones.com/cisco/precios_cisco.html" target="_blank" rel="noopener noreferrer"
-              class="flex items-center gap-2 px-3 py-2 text-sm text-blue-700 hover:text-blue-900 font-medium hover:bg-blue-100 rounded-lg transition-colors">
-              <i class="fas fa-tag text-blue-500 text-xs"></i>
-              <span class="font-bold">CISCO</span>
-            </a>
-          </li>
-
-          <!-- Datatronix -->
-          <li class="price-item-mobile hover:shadow-md rounded-lg transition-all duration-200" data-brand="Datatronix">
-            <a href="https://kevinnavarreteusnayo.github.io/lista-de-precios-datatronix/" target="_blank" rel="noopener noreferrer"
-              class="flex items-center gap-2 px-3 py-2 text-sm text-blue-700 hover:text-blue-900 font-medium hover:bg-blue-100 rounded-lg transition-colors">
-              <i class="fas fa-tag text-blue-500 text-xs"></i>
-              <span class="font-bold">Datatronix</span>
-            </a>
-          </li>
-
-          <!-- Mikrotik -->
-          <li class="price-item-mobile hover:shadow-md rounded-lg transition-all duration-200" data-brand="Mikrotik">
-            <a href="https://www.ds3comunicaciones.com/mikrotik/precios_mikrotik.html" target="_blank" rel="noopener noreferrer"
-              class="flex items-center gap-2 px-3 py-2 text-sm text-blue-700 hover:text-blue-900 font-medium hover:bg-blue-100 rounded-lg transition-colors">
-              <i class="fas fa-tag text-blue-500 text-xs"></i>
-              <span>Mikrotik</span>
-            </a>
-          </li>
-
-          <!-- Ubiquiti -->
-          <li class="price-item-mobile hover:shadow-md rounded-lg transition-all duration-200" data-brand="Ubiquiti">
-            <a href="https://www.ds3comunicaciones.com/ubiquiti/precios_ubiquiti.html" target="_blank" rel="noopener noreferrer"
-              class="flex items-center gap-2 px-3 py-2 text-sm text-blue-700 hover:text-blue-900 font-medium hover:bg-blue-100 rounded-lg transition-colors">
-              <i class="fas fa-tag text-blue-500 text-xs"></i>
-              <span>Ubiquiti</span>
-            </a>
-          </li>
-        </ul>
-        
-        <!-- Botón para ver más marcas móvil -->
-        <button class="mt-4 w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium">
-          <i class="fas fa-list mr-2"></i>Ver todas las marcas
-        </button>
-      </div>
-    </div>
-
-    <!-- Script para búsqueda móvil -->
-    <script>
-      const searchInputMobile = document.getElementById('searchPricesMobile');
-      const pricesListMobile = document.querySelectorAll('.price-item-mobile');
-      
-      if (searchInputMobile) {
-        searchInputMobile.addEventListener('keyup', function(e) {
-          const searchTerm = e.target.value.toLowerCase();
-          pricesListMobile.forEach(item => {
-            const brand = item.getAttribute('data-brand').toLowerCase();
-            if (brand.includes(searchTerm)) {
-              item.style.display = '';
-            } else {
-              item.style.display = 'none';
-            }
-          });
-        });
-      }
-    </script>
-
-    <!-- Script para búsqueda en tiempo real -->
-    <script>
-      const searchInput = document.getElementById('searchPrices');
-      const pricesList = document.querySelectorAll('.price-item');
-      
-      if (searchInput) {
-        searchInput.addEventListener('keyup', function(e) {
-          const searchTerm = e.target.value.toLowerCase();
-          pricesList.forEach(item => {
-            const brand = item.getAttribute('data-brand').toLowerCase();
-            if (brand.includes(searchTerm)) {
-              item.style.display = '';
-            } else {
-              item.style.display = 'none';
-            }
-          });
-        });
-      }
-    </script>
     <section class="py-8 bg-gray-50 w-full">
       <div class="container mx-auto px-4 w-full max-w-full">
         <!-- Encabezado -->
@@ -1996,7 +1749,7 @@
         </div>
 
          <!-- Grid de productos -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 w-full">
+        <div class="stock-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 w-full">
 
           <!-- Producto 1 -->
           <a href="poner enlace aqui"
