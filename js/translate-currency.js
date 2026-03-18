@@ -1,110 +1,36 @@
-// Sistema de traducción y cambio de moneda
+// Translation and currency conversion system
 class TranslateCurrency {
     constructor() {
-        this.currentLang = 'es'; // español por defecto
-        this.currentCurrency = 'PEN'; // soles peruanos por defecto
+        this.currentCurrency = 'PEN'; // Peruvian soles by default
         this.exchangeRates = {
             'PEN': 3.75,  // 1 USD = 3.75 PEN
             'EUR': 0.92   // 1 USD = 0.92 EUR
-        };
-        
-        // Textos para traducción
-        this.translations = {
-            en: {
-                addToCart: 'Add to Cart',
-                buyNow: 'Buy Now',
-                inStock: 'In Stock',
-                specifications: 'Technical Specifications',
-                installationGuide: 'Installation Guide',
-                download: 'Download',
-                dimensions: 'Dimensions',
-                capacity: 'Capacity',
-                compatibility: 'Compatibility',
-                materials: 'Materials',
-                weight: 'Weight',
-                operatingTemperature: 'Operating Temperature',
-                storageTemperature: 'Storage Temperature',
-                viewDetails: 'View Details',
-                currency: 'USD',
-                available: 'Available',
-                price: 'Price',
-                description: 'Description',
-                features: 'Features',
-                technicalData: 'Technical Data',
-                warranty: 'Warranty',
-                contact: 'Contact',
-                search: 'Search',
-                menu: 'Menu',
-                home: 'Home',
-                products: 'Products',
-                about: 'About',
-                language: 'Language',
-                currencyLabel: 'Currency'
-            },
-            es: {
-                addToCart: 'Añadir al carrito',
-                buyNow: 'Comprar ahora',
-                inStock: 'En stock disponible',
-                specifications: 'Especificaciones técnicas',
-                installationGuide: 'Guía de instalación',
-                download: 'Descargar',
-                dimensions: 'Dimensiones',
-                capacity: 'Capacidad',
-                compatibility: 'Compatibilidad',
-                materials: 'Materiales',
-                weight: 'Peso',
-                operatingTemperature: 'Temperatura de operación',
-                storageTemperature: 'Temperatura de almacenamiento',
-                viewDetails: 'Ver detalles',
-                currency: 'PEN',
-                available: 'Disponible',
-                price: 'Precio',
-                description: 'Descripción',
-                features: 'Características',
-                technicalData: 'Datos técnicos',
-                warranty: 'Garantía',
-                contact: 'Contacto',
-                search: 'Buscar',
-                menu: 'Menú',
-                home: 'Inicio',
-                products: 'Productos',
-                about: 'Acerca de',
-                language: 'Idioma',
-                currencyLabel: 'Moneda'
-            }
         };
         
         this.init();
     }
     
     init() {
-        // Ya no creamos selectores flotantes, están en la navbar
-        this.translatePage();
-        this.updatePrices(); // Actualizar precios al iniciar
-        this.updateCurrencyButton(); // Actualizar botón de moneda al iniciar
+        // We no longer create floating selectors, they are in the navbar
+        this.updatePrices(); // Update prices on start
+        this.updateCurrencyButton(); // Update currency button on start
         
-        // Crear botón flotante de WhatsApp
+        // Create floating WhatsApp button
         this.createToggleButton();
     }
     
     createToggleButton() {
         const toggle = document.createElement('button');
-        // Reemplazar globo terráqueo por logo de WhatsApp color clásico
+        // Replace globe with classic WhatsApp logo
         toggle.innerHTML = '<i class="fab fa-whatsapp" style="color: #25D366; font-size: 20px;"></i>';
         toggle.className = 'fixed bottom-4 right-4 z-50 bg-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg hover:bg-gray-100 transition-colors border border-gray-300';
-        toggle.title = 'Contactar por WhatsApp';
-        // AGREGAR AQUÍ EL LINK DE WHATSAPP: Reemplaza el número abajo
+        toggle.title = 'Contact via WhatsApp';
+        // ADD WHATSAPP LINK HERE: Replace the number below
         toggle.onclick = () => {
-            // Ejemplo: window.open('https://wa.me/51994428965?text=Hola,%20me%20gustaría%20información%20sobre%20sus%20productos', '_blank');
-            // DESCOMENTAR LA LÍNEA ANTERIOR Y REEMPLAZAR EL NÚMERO DE TELÉFONO
+            // Example: window.open('https://wa.me/51994428965?text=Hola,%20me%20gustaría%20información%20sobre%20sus%20productos', '_blank');
+            // UNCOMMENT THE PREVIOUS LINE AND REPLACE THE PHONE NUMBER
         };
         document.body.appendChild(toggle);
-    }
-    
-    setLanguage(lang) {
-        this.currentLang = lang;
-        this.translatePage();
-        this.updateNavbarStyles();
     }
     
     setCurrency(currency) {
@@ -115,7 +41,7 @@ class TranslateCurrency {
     }
     
     updateNavbarStyles() {
-        // Actualizar estilos de los selectores en la navbar
+        // Update navbar selector styles
         const langButtons = document.querySelectorAll('[onclick*="setLanguage"]');
         const currButtons = document.querySelectorAll('[onclick*="setCurrency"]');
         
@@ -135,11 +61,11 @@ class TranslateCurrency {
     }
     
     updateCurrencyButton() {
-        // Actualizar el texto del botón de moneda en la navbar
-        // Buscar específicamente el botón de moneda (el segundo grupo)
+        // Update currency button text in navbar
+        // Search specifically for currency button (the second group)
         const currencyGroups = document.querySelectorAll('.relative.group');
         if (currencyGroups.length >= 2) {
-            const currencyGroup = currencyGroups[1]; // El segundo grupo es el de moneda
+            const currencyGroup = currencyGroups[1]; // The second group is the currency one
             const currencyButton = currencyGroup.querySelector('button .text-xs');
             if (currencyButton && currencyButton.textContent.match(/^(USD|PEN|EUR)$/)) {
                 currencyButton.textContent = this.currentCurrency;
@@ -147,19 +73,8 @@ class TranslateCurrency {
         }
     }
     
-    translatePage() {
-        // Traducir elementos comunes
-        const elements = document.querySelectorAll('[data-translate]');
-        elements.forEach(element => {
-            const key = element.getAttribute('data-translate');
-            if (this.translations[this.currentLang][key]) {
-                element.textContent = this.translations[this.currentLang][key];
-            }
-        });
-    }
-    
     updatePrices() {
-        // Actualizar todos los precios en la página
+        // Update all prices on the page
         const priceElements = document.querySelectorAll('[data-price]');
         priceElements.forEach(element => {
             const basePrice = parseFloat(element.getAttribute('data-price'));
@@ -177,10 +92,10 @@ class TranslateCurrency {
                 currencySymbol = '$';
             }
             
-            // Actualizar el elemento del precio directamente
+            // Update price element directly
             element.textContent = currencySymbol + convertedPrice.toFixed(2);
             
-            // Buscar y actualizar el elemento de la moneda
+            // Search and update currency element
             const priceContainer = element.closest('.price-container');
             if (priceContainer) {
                 const currencyElement = priceContainer.querySelector('.price-currency');
@@ -191,18 +106,26 @@ class TranslateCurrency {
         });
     }
     
-    // Función para cerrar selectores (ya no necesaria)
+    // Function to close selectors (no longer needed)
     closeSelectors() {
-        // Los selectores ahora están en la navbar, no hay flotantes que cerrar
+        // Selectors are now in navbar, no floating ones to close
     }
 }
 
-// Inicializar cuando el DOM esté listo
+// Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', function() {
     setTimeout(() => {
         window.translateCurrency = new TranslateCurrency();
         
-        // Actualizar estilos iniciales de la navbar
+        // Maintain compatibility with main translation system
+        if (window.translationSystem) {
+            // If main system exists, use it for translations
+            window.translateCurrency.setLanguage = function(lang) {
+                window.translationSystem.setLanguage(lang);
+            };
+        }
+        
+        // Update initial navbar styles
         if (window.translateCurrency) {
             window.translateCurrency.updateNavbarStyles();
         }

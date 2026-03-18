@@ -15,6 +15,7 @@ class TranslationSystem {
                 'nav-search': 'Buscar',
                 'nav-language': 'Idioma',
                 'nav-currency': 'Moneda',
+                'nav-dark-mode': 'Alternar modo oscuro',
                 
                 // Selector de idioma
                 'lang-spanish': 'Español',
@@ -27,6 +28,7 @@ class TranslationSystem {
                 
                 // Menú móvil
                 'mobile-menu-close': 'Cerrar menú',
+                'mobile-menu-open': 'Abrir menú móvil',
                 'mobile-menu-lists': 'Lista de Precios',
                 'mobile-menu-full-list': 'Lista Completa',
                 'mobile-menu-access-point': 'Access Point',
@@ -65,7 +67,7 @@ class TranslationSystem {
                 
                 // Contenido principal
                 'main-title': 'Bandeja para Fibra',
-                'main-description': 'Descripción técnica: Bandeja rackeable de fibra optica — Datatronix — Código CPPR1-01-X1-UL.',
+                'main-description': 'Bandeja para fibra Rackeable 1RU patch panel de fibra con bandeja Deslizable para 24 puertos SC hasta 48 hilos LC marca Datatronix CPPR1-02-X1-UL.',
                 'zoom-badge': 'Zoom',
                 'product-view': 'Vista del producto',
                 'views-count': 'vistas',
@@ -86,6 +88,7 @@ class TranslationSystem {
                 'img-front': 'Vista frontal',
                 'img-front-large': 'Vista frontal ampliada',
                 'img-back': 'Vista posterior',
+                'main-image-alt': 'Imagen principal del producto',
                 
                 // Descargas
                 'downloads-title': 'Descargas disponibles',
@@ -187,11 +190,19 @@ class TranslationSystem {
                 'product-8-desc': 'Cable patch cord fibra óptica SC-SC monomodo 3 metros marca DATATRONIX',
                 
                 // Footer
-                'footer-description': 'Líderes en redes con 15+ años de experiencia.',
+                'footer-description': 'Líderes en redes con 15+ años.',
                 'footer-products': 'Productos',
                 'footer-equipment': 'Equipamiento',
                 'footer-services': 'Servicios',
                 'footer-contact': 'Contacto',
+                'footer-switches': 'Switches',
+                'footer-routers': 'Routers',
+                'footer-access-points': 'Access Points',
+                'footer-fiber-optic': 'Fibra Óptica',
+                'footer-technical-support': 'Soporte Técnico',
+                'footer-installation': 'Instalación',
+                'footer-consulting': 'Consultoría',
+                'footer-maintenance': 'Mantenimiento',
                 'footer-connected': 'Conectados',
                 'footer-newsletter-desc': 'Recibe ofertas exclusivas.',
                 'footer-email-placeholder': 'tu@email.com',
@@ -199,17 +210,9 @@ class TranslationSystem {
                 'footer-copyright': 'DS3 Comunicaciones. Todos los derechos reservados.',
                 'footer-privacy': 'Política de Privacidad',
                 'footer-terms': 'Términos',
-                'footer-support': 'Soporte Técnico',
-                'footer-installation': 'Instalación',
-                'footer-consulting': 'Consultoría',
-                'footer-maintenance': 'Mantenimiento',
-                'footer-switches': 'Switches',
-                'footer-routers': 'Routers',
-                'footer-access-points': 'Access Points',
-                'footer-fiber-optic': 'Fibra Óptica',
+                'footer-email': 'Email',
                 'footer-media-converters': 'Media Converters',
-                'footer-business-hours': 'Lun-Vie 9:00-18:00',
-                'footer-email': 'Email'
+                'mobile-menu-access-points': 'Access points'
             },
             en: {
                 // Navegación principal
@@ -220,6 +223,7 @@ class TranslationSystem {
                 'nav-search': 'Search',
                 'nav-language': 'Language',
                 'nav-currency': 'Currency',
+                'nav-dark-mode': 'Toggle dark mode',
                 
                 // Selector de idioma
                 'lang-spanish': 'Español',
@@ -232,6 +236,7 @@ class TranslationSystem {
                 
                 // Menú móvil
                 'mobile-menu-close': 'Close menu',
+                'mobile-menu-open': 'Open mobile menu',
                 'mobile-menu-lists': 'Price Lists',
                 'mobile-menu-full-list': 'Complete List',
                 'mobile-menu-access-point': 'Access Point',
@@ -270,7 +275,7 @@ class TranslationSystem {
                 
                 // Contenido principal
                 'main-title': 'Fiber Tray',
-                'main-description': 'Technical description: Rackmount fiber optic tray — Datatronix — Code CPPR1-01-X1-UL.',
+                'main-description': 'Rackmount fiber tray 1RU patch panel fiber with sliding tray for 24 SC ports up to 48 LC fibers brand Datatronix CPPR1-02-X1-UL.',
                 'zoom-badge': 'Zoom',
                 'product-view': 'Product view',
                 'views-count': 'views',
@@ -291,6 +296,7 @@ class TranslationSystem {
                 'img-front': 'Front view',
                 'img-front-large': 'Front view enlarged',
                 'img-back': 'Rear view',
+                'main-image-alt': 'Main product image',
                 
                 // Descargas
                 'downloads-title': 'Available Downloads',
@@ -397,6 +403,14 @@ class TranslationSystem {
                 'footer-equipment': 'Equipment',
                 'footer-services': 'Services',
                 'footer-contact': 'Contact',
+                'footer-switches': 'Switches',
+                'footer-routers': 'Routers',
+                'footer-access-points': 'Access Points',
+                'footer-fiber-optic': 'Fiber Optic',
+                'footer-technical-support': 'Technical Support',
+                'footer-installation': 'Installation',
+                'footer-consulting': 'Consulting',
+                'footer-maintenance': 'Maintenance',
                 'footer-connected': 'Connected',
                 'footer-newsletter-desc': 'Receive exclusive offers.',
                 'footer-email-placeholder': 'your@email.com',
@@ -405,16 +419,10 @@ class TranslationSystem {
                 'footer-privacy': 'Privacy Policy',
                 'footer-terms': 'Terms',
                 'footer-support': 'Technical Support',
-                'footer-installation': 'Installation',
-                'footer-consulting': 'Consulting',
-                'footer-maintenance': 'Maintenance',
-                'footer-switches': 'Switches',
-                'footer-routers': 'Routers',
-                'footer-access-points': 'Access Points',
-                'footer-fiber-optic': 'Fiber Optic',
-                'footer-media-converters': 'Media Converters',
                 'footer-business-hours': 'Mon-Fri 9:00-18:00',
-                'footer-email': 'Email'
+                'footer-email': 'Email',
+                'footer-media-converters': 'Media Converters',
+                'mobile-menu-access-points': 'Access points'
             }
         };
         
@@ -422,42 +430,18 @@ class TranslationSystem {
     }
     
     init() {
-        // Aplicar idioma guardado inmediatamente
+        // Apply saved language on load
         this.applyLanguage(this.currentLanguage);
-        this.updateLanguageSelector();
         
-        // Configurar event listeners cuando el DOM esté listo
-        const setupWhenReady = () => {
-            this.setupLanguageSelector();
-            console.log('✓ Sistema de traducción inicializado');
-            console.log('✓ Idioma actual:', this.currentLanguage);
-        };
+        // Update language button display
+        this.updateLanguageButton();
         
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', setupWhenReady);
-        } else {
-            setupWhenReady();
-        }
-    }
-    
-    setupLanguageSelector() {
-        // Configurar event listeners para los botones de idioma
-        const langButtons = document.querySelectorAll('[onclick*="setLanguage"]');
-        langButtons.forEach(button => {
-            const onclickAttr = button.getAttribute('onclick');
-            if (onclickAttr && onclickAttr.includes('setLanguage')) {
-                // Extraer el idioma del onclick
-                const match = onclickAttr.match(/setLanguage\(['"]([^'"]+)['"]\)/);
-                if (match && match[1]) {
-                    const lang = match[1];
-                    button.removeAttribute('onclick');
-                    button.addEventListener('click', (e) => {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        console.log('🌐 Cambiando idioma a:', lang);
-                        this.setLanguage(lang);
-                    });
-                }
+        // Add change listener for language preference
+        window.addEventListener('storage', (e) => {
+            if (e.key === 'selectedLanguage') {
+                this.currentLanguage = e.newValue || 'es';
+                this.applyLanguage(this.currentLanguage);
+                this.updateLanguageButton();
             }
         });
     }
@@ -467,56 +451,31 @@ class TranslationSystem {
             this.currentLanguage = lang;
             localStorage.setItem('selectedLanguage', lang);
             this.applyLanguage(lang);
-            this.updateLanguageSelector();
+            this.updateLanguageButton();
             
-            // Actualizar atributo lang del HTML
+            // Update HTML lang attribute
             document.documentElement.lang = lang;
             
-            // Disparar evento personalizado para otros componentes
-            window.dispatchEvent(new CustomEvent('languageChanged', { detail: { language: lang } }));
+            console.log(`Language changed to: ${lang}`);
         }
+    }
+    
+    getCurrentLanguage() {
+        return this.currentLanguage;
     }
     
     applyLanguage(lang) {
         const translations = this.translations[lang];
         
-        // Traducir elementos con atributo data-translate
+        // Translate all elements with data-translate attribute
         document.querySelectorAll('[data-translate]').forEach(element => {
             const key = element.getAttribute('data-translate');
             if (translations[key]) {
-                // Preservar estructura HTML si existe
-                if (element.innerHTML.includes('<i') || element.innerHTML.includes('<svg')) {
-                    // Si tiene iconos, actualizar solo el texto
-                    const textNode = Array.from(element.childNodes).find(node => node.nodeType === Node.TEXT_NODE);
-                    if (textNode) {
-                        textNode.textContent = translations[key];
-                    } else {
-                        // Si no hay nodo de texto, añadir al final
-                        element.appendChild(document.createTextNode(' ' + translations[key]));
-                    }
-                } else {
-                    element.textContent = translations[key];
-                }
+                element.textContent = translations[key];
             }
         });
         
-        // Traducir placeholders
-        document.querySelectorAll('[data-translate-placeholder]').forEach(element => {
-            const key = element.getAttribute('data-translate-placeholder');
-            if (translations[key]) {
-                element.placeholder = translations[key];
-            }
-        });
-        
-        // Traducir atributos alt de imágenes
-        document.querySelectorAll('[data-translate-alt]').forEach(element => {
-            const key = element.getAttribute('data-translate-alt');
-            if (translations[key]) {
-                element.alt = translations[key];
-            }
-        });
-        
-        // Traducir atributos aria-label
+        // Translate aria-labels with data-translate-aria attribute
         document.querySelectorAll('[data-translate-aria]').forEach(element => {
             const key = element.getAttribute('data-translate-aria');
             if (translations[key]) {
@@ -524,50 +483,50 @@ class TranslationSystem {
             }
         });
         
-        // Traducir títulos
+        // Translate title elements
         document.querySelectorAll('[data-translate-title]').forEach(element => {
             const key = element.getAttribute('data-translate-title');
             if (translations[key]) {
-                element.title = translations[key];
+                element.setAttribute('title', translations[key]);
             }
         });
-    }
-    
-    updateLanguageSelector() {
-        // Actualizar botón del selector de idioma
-        const langButton = document.getElementById('current-language');
-        if (langButton) {
-            langButton.textContent = this.currentLanguage.toUpperCase();
-        }
         
-        // También actualizar por si hay otros elementos
-        const langButtons = document.querySelectorAll('.group button span.text-xs');
-        langButtons.forEach(btn => {
-            if (btn.textContent && (btn.textContent === 'ES' || btn.textContent === 'EN')) {
-                btn.textContent = this.currentLanguage.toUpperCase();
+        // Translate placeholder attributes
+        document.querySelectorAll('[data-translate-placeholder]').forEach(element => {
+            const key = element.getAttribute('data-translate-placeholder');
+            if (translations[key]) {
+                element.setAttribute('placeholder', translations[key]);
             }
         });
+        
+        // Update page title if it has data-translate attribute
+        const titleElement = document.querySelector('title[data-translate]');
+        if (titleElement) {
+            const key = titleElement.getAttribute('data-translate');
+            if (translations[key]) {
+                titleElement.textContent = translations[key];
+            }
+        }
     }
     
-    getCurrentLanguage() {
-        return this.currentLanguage;
+    updateLanguageButton() {
+        const languageButton = document.getElementById('current-language');
+        if (languageButton) {
+            languageButton.textContent = this.currentLanguage.toUpperCase();
+        }
     }
     
+    // Get translation for a specific key
     translate(key) {
         return this.translations[this.currentLanguage][key] || key;
     }
 }
 
-// Crear instancia global
-window.translationSystem = new TranslationSystem();
-
-// Función para cambio de idioma (compatibilidad con código existente)
-window.translateCurrency = {
-    setLanguage: function(lang) {
-        window.translationSystem.setLanguage(lang);
-    },
-    setCurrency: function(currency) {
-        // Mantener funcionalidad de moneda existente
-        console.log('Currency set to:', currency);
-    }
-};
+// Initialize the translation system when DOM is ready
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(() => {
+        window.translationSystem = new TranslationSystem();
+        console.log('Translation system initialized');
+        console.log('Current language:', window.translationSystem.getCurrentLanguage());
+    }, 100);
+});
