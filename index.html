@@ -352,6 +352,7 @@
       .stock-grid .group {
         flex: 0 0 280px !important;
         min-height: 320px !important;
+        max-height: 320px !important;
         scroll-snap-align: start !important;
       }
       
@@ -362,21 +363,21 @@
       
       /* Productos individuales en el carrusel de stock */
       .stock-grid .p-5 {
-        padding: 16px !important;
+        padding: 12px !important;
       }
       .stock-grid .h-40 {
-        height: 160px !important;
+        height: 140px !important;
       }
       .stock-grid .text-lg {
-        font-size: 1rem !important;
-        line-height: 1.3 !important;
+        font-size: 0.95rem !important;
+        line-height: 1.2 !important;
         font-weight: 600 !important;
         text-align: center !important;
       }
       .stock-grid .text-sm {
-        font-size: 0.85rem !important;
+        font-size: 0.8rem !important;
         line-height: 1.2 !important;
-        margin-top: 8px !important;
+        margin-top: 6px !important;
         text-align: center !important;
       }
       .stock-grid .border-t {
@@ -434,10 +435,11 @@
         padding: 6px 12px !important;
       }
       
-      /* Asegurar que el grid de productos en stock use 3 columnas en móvil */
-      section[class*="bg-gray-50"] .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-3.xl\:grid-cols-4 {
-        grid-template-columns: repeat(3, 1fr) !important;
-        gap: 10px !important;
+      /* Mantener grid original de desktop sin modificaciones */
+      
+      /* Optimización adicional para productos en stock desktop - mantener posiciones originales */
+      section[class*="bg-gray-50"] .grid .group {
+        min-height: 320px !important;
       }
       
       /* Optimización adicional para productos en stock móvil */
@@ -448,7 +450,7 @@
         padding: 12px !important;
       }
       section[class*="bg-gray-50"] .grid .h-40 {
-        height: 80px !important;
+        height: 120px !important;
       }
       section[class*="bg-gray-50"] .grid .text-lg {
         font-size: 0.85rem !important;
@@ -531,32 +533,72 @@
       
       .stock-grid .group {
         flex: 0 0 300px !important;
-        min-height: 340px !important;
+        min-height: 360px !important;
+        max-height: 360px !important;
         scroll-snap-align: start !important;
       }
       
       .stock-grid .p-5 {
-        padding: 20px !important;
+        padding: 16px !important;
       }
       .stock-grid .h-40 {
-        height: 180px !important;
+        height: 160px !important;
       }
       .stock-grid .text-lg {
-        font-size: 1.1rem !important;
-        line-height: 1.3 !important;
+        font-size: 1rem !important;
+        line-height: 1.2 !important;
         font-weight: 600 !important;
         text-align: center !important;
       }
       .stock-grid .text-sm {
-        font-size: 0.9rem !important;
+        font-size: 0.85rem !important;
         line-height: 1.2 !important;
-        margin-top: 10px !important;
+        margin-top: 8px !important;
         text-align: center !important;
       }
       .stock-grid .font-semibold {
         font-weight: 600 !important;
         font-size: 1rem !important;
         padding: 10px 20px !important;
+      }
+    }
+
+    /* Desktop view - mantener grid original con productos en posiciones originales */
+    @media (min-width: 1025px) {
+      section[class*="bg-gray-50"] .stock-grid {
+        display: grid !important;
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 32px !important;
+      }
+      
+      section[class*="bg-gray-50"] .stock-grid .group {
+        width: 100% !important;
+        min-height: 320px !important;
+        max-height: 320px !important;
+      }
+      
+      section[class*="bg-gray-50"] .stock-grid .p-5 {
+        padding: 16px !important;
+      }
+      section[class*="bg-gray-50"] .stock-grid .h-40 {
+        height: 140px !important;
+      }
+      section[class*="bg-gray-50"] .stock-grid .text-lg {
+        font-size: 0.95rem !important;
+        line-height: 1.2 !important;
+        font-weight: 600 !important;
+        text-align: center !important;
+      }
+      section[class*="bg-gray-50"] .stock-grid .text-sm {
+        font-size: 0.8rem !important;
+        line-height: 1.2 !important;
+        margin-top: 6px !important;
+        text-align: center !important;
+      }
+      section[class*="bg-gray-50"] .stock-grid .font-semibold {
+        font-weight: 600 !important;
+        font-size: 0.85rem !important;
+        padding: 8px 16px !important;
       }
     }
 
@@ -2202,7 +2244,7 @@
         </div>
 
          <!-- Grid de productos -->
-        <div class="stock-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full max-w-4xl mx-auto">
+        <div class="stock-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full max-w-7xl mx-auto">
 
           <!-- Producto 1 -->
           <a href="poner enlace aqui"
