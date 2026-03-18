@@ -331,6 +331,40 @@
       .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-3.xl\:grid-cols-4 { gap: 12px; }
       .gap-4.sm\:gap-6 { gap: 12px; }
       
+      /* Grid de productos en stock optimizado para móvil - 2 filas de 4 */
+      .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-3.xl\:grid-cols-4.w-full { 
+        grid-template-columns: repeat(4, 1fr); 
+        gap: 8px; 
+      }
+      
+      /* Productos individuales en el grid de stock */
+      .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-3.xl\:grid-cols-4.w-full .group {
+        min-height: 180px;
+      }
+      .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-3.xl\:grid-cols-4.w-full .p-5 {
+        padding: 8px;
+      }
+      .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-3.xl\:grid-cols-4.w-full .h-40 {
+        height: 60px;
+      }
+      .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-3.xl\:grid-cols-4.w-full .text-lg {
+        font-size: 0.7rem;
+        line-height: 1.1;
+      }
+      .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-3.xl\:grid-cols-4.w-full .text-sm {
+        font-size: 0.6rem;
+        line-height: 1.0;
+      }
+      .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-3.xl\:grid-cols-4.w-full .border-t {
+        border-top: 1px solid #e5e7eb;
+      }
+      .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-3.xl\:grid-cols-4.w-full .pt-4 {
+        padding-top: 4px;
+      }
+      .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-3.xl\:grid-cols-4.w-full .mt-6 {
+        margin-top: 4px;
+      }
+      
       /* Optimizaciones adicionales para móvil */
       .max-w-2xl { max-width: 100%; }
       .rounded-2xl { border-radius: 12px; }
