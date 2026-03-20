@@ -311,6 +311,11 @@
       #brand-nav .text-sm { font-size: 0.7rem; }
       #brand-nav .space-x-2 > * + * { margin-left: 4px; }
       
+      /* Ajustes adicionales para elementos de navegación en móvil */
+      #brand-nav .nav-item { padding: 2px !important; }
+      #brand-nav .icon-container { height: 32px !important; width: 48px !important; }
+      #brand-nav .nav-icon { height: 24px !important; width: 32px !important; }
+      
       /* Imágenes optimizadas para móvil */
       .h-48.sm\:h-64 { height: 160px; }
       .h-64 { height: 180px; }
@@ -935,7 +940,7 @@
   <nav class="bg-white w-full shadow-md border sticky top-0 z-50" role="navigation" aria-label="Main navigation">
     <div class="container mx-auto px-4">
       <!-- Desktop Navbar -->
-      <div class="hidden lg:flex justify-between items-center py-4">
+      <div class="hidden lg:flex justify-between items-center py-2">
         <!-- Logo and name -->
         <div class="flex items-center">
           <img
@@ -1526,62 +1531,42 @@
       <div id="brand-nav" class="nav-container flex justify-evenly overflow-x-auto md:py-3 px-4 space-x-2 scrollbar-hide">
         <!-- Item 1 -->
         <a href="https://www.ds3comunicaciones.com/ubiquiti/index.html"
-          class="nav-item flex flex-col items-center p-3 rounded-lg min-w-fit flex-shrink-0 transition-all duration-300" data-title="UniFi">
-          <div class="icon-container h-16 w-20 flex items-center justify-center">
-            <img src="./icons/unifi.ico" class="nav-icon h-12 w-16 dark-icon-hidden" alt="UniFi" />
-            <img src="./icons/unifiwh.ico" class="nav-icon h-12 w-16 light-icon-hidden" alt="UniFi" />
+          class="nav-item flex flex-col items-center p-1 rounded-lg min-w-fit flex-shrink-0 transition-all duration-300" data-title="UniFi">
+          <div class="icon-container h-10 w-14 flex items-center justify-center">
+            <img src="./icons/ftth.ico" class="nav-icon h-8 w-10 dark-icon-hidden" alt="UniFi" />
+            <img src="./icons/ftth.ico" class="nav-icon h-8 w-10 light-icon-hidden" alt="UniFi" />
           </div>
-          <span class="text-xs font-semibold text-black dark:text-gray-300 mt-1">UniFi</span>
+          <span class="text-xs font-semibold text-black dark:text-gray-300 mt-1">Cables de fibra</span>
         </a>
 
         <!-- Item 2 -->
         <a href="https://www.ds3comunicaciones.com/ubiquiti/index.html"
-          class="nav-item flex flex-col items-center p-3 rounded-lg min-w-fit flex-shrink-0 transition-all duration-300" data-title="PowerBeam">
-          <div class="icon-container h-16 w-20 flex items-center justify-center">
-            <img src="./icons/PBeam.ico" class="nav-icon h-12 w-16 dark-icon-hidden" alt="PowerBeam" />
-            <img src="./icons/PBeamwh.ico" class="nav-icon h-12 w-16 light-icon-hidden" alt="PowerBeam" />
+          class="nav-item flex flex-col items-center p-1 rounded-lg min-w-fit flex-shrink-0 transition-all duration-300" data-title="PowerBeam">
+          <div class="icon-container h-10 w-14 flex items-center justify-center">
+            <img src="./icons/patch.ico" class="nav-icon h-8 w-10 dark-icon-hidden" alt="PowerBeam" />
+            <img src="./icons/patch.ico" class="nav-icon h-8 w-10 light-icon-hidden" alt="PowerBeam" />
           </div>
-          <span class="text-xs font-semibold text-black dark:text-gray-300 mt-1">PowerBeam</span>
+          <span class="text-xs font-semibold text-black dark:text-gray-300 mt-1">Patch cords / pigtails</span>
         </a>
 
         <!-- Item 3 -->
         <a href="https://www.ds3comunicaciones.com/ubiquiti/index.html"
-          class="nav-item flex flex-col items-center p-3 rounded-lg min-w-fit flex-shrink-0 transition-all duration-300" data-title="airFiber">
-          <div class="icon-container h-16 w-20 flex items-center justify-center">
-            <img src="./icons/airFiber.ico" class="nav-icon h-12 w-16 dark-icon-hidden" alt="airFiber" />
-            <img src="./icons/airFiberwh.ico" class="nav-icon h-12 w-16 light-icon-hidden" alt="airFiber" />
+          class="nav-item flex flex-col items-center p-1 rounded-lg min-w-fit flex-shrink-0 transition-all duration-300" data-title="airFiber">
+          <div class="icon-container h-10 w-14 flex items-center justify-center">
+            <img src="./icons/bandejas.ico" class="nav-icon h-8 w-10 dark-icon-hidden" alt="airFiber" />
+            <img src="./icons/bandejas.ico" class="nav-icon h-8 w-10 light-icon-hidden" alt="airFiber" />
           </div>
-          <span class="text-xs font-semibold text-black dark:text-gray-300 mt-1">airFiber</span>
+          <span class="text-xs font-semibold text-black dark:text-gray-300 mt-1">Bandejas</span>
         </a>
 
         <!-- Item 4 -->
         <a href="https://www.ds3comunicaciones.com/mikrotik/index.html"
-          class="nav-item flex flex-col items-center p-3 rounded-lg min-w-fit flex-shrink-0 transition-all duration-300" data-title="Antenas">
-          <div class="icon-container h-16 w-20 flex items-center justify-center">
-            <img src="./icons/antena.ico" class="nav-icon h-12 w-16 dark-icon-hidden" alt="Antenas" />
-            <img src="./icons/antenawh.ico" class="nav-icon h-12 w-16 light-icon-hidden" alt="Antenas" />
+          class="nav-item flex flex-col items-center p-1 rounded-lg min-w-fit flex-shrink-0 transition-all duration-300" data-title="Antenas">
+          <div class="icon-container h-10 w-14 flex items-center justify-center">
+            <img src="./icons/mufaswh.ico" class="nav-icon h-8 w-10 dark-icon-hidden" alt="Antenas" />
+            <img src="./icons/mufaswh.ico" class="nav-icon h-8 w-10 light-icon-hidden" alt="Antenas" />
           </div>
-          <span class="text-xs font-semibold text-black dark:text-gray-300 mt-1">Antenas</span>
-        </a>
-
-        <!-- Item 5 -->
-        <a href="https://www.ds3comunicaciones.com/ubiquiti/index.html"
-          class="nav-item flex flex-col items-center p-3 rounded-lg min-w-fit flex-shrink-0 transition-all duration-300" data-title="LTU 5GHz">
-          <div class="icon-container h-16 w-20 flex items-center justify-center">
-            <img src="./icons/LTU5GHZ.ico" class="nav-icon h-12 w-16 dark-icon-hidden" alt="LTU5GHZ" />
-            <img src="./icons/LTU5GHZwh.ico" class="nav-icon h-12 w-16 light-icon-hidden" alt="LTU5GHZ" />
-          </div>
-          <span class="text-xs font-semibold text-black dark:text-gray-300 mt-1">LTU 5GHz</span>
-        </a>
-
-        <!-- Item 6 -->
-        <a href="https://www.ds3comunicaciones.com/cisco/index.html"
-          class="nav-item flex flex-col items-center p-3 rounded-lg min-w-fit flex-shrink-0 transition-all duration-300" data-title="Switching">
-          <div class="icon-container h-16 w-20 flex items-center justify-center">
-            <img src="./icons/Switching.ico" class="nav-icon h-12 w-16 dark-icon-hidden" alt="Switching" />
-            <img src="./icons/Switchingwh.ico" class="nav-icon h-12 w-16 light-icon-hidden" alt="Switching" />
-          </div>
-          <span class="text-xs font-semibold text-black dark:text-gray-300 mt-1">Switching</span>
+          <span class="text-xs font-semibold text-black dark:text-gray-300 mt-1">Mufas</span>
         </a>
       </div>
     </div>
