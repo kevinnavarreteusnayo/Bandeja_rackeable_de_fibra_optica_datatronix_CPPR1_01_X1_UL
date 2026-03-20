@@ -311,11 +311,6 @@
       #brand-nav .text-sm { font-size: 0.7rem; }
       #brand-nav .space-x-2 > * + * { margin-left: 4px; }
       
-      /* Ajustes adicionales para elementos de navegación en móvil */
-      #brand-nav .nav-item { padding: 2px !important; }
-      #brand-nav .icon-container { height: 32px !important; width: 48px !important; }
-      #brand-nav .nav-icon { height: 24px !important; width: 32px !important; }
-      
       /* Imágenes optimizadas para móvil */
       .h-48.sm\:h-64 { height: 160px; }
       .h-64 { height: 180px; }
@@ -1044,7 +1039,7 @@
       <!-- Mobile Navbar -->
       <div class="lg:hidden flex flex-col">
         <!-- top navbar ultra compact -->
-        <div class="flex justify-between items-center py-2 px-3 bg-white border-b">
+        <div class="flex justify-between items-center py-1 px-3 bg-white border-b">
           <!-- left div -->
           <div class="flex items-center gap-2">
             <!-- hamburger button -->
@@ -1085,7 +1080,7 @@
         </div>
 
         <!-- bottom navbar - ultra compact contact -->
-        <div class="py-2 px-3 bg-gray-50 border-b">
+        <div class="py-1 px-3 bg-gray-50 border-b">
           <div class="flex justify-between items-center text-xs">
             <div class="flex items-center gap-2">
               <i class="fas fa-phone text-green-600 text-xs"></i>
@@ -1528,43 +1523,43 @@
   <nav class="bg-white border-b border-gray-200 shadow-md z-40">
     <div class="relative">
       <!-- Horizontal scroll container -->
-      <div id="brand-nav" class="nav-container flex justify-evenly overflow-x-auto md:py-3 px-4 space-x-2 scrollbar-hide">
+      <div id="brand-nav" class="nav-container flex justify-evenly overflow-x-auto py-1 px-4 space-x-2 scrollbar-hide">
         <!-- Item 1 -->
-        <a href="https://www.ds3comunicaciones.com/ubiquiti/index.html"
-          class="nav-item flex flex-col items-center p-1 rounded-lg min-w-fit flex-shrink-0 transition-all duration-300" data-title="UniFi">
+        <a href="https://www.ds3comunicaciones.com/panduit/index.html#cables"
+          class="nav-item flex flex-col items-center p-1 rounded-lg min-w-fit flex-shrink-0 transition-all duration-300" data-title="Cables de fibra">
           <div class="icon-container h-10 w-14 flex items-center justify-center">
-            <img src="./icons/ftthwh.ico" class="nav-icon h-8 w-10 dark-icon-hidden" alt="ftth" />
-            <img src="./icons/ftth.ico" class="nav-icon h-8 w-10 light-icon-hidden" alt="ftth" />
+            <img src="./icons/ftthwh.ico" class="nav-icon h-8 w-10 dark-icon-hidden" alt="UniFi" />
+            <img src="./icons/ftth.ico" class="nav-icon h-8 w-10 light-icon-hidden" alt="UniFi" />
           </div>
           <span class="text-xs font-semibold text-black dark:text-gray-300 mt-1">Cables de fibra</span>
         </a>
 
         <!-- Item 2 -->
-        <a href="https://www.ds3comunicaciones.com/ubiquiti/index.html"
-          class="nav-item flex flex-col items-center p-1 rounded-lg min-w-fit flex-shrink-0 transition-all duration-300" data-title="PowerBeam">
+        <a href="https://www.ds3comunicaciones.com/panduit/index.html#patch-cords"
+          class="nav-item flex flex-col items-center p-1 rounded-lg min-w-fit flex-shrink-0 transition-all duration-300" data-title="Patch cords">
           <div class="icon-container h-10 w-14 flex items-center justify-center">
-            <img src="./icons/patchwh.ico" class="nav-icon h-8 w-10 dark-icon-hidden" alt="patch" />
-            <img src="./icons/patch.ico" class="nav-icon h-8 w-10 light-icon-hidden" alt="patch" />
+            <img src="./icons/patchwh.ico" class="nav-icon h-8 w-10 dark-icon-hidden" alt="PowerBeam" />
+            <img src="./icons/patch.ico" class="nav-icon h-8 w-10 light-icon-hidden" alt="PowerBeam" />
           </div>
           <span class="text-xs font-semibold text-black dark:text-gray-300 mt-1">Patch cords / pigtails</span>
         </a>
 
         <!-- Item 3 -->
-        <a href="https://www.ds3comunicaciones.com/ubiquiti/index.html"
-          class="nav-item flex flex-col items-center p-1 rounded-lg min-w-fit flex-shrink-0 transition-all duration-300" data-title="airFiber">
+        <a href="https://www.ds3comunicaciones.com/panduit/index.html#bandejas"
+          class="nav-item flex flex-col items-center p-1 rounded-lg min-w-fit flex-shrink-0 transition-all duration-300" data-title="Bandejas">
           <div class="icon-container h-10 w-14 flex items-center justify-center">
-            <img src="./icons/bandejaswh.ico" class="nav-icon h-8 w-10 dark-icon-hidden" alt="bandeja" />
-            <img src="./icons/bandeja.ico" class="nav-icon h-8 w-10 light-icon-hidden" alt="bandeja" />
+            <img src="./icons/bandejaswh.ico" class="nav-icon h-8 w-10 dark-icon-hidden" alt="airFiber" />
+            <img src="./icons/bandeja.ico" class="nav-icon h-8 w-10 light-icon-hidden" alt="airFiber" />
           </div>
           <span class="text-xs font-semibold text-black dark:text-gray-300 mt-1">Bandejas</span>
         </a>
 
         <!-- Item 4 -->
-        <a href="https://www.ds3comunicaciones.com/mikrotik/index.html"
-          class="nav-item flex flex-col items-center p-1 rounded-lg min-w-fit flex-shrink-0 transition-all duration-300" data-title="Antenas">
+        <a href="https://www.ds3comunicaciones.com/panduit/index.html#mufas"
+          class="nav-item flex flex-col items-center p-1 rounded-lg min-w-fit flex-shrink-0 transition-all duration-300" data-title="Mufas">
           <div class="icon-container h-10 w-14 flex items-center justify-center">
-            <img src="./icons/mufaswh.ico" class="nav-icon h-8 w-10 dark-icon-hidden" alt="mufas" />
-            <img src="./icons/mufas.ico" class="nav-icon h-8 w-10 light-icon-hidden" alt="mufas" />
+            <img src="./icons/mufaswh.ico" class="nav-icon h-8 w-10 dark-icon-hidden" alt="Antenas" />
+            <img src="./icons/mufas.ico" class="nav-icon h-8 w-10 light-icon-hidden" alt="Antenas" />
           </div>
           <span class="text-xs font-semibold text-black dark:text-gray-300 mt-1">Mufas</span>
         </a>
