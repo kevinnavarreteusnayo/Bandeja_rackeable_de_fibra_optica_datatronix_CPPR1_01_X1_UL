@@ -1134,6 +1134,51 @@
         </div>
       </div>
 
+      <!-- Language and Currency selectors -->
+      <div class="px-4 pb-4 border-b border-gray-200">
+        <div class="flex justify-between items-center gap-4">
+          <!-- Language selector -->
+          <div class="relative group">
+            <button class="flex items-center gap-2 p-2 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors text-sm font-medium text-gray-700" id="mobile-language-selector-btn">
+              <i class="fas fa-globe text-black"></i>
+              <span class="text-xs text-black" id="mobile-current-language">ES</span>
+            </button>
+            <div class="absolute left-0 mt-2 w-32 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <button onclick="window.translationSystem.setLanguage('es')" class="w-full text-left px-3 py-2 text-sm hover:bg-gray-100 flex items-center gap-2">
+                <span>🇪🇸</span>
+                <span data-translate="lang-spanish">Español</span>
+              </button>
+              <button onclick="window.translationSystem.setLanguage('en')" class="w-full text-left px-3 py-2 text-sm hover:bg-gray-100 flex items-center gap-2">
+                <span>🇺🇸</span>
+                <span data-translate="lang-english">English</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Currency selector -->
+          <div class="relative group">
+            <button class="flex items-center gap-2 p-2 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors text-sm font-medium text-gray-700">
+              <i class="fas fa-dollar-sign text-black"></i>
+              <span class="text-xs text-black">USD</span>
+            </button>
+            <div class="absolute right-0 mt-2 w-32 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <button onclick="translateCurrency.setCurrency('PEN')" class="w-full text-left px-3 py-2 text-sm hover:bg-gray-100 flex items-center gap-2">
+                <span>🇵🇪</span>
+                <span data-translate="currency-pen">PEN - Soles</span>
+              </button>
+              <button onclick="translateCurrency.setCurrency('USD')" class="w-full text-left px-3 py-2 text-sm hover:bg-gray-100 flex items-center gap-2">
+                <span>🇺🇸</span>
+                <span data-translate="currency-usd">USD - Dólares</span>
+              </button>
+              <button onclick="translateCurrency.setCurrency('EUR')" class="w-full text-left px-3 py-2 text-sm hover:bg-gray-100 flex items-center gap-2">
+                <span>🇪🇺</span>
+                <span data-translate="currency-eur">EUR - Euros</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- Menu content -->
       <div class="px-6 pb-8">
         <!-- Additional links -->
