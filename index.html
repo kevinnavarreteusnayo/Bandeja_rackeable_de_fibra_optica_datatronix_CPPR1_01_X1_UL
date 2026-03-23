@@ -159,6 +159,19 @@
       display: block !important;
       visibility: visible !important;
     }
+
+    /* Theme toggle for hamburger icons */
+    .light-icon-hidden {
+      display: none !important;
+    }
+    
+    html.dark .light-icon-hidden {
+      display: inline !important;
+    }
+    
+    html.dark #hamburguer-desktop .dark\:text-white {
+      display: none !important;
+    }
     
     html.dark .relative.group .p-2.rounded-full:first-child .fas,
     html.dark .relative.group .p-2.rounded-full:first-child span {
@@ -964,6 +977,32 @@
       <div class="hidden lg:flex justify-between items-center py-2">
         <!-- Logo and name -->
         <div class="flex items-center">
+          <!-- Desktop hamburger button - al inicio -->
+          <button
+            id="hamburguer-desktop"
+            onclick="
+              const menu = document.getElementById('desktop-menu');
+              const overlay = document.getElementById('menu-overlay');
+              if (menu.classList.contains('-translate-x-full')) {
+                menu.classList.remove('-translate-x-full');
+                menu.classList.remove('hidden');
+                if (overlay) overlay.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+                this.setAttribute('aria-expanded', 'true');
+              } else {
+                menu.classList.add('-translate-x-full');
+                menu.classList.add('hidden');
+                if (overlay) overlay.classList.add('hidden');
+                document.body.style.overflow = '';
+                this.setAttribute('aria-expanded', 'false');
+              }
+            "
+            style="background: none; border: none; padding: 8px; cursor: pointer; margin-right: 10px; display: block !important; visibility: visible !important;"
+          >
+            <span style="font-size: 20px; font-weight: bold; color: #000;" class="dark:text-white">☰</span>
+            <span style="font-size: 20px; font-weight: bold; color: #f7f7f7;" class="light-icon-hidden">☰</span>
+          </button>
+          
           <img
             src="https://www.ds3comunicaciones.com/mikrotik/images/Logo1.jpg"
             alt="NetPeru Logo"
