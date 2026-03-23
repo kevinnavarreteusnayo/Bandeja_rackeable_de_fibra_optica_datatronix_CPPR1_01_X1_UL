@@ -30,18 +30,6 @@
   transform: rotate(-45deg) translate(7px, -6px);
 }
 
-/* Hover desktop: abrir el menú y overlay (solo cuando hay hover disponible) */
-@media (hover: hover) and (pointer: fine) {
-  nav:has(#mobile-menu-button:hover) #mobile-menu,
-  nav:has(#mobile-menu:hover) #mobile-menu {
-    transform: translateX(0) !important;
-  }
-
-  nav:has(#mobile-menu-button:hover) #menu-overlay,
-  nav:has(#mobile-menu:hover) #menu-overlay {
-    display: block !important;
-  }
-}
 
 /* Utilidad para ocultar elementos solo visualmente (accesible) */
 .sr-only {

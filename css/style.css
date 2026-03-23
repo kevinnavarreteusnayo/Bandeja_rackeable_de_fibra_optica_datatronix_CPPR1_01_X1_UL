@@ -361,7 +361,7 @@ html.theme-transition, html.theme-transition * {
    sin exceder el viewport en móviles */
 .mobile-menu-panel {
   width: max-content;
-  max-width: min(92vw, 420px);
+  max-width: min(92vw, 50px);
   min-width: 240px;
   white-space: nowrap;
 }

@@ -7,18 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function initializeNavbar() {
-    // Menú hamburguesa (versión simplificada que será reemplazada por initializeMobileMenu)
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    if (mobileMenuButton) {
-        const icon = mobileMenuButton.querySelector('i');
-        mobileMenuButton.addEventListener('click', function() {
-            if (icon) {
-                icon.classList.toggle('fa-bars');
-                icon.classList.toggle('fa-times');
-            }
-        });
-    }
-
+    
     // Theme toggle (dark / light)
     const themeToggles = document.querySelectorAll('.theme-toggle');
     function applyTheme(theme) {
@@ -98,56 +87,115 @@ function showThemeTooltip(button) {
 
 function initializeMobileMenu() {
     const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const desktopMenuButton = document.getElementById('desktop-menu-button');
+    const desktopMenuButtonNew = document.getElementById('desktop-menu-btn-new');
     const closeMenuButton = document.getElementById('close-menu');
+    const closeDesktopMenuButton = document.getElementById('close-desktop-menu');
     const mobileMenu = document.getElementById('mobile-menu');
+    const desktopMenu = document.getElementById('desktop-menu');
     const menuOverlay = document.getElementById('menu-overlay');
 
-    if (!mobileMenuButton || !mobileMenu) return;
+    if (!mobileMenu || !desktopMenu) return;
 
-    // Función para abrir el menú
+    // Asegurar que el menú móvil esté oculto en desktop
+    function ensureMobileMenuHidden() {
+        if (window.innerWidth >= 1024) { // lg breakpoint
+            mobileMenu.classList.add('-translate-x-full');
+            mobileMenu.classList.add('hidden');
+            if (menuOverlay) menuOverlay.classList.add('hidden');
+            document.body.style.overflow = '';
+            if (mobileMenuButton) mobileMenuButton.setAttribute('aria-expanded', 'false');
+            if (desktopMenuButton) desktopMenuButton.setAttribute('aria-expanded', 'false');
+            if (desktopMenuButtonNew) desktopMenuButtonNew.setAttribute('aria-expanded', 'false');
+        }
+    }
+
+    // Ejecutar al cargar y al redimensionar
+    ensureMobileMenuHidden();
+    window.addEventListener('resize', ensureMobileMenuHidden);
+
+    // Función para abrir el menú móvil
     function openMobileMenu() {
         mobileMenu.classList.remove('-translate-x-full');
         mobileMenu.classList.remove('hidden');
         if (menuOverlay) menuOverlay.classList.remove('hidden');
         document.body.style.overflow = 'hidden';
-        mobileMenuButton.setAttribute('aria-expanded', 'true');
         
-        // Cambiar hamburguesa a X
-        const hamburgerLines = mobileMenuButton.querySelector('.hamburger-lines');
-        if (hamburgerLines) {
-            hamburgerLines.classList.add('active');
-        }
+        // Actualizar botón móvil
+        if (mobileMenuButton) mobileMenuButton.setAttribute('aria-expanded', 'true');
     }
 
-    // Función para cerrar el menú
+    // Función para abrir el menú desktop
+    function openDesktopMenu() {
+        desktopMenu.classList.remove('-translate-x-full');
+        desktopMenu.classList.remove('hidden');
+        if (menuOverlay) menuOverlay.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        
+        // Actualizar botón desktop
+        if (desktopMenuButton) desktopMenuButton.setAttribute('aria-expanded', 'true');
+        if (desktopMenuButtonNew) desktopMenuButtonNew.setAttribute('aria-expanded', 'true');
+    }
+
+    // Función para cerrar el menú móvil
     function closeMobileMenu() {
         mobileMenu.classList.add('-translate-x-full');
         if (menuOverlay) menuOverlay.classList.add('hidden');
         document.body.style.overflow = '';
         
-        // Cambiar X a hamburguesa
-        const hamburgerLines = mobileMenuButton.querySelector('.hamburger-lines');
-        if (hamburgerLines) {
-            hamburgerLines.classList.remove('active');
-        }
-        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        // Actualizar botón móvil
+        if (mobileMenuButton) mobileMenuButton.setAttribute('aria-expanded', 'false');
     }
 
-    // Event listeners
-    mobileMenuButton.addEventListener('click', openMobileMenu);
+    // Función para cerrar el menú desktop
+    function closeDesktopMenu() {
+        desktopMenu.classList.add('-translate-x-full');
+        desktopMenu.classList.add('hidden');
+        if (menuOverlay) menuOverlay.classList.add('hidden');
+        document.body.style.overflow = '';
+        
+        // Actualizar botón desktop
+        if (desktopMenuButton) desktopMenuButton.setAttribute('aria-expanded', 'false');
+    }
+
+    // Event listeners para móvil
+    if (mobileMenuButton) {
+        mobileMenuButton.addEventListener('click', openMobileMenu);
+    }
+    
+    // Event listeners para desktop
+    if (desktopMenuButton) {
+        desktopMenuButton.addEventListener('click', openDesktopMenu);
+    }
+    
+    if (desktopMenuButtonNew) {
+        desktopMenuButtonNew.addEventListener('click', openDesktopMenu);
+    }
 
     if (closeMenuButton) {
         closeMenuButton.addEventListener('click', closeMobileMenu);
     }
 
+    if (closeDesktopMenuButton) {
+        closeDesktopMenuButton.addEventListener('click', closeDesktopMenu);
+    }
+
     if (menuOverlay) {
-        menuOverlay.addEventListener('click', closeMobileMenu);
+        menuOverlay.addEventListener('click', function() {
+            closeMobileMenu();
+            closeDesktopMenu();
+        });
     }
 
     // Cerrar menú con tecla Escape
     document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && !mobileMenu.classList.contains('-translate-x-full')) {
-            closeMobileMenu();
+        if (e.key === 'Escape') {
+            if (!mobileMenu.classList.contains('-translate-x-full')) {
+                closeMobileMenu();
+            }
+            if (!desktopMenu.classList.contains('-translate-x-full')) {
+                closeDesktopMenu();
+            }
         }
     });
 }
