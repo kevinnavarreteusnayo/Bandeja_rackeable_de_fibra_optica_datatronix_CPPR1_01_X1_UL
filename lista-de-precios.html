@@ -1,0 +1,2565 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Lista de precios de productos de fibra óptica - Cables, acopladores, pigtail, patch cords y más." />
+  <meta name="keywords"
+    content="fibra óptica, cables, acopladores, pigtail, patch cord, lista de precios, DATATRONIX" />
+  <meta name="author" content="ds3comunicaciones" />
+  <!-- tailwind cdn -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- fontawesome cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- css  -->
+  <link rel="stylesheet" href="css/style.css?v=20240317" />
+  <link rel="stylesheet" href="./css/hamburger.css?v=20240317" />
+  <link rel="stylesheet" href="./css/carousel.css?v=20240317" />
+  <!-- carga del navbar -->
+  <script src="./js/nav.js?v=20240317"></script>
+  <!-- Scripts de interactividad -->
+  <script src="./js/main.js?v=20240317" defer></script>
+  <script src="./js/carousel.js?v=20240317" defer></script>
+
+  <!-- titulo de la pagina -->
+  <title>Lista de Precios - Productos de Fibra Óptica</title>
+
+  <!-- Inline styles para modo oscuro completo y overrides críticos -->
+  <style>
+    /* Variables for light/dark mode */
+    :root {
+      --bg: #ffffff;
+      --surface: #ffffff;
+      --panel: #f8fafc;
+      --muted: #475569;
+      --text: #0f172a;
+      --accent: #0b66c3;
+      --border: #e6e6e6;
+      --card-shadow: 0 10px 30px rgba(2,6,23,0.06);
+      --input-bg: #ffffff;
+      --action-bg: #ffffff;
+      --action-fg: #0f172a;
+    }
+
+    /* Values for dark mode: applicable if <html> has .dark class */
+    html.dark {
+      --bg: #061826;
+      --surface: #071a27;
+      --panel: rgba(255,255,255,0.02);
+      --muted: #9aa6b2;
+      --text: #e6eef8;
+      --accent: #60a5fa;
+      --border: rgba(255,255,255,0.06);
+      --card-shadow: 0 10px 30px rgba(0,0,0,0.6);
+      --input-bg: rgba(255,255,255,0.03);
+      --action-bg: rgba(255,255,255,0.03);
+      --action-fg: #e6eef8;
+    }
+
+    /* Page base */
+    html, body {
+      background-color: var(--bg) !important;
+      color: var(--text) !important;
+    }
+
+    /* Topbar */
+    .topbar {
+      -webkit-backdrop-filter: blur(6px);
+      backdrop-filter: blur(6px);
+      background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(250,250,250,0.9));
+      border-bottom: 1px solid var(--border);
+    }
+    html.dark .topbar {
+      background: linear-gradient(180deg, rgba(4,18,30,0.95), rgba(6,24,36,0.95)) !important;
+      border-bottom: 1px solid var(--border) !important;
+    }
+
+    .topbar .contact-item { color: var(--text); }
+    .topbar .phone-primary {
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 1.075rem;
+    }
+    .topbar .contact-mini { color: var(--muted); font-size: .875rem; }
+
+    /* Force readable numbers and links in dark mode */
+    html.dark .topbar .phone-primary,
+    html.dark .topbar .phone-primary a,
+    html.dark .topbar .contact-item,
+    html.dark .topbar .contact-item a,
+    html.dark .topbar .contact-mini {
+      color: #ffffff !important;
+    }
+
+    /* Language selector in dark mode */
+    html.dark #language-selector-btn {
+      background: var(--action-bg) !important;
+      border: 1px solid var(--border) !important;
+    }
+    
+    html.dark #language-selector-btn .fas,
+    html.dark #language-selector-btn #current-language {
+      color: var(--text) !important;
+    }
+    
+    html.dark .absolute.right-0.mt-2.w-32 {
+      background: var(--surface) !important;
+      border: 1px solid var(--border) !important;
+    }
+    
+    html.dark .absolute.right-0.mt-2.w-32 button {
+      color: var(--text) !important;
+    }
+    
+    html.dark .absolute.right-0.mt-2.w-32 span {
+      color: var(--text) !important;
+    }
+
+    /* Currency selector in dark mode */
+    html.dark .relative.group .p-2.rounded-full:first-child {
+      background: var(--action-bg) !important;
+      border: 1px solid var(--border) !important;
+    }
+
+    /* Desktop hamburger button in dark mode */
+    html.dark #desktop-menu-button {
+      background: var(--action-bg) !important;
+      border: 1px solid var(--border) !important;
+    }
+
+    html.dark #desktop-menu-button:hover {
+      background: var(--hover-bg) !important;
+    }
+
+    /* Force desktop hamburger button visibility */
+    #desktop-menu-button {
+      display: inline-flex !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      position: relative !important;
+      z-index: 9999 !important;
+      width: auto !important;
+      height: auto !important;
+    }
+
+    #desktop-menu-button i {
+      display: block !important;
+      visibility: visible !important;
+    }
+
+    /* Theme toggle for hamburger icons */
+    .light-icon-hidden {
+      display: none !important;
+    }
+    
+    html.dark .light-icon-hidden {
+      display: inline !important;
+    }
+    
+    .dark-icon-hidden {
+      display: inline !important;
+    }
+    
+    html.dark .dark-icon-hidden {
+      display: none !important;
+    }
+    
+    /* Force icon visibility */
+    html:not(.dark) .dark-icon-hidden {
+      display: inline !important;
+    }
+    
+    html:not(.dark) .light-icon-hidden {
+      display: none !important;
+    }
+    
+    html.dark .dark-icon-hidden {
+      display: none !important;
+    }
+    
+    html.dark .light-icon-hidden {
+      display: inline !important;
+    }
+    
+    /* Navigation icons specific rules */
+    .nav-icon.dark-icon-hidden {
+      display: inline !important;
+    }
+    
+    html.dark .nav-icon.dark-icon-hidden {
+      display: none !important;
+    }
+    
+    .nav-icon.light-icon-hidden {
+      display: none !important;
+    }
+    
+    html.dark .nav-icon.light-icon-hidden {
+      display: inline !important;
+    }
+    
+    /* Hamburger menu lines dark mode */
+    .hamburger-lines span {
+      background-color: #000000 !important;
+    }
+    
+    html.dark .hamburger-lines span {
+      background-color: #ffffff !important;
+    }
+
+    /* Product card styles */
+    .product-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: all 0.3s ease;
+      box-shadow: var(--card-shadow);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    
+    .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(2,6,23,0.12);
+    }
+    
+    html.dark .product-card {
+      background: var(--surface);
+      border-color: var(--border);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    }
+    
+    .product-card:hover {
+      border-color: var(--accent);
+    }
+    
+    .product-image-container {
+      width: 100%;
+      height: 200px;
+      background: var(--panel);
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 1rem;
+      position: relative;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .product-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    
+    .product-image-container:hover .product-image {
+      transform: scale(1.05);
+    }
+    
+    .product-placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: var(--muted);
+      font-size: 2rem;
+    }
+    
+    .product-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .price-tag {
+      background: linear-gradient(135deg, #10b981, #059669);
+      color: white;
+      font-weight: 700;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      display: inline-block;
+      font-size: 1.25rem;
+    }
+    
+    .category-header {
+      background: linear-gradient(135deg, var(--accent), #1e40af);
+      color: white;
+      padding: 1rem 1.5rem;
+      border-radius: 12px;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 12px rgba(37,99,235,0.3);
+    }
+    
+    html.dark .category-header {
+      background: linear-gradient(135deg, #3b82f6, #1e40af);
+    }
+    
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.9);
+      animation: fadeIn 0.3s;
+    }
+    
+    .modal-content {
+      position: relative;
+      margin: auto;
+      padding: 0;
+      width: 90%;
+      max-width: 800px;
+      height: 90%;
+      max-height: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .modal-image {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+    
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    
+    .close:hover {
+      color: #bbb;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* SEARCH OVERLAY STYLES */
+    #search-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: 9999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #search-overlay .overlay-card {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      max-width: 90%;
+      max-height: 90%;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+      position: relative;
+    }
+
+    html.dark #search-overlay .overlay-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+    }
+
+    #search-overlay .overlay-top {
+      display:flex;
+      gap:10px;
+      align-items:center;
+      margin-bottom: 14px;
+    }
+
+    #search-overlay .overlay-search {
+      flex:1;
+    }
+
+    #search-overlay .overlay-search input {
+      flex:1;
+      padding: 12px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 16px;
+      background: var(--input-bg);
+      color: var(--text);
+    }
+
+    #search-overlay .overlay-actions { display:flex; gap:8px; align-items:center; }
+    #search-overlay .icon-grid { display:flex; gap:12px; flex-wrap:wrap; margin-top:14px; justify-content:center; }
+    
+    #search-overlay .icon-card {
+      min-width: 160px;
+      max-width: 220px;
+      padding: 1rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      background: var(--surface);
+    }
+    
+    #search-overlay .icon-card:hover{
+      transform: translateY(-4px);
+      box-shadow:0 8px 20px rgba(2,6,23,0.08);
+      border-color:#bfdbfe;
+    }
+
+    /* small screens */
+    @media (max-width: 768px) {
+      .topbar .contact-group { display: none; } /* collapse contact group on small screens */
+      .topbar .mobile-contact-btn { display: inline-flex; }
+      #search-overlay .icon-grid { gap:8px; }
+      #search-overlay .icon-card { min-width: 44%; }
+      
+      /* Mejoras específicas para móvil */
+      .lg\:hidden .py-1 { padding-top: 2px; padding-bottom: 2px; }
+      .lg\:hidden .px-2 { padding-left: 8px; padding-right: 8px; }
+      .lg\:hidden .gap-1 { gap: 4px; }
+      .lg\:hidden .text-xs { font-size: 0.65rem; }
+      .lg\:hidden .h-6 { height: 1.25rem; }
+      .lg\:hidden .h-4 { height: 0.875rem; }
+      
+      /* Breadcrumb optimizado para móvil */
+      .border-b .px-4 { padding-left: 12px; padding-right: 12px; }
+      .border-b .py-3 { padding-top: 8px; padding-bottom: 8px; }
+      .border-b .text-xs { font-size: 0.625rem; line-height: 1.2; }
+      
+      /* Galería de productos optimizada para móvil */
+      .grid-cols-1.sm\:grid-cols-2 { gap: 12px; }
+      .group .p-5 { padding: 16px; }
+      .group .h-40 { height: 120px; }
+      .group .text-lg { font-size: 0.875rem; }
+      .group .text-sm { font-size: 0.75rem; }
+      
+      /* Footer optimizado para móvil */
+      footer .grid-cols-2 { gap: 8px; }
+      footer .text-xs { font-size: 0.6rem; line-height: 1.1; }
+      footer .py-3 { padding-top: 8px; padding-bottom: 8px; }
+      footer .px-2 { padding-left: 8px; padding-right: 8px; }
+      footer .w-20 { width: 60px; }
+      footer .space-y-0\.5 > * + * { margin-top: 2px; }
+      
+      /* Sección de precio optimizada para móvil */
+      #price-panel .p-4 { padding: 12px; }
+      #price-panel .text-3xl { font-size: 1.5rem; }
+      #price-panel .px-4 { padding-left: 12px; padding-right: 12px; }
+      #price-panel .py-2 { padding-top: 8px; padding-bottom: 8px; }
+      
+      /* Controles de pestañas optimizados para móvil */
+      .px-3 { padding-left: 8px; padding-right: 8px; }
+      .py-2 { padding-top: 6px; padding-bottom: 6px; }
+      .text-xs { font-size: 0.65rem; }
+    }
+
+    /* Force overrides in dark mode for Tailwind utilities */
+    html.dark .bg-white { background-color: var(--surface) !important; }
+    html.dark .bg-gray-50 { background-color: var(--panel) !important; }
+    html.dark .text-gray-800, html.dark .text-gray-900, html.dark .text-slate-800 { color: var(--text) !important; }
+    html.dark .text-gray-700, html.dark .text-gray-600 { color: var(--muted) !important; }
+    html.dark .border-gray-200, html.dark .border-gray-100 { border-color: var(--border) !important; }
+    html.dark .shadow-lg, html.dark .shadow-md, html.dark .shadow-sm { box-shadow: 0 8px 20px rgba(0,0,0,0.55) !important; }
+    html.dark input, html.dark textarea { background: var(--input-bg) !important; color: var(--text) !important; border-color: var(--border) !important; }
+    html.dark ::placeholder { color: rgba(255,255,255,0.45) !important; }
+    html.dark .fa, html.dark .fas, html.dark .fa-solid { color: var(--text) !important; filter: none !important; }
+
+    /* Light mode text improvements */
+    .text-gray-800, .text-gray-900, .text-slate-800 { color: #000000 !important; }
+    .text-gray-700, .text-gray-600 { color: #374151 !important; }
+    .text-gray-500 { color: #6b7280 !important; }
+    .text-gray-400 { color: #9ca3af !important; }
+    
+    /* Dark mode text improvements */
+    html.dark .text-gray-800, html.dark .text-gray-900, html.dark .text-slate-800 { color: #ffffff !important; }
+    html.dark .text-gray-700, html.dark .text-gray-600 { color: #d1d5db !important; }
+    html.dark .text-gray-500 { color: #9ca3af !important; }
+    html.dark .text-gray-400 { color: #6b7280 !important; }
+    
+    /* Menu links dark mode improvements */
+    html.dark .text-blue-500 { color: #60a5fa !important; }
+    html.dark .text-blue-400 { color: #93c5fd !important; }
+    html.dark .text-blue-600 { color: #3b82f6 !important; }
+    html.dark .menu-link { color: #93c5fd !important; }
+    html.dark .menu-link:hover { color: #60a5fa !important; }
+
+    /* Footer contrast */
+    footer { background: linear-gradient(180deg,#f8fafc,#ffffff); color:#374151; }
+    html.dark footer { background: linear-gradient(180deg, rgba(5,16,26,0.98), rgba(6,18,30,0.98)) !important; color: var(--muted) !important; border-top: 1px solid var(--border) !important; }
+    html.dark footer a { color: var(--muted) !important; }
+
+    /* Dark mode for new footer */
+    html.dark footer {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%) !important;
+      color: #e2e8f0 !important;
+    }
+
+    html.dark .footer-link-modern {
+      color: #94a3b8 !important;
+    }
+
+    html.dark .footer-link-modern:hover {
+      color: #60a5fa !important;
+    }
+
+    html.dark .footer-contact-modern {
+      color: #cbd5e1 !important;
+    }
+
+    html.dark .footer-contact-modern:hover {
+      color: #60a5fa !important;
+    }
+
+    html.dark .social-btn-modern {
+      background: rgba(255, 255, 255, 0.05) !important;
+      border-color: rgba(255, 255, 255, 0.1) !important;
+      color: #94a3b8 !important;
+    }
+
+    html.dark .social-btn-modern:hover {
+      background: rgba(255, 255, 255, 0.15) !important;
+      color: #ffffff !important;
+      border-color: rgba(255, 255, 255, 0.2) !important;
+    }
+
+    html.dark .social-btn-modern.whatsapp:hover {
+      background: #25D366 !important;
+      border-color: #25D366 !important;
+    }
+
+    /* Class for small footer icons */
+    .footer-icon-small {
+      font-size: 10px;
+    }
+    
+    /* Responsive adjustments for the new footer */
+    @media (max-width: 768px) {
+      .social-btn-modern { 
+        width: 38px; 
+        height: 38px; 
+        font-size: 1rem;
+      }
+      
+      .footer-link-modern,
+      .footer-contact-modern {
+        font-size: 0.85rem;
+      }
+    }
+  </style>
+</head>
+<body class="antialiased text-slate-800">
+
+  <!-- Main Navbar -->
+  <nav class="bg-white w-full shadow-md border sticky top-0 z-50" role="navigation" aria-label="Main navigation">
+    <div class="container mx-auto px-4">
+      <!-- Desktop Navbar -->
+      <div class="hidden lg:flex justify-between items-center py-2">
+        <!-- Logo and name -->
+        <div class="flex items-center">
+          <!-- Desktop hamburger button -->
+          <button
+            id="hamburguer-desktop"
+            onclick="
+              const menu = document.getElementById('desktop-menu');
+              const overlay = document.getElementById('menu-overlay');
+              if (menu.classList.contains('-translate-x-full')) {
+                menu.classList.remove('-translate-x-full');
+                menu.classList.remove('hidden');
+                if (overlay) overlay.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+                this.setAttribute('aria-expanded', 'true');
+              } else {
+                menu.classList.add('-translate-x-full');
+                menu.classList.add('hidden');
+                if (overlay) overlay.classList.add('hidden');
+                document.body.style.overflow = '';
+                this.setAttribute('aria-expanded', 'false');
+              }
+            "
+            style="background: none; border: none; padding: 8px; cursor: pointer; margin-right: 10px; display: block !important; visibility: visible !important;"
+          >
+            <span style="font-size: 20px; font-weight: bold; color: #000;" class="light-icon-hidden">☰</span>
+            <span style="font-size: 20px; font-weight: bold; color: #ffffff;" class="dark-icon-hidden">☰</span>
+          </button>
+          
+          <img
+            src="https://www.ds3comunicaciones.com/mikrotik/images/Logo1.jpg"
+            alt="NetPeru Logo"
+            class="h-12 mr-3"
+          />
+          <img
+            src="icons/brands/datatronix.png"
+            alt="Datatronix Logo"
+            class="h-10 mr-3"
+          />
+        </div>
+
+        <!-- Contact info -->
+        <div class="flex space-x-8 text-black">
+          <div class="flex items-center">
+            <i class="fas fa-phone-alt mr-2 text-black "></i>
+            <div>
+              <p class="text-sm font-bold"><a href="tel:+515334339">533-4339</a></p>
+              <p class="text-sm font-bold"><a href="tel:+51994428965">994-428-965</a></p>
+            </div>
+          </div>
+          <div class="flex items-center">
+            <i class="fas fa-phone-alt mr-2 text-black "></i>
+            <div>
+              <p class="text-sm font-bold"><a href="tel:+51996533223">99653-3223</a></p>
+              <p class="text-sm font-bold"><a href="tel:+51937514867">937-514-867</a></p>
+            </div>
+          </div>
+          <div class="flex items-center">
+            <i class="fas fa-envelope mr-2 text-black "></i>
+            <span class="text-sm font-bold"><a href="mailto:netperu100@hotmail.com">netperu100@hotmail.com</a></span>
+          </div>
+          <div class="flex items-center">
+            <i class="fas fa-map-marker-alt mr-2 text-black "></i>
+            <span class="text-sm font-bold"><a href="https://www.google.com/maps?q=Lima,+PERÚ" target="_blank">Lima, PERÚ</a></span>
+          </div>
+          <div class="w-24 h-10 flex items-center justify-center">
+            <img id="brands-carousel" src="icons/brands/cisco.gif" alt="brands carousel" class="max-h-full max-w-full object-contain" />
+          </div>
+        </div>
+
+        <!-- Search button -->
+        <div class="flex items-center space-x-2">
+          <!-- Theme toggle -->
+          <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 transition-colors theme-toggle" aria-pressed="false" aria-label="Alternar modo oscuro">
+            <i class="fas fa-moon text-black"></i>
+          </button>
+
+          <button
+            id="search-button"
+            class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+          >
+            <i class="fas fa-search text-black"></i>
+          </button>
+
+          <!-- Language selector -->
+          <div class="relative group">
+            <button class="p-2 rounded-full hover:bg-gray-100 transition-colors flex items-center gap-1" id="language-selector-btn">
+              <i class="fas fa-globe text-black"></i>
+              <span class="text-xs text-black" id="current-language">ES</span>
+            </button>
+            <div class="absolute right-0 mt-2 w-32 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <button onclick="window.translationSystem.setLanguage('es')" class="w-full text-left px-3 py-2 text-sm hover:bg-gray-100 flex items-center gap-2">
+                <span>🇪🇸</span>
+                <span>Español</span>
+              </button>
+              <button onclick="window.translationSystem.setLanguage('en')" class="w-full text-left px-3 py-2 text-sm hover:bg-gray-100 flex items-center gap-2">
+                <span>🇺🇸</span>
+                <span>English</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Navbar -->
+      <div class="lg:hidden flex flex-col">
+        <!-- top navbar ultra compact -->
+        <div class="flex justify-between items-center py-1 px-3 bg-white dark:bg-gray-900 border-b dark:border-gray-700">
+          <!-- left div -->
+          <div class="flex items-center gap-2">
+            <!-- hamburger button -->
+            <button
+              id="mobile-menu-button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Abrir menú móvil" class="p-2 rounded-full hover:bg-gray-100 transition-colors">
+              <div class="hamburger-lines" style="transform: scale(0.9);">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </button>
+
+            <!-- Compact logos -->
+            <div class="flex items-center gap-2">
+              <img
+                src="https://www.ds3comunicaciones.com/mikrotik/images/Logo1.jpg"
+                alt="DS3 Comunicaciones Logo"
+                class="h-8"
+              />
+              <img
+                src="icons/brands/datatronix.png"
+                alt="Datatronix Logo"
+                class="h-6"
+              />
+            </div>
+          </div>
+
+          <!-- Right ultra compact buttons -->
+          <div class="flex items-center gap-1">
+            <button id="open-search" class="p-2 rounded-full hover:bg-gray-100 transition-colors" aria-label="Buscar productos">
+              <i class="fas fa-search text-black text-sm" aria-hidden="true"></i>
+            </button>
+            <button id="mobile-theme-toggle" class="p-2 rounded-full hover:bg-gray-100 transition-colors theme-toggle" aria-pressed="false" aria-label="Alternar modo oscuro">
+              <i class="fas fa-moon text-black text-sm" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- bottom navbar - ultra compact contact -->
+        <div class="py-1 px-3 bg-gray-50 dark:bg-gray-800 border-b dark:border-gray-700">
+          <div class="flex justify-between items-center text-xs">
+            <div class="flex items-center gap-2">
+              <i class="fas fa-phone text-green-600 text-xs"></i>
+              <a href="tel:996533223" class="font-semibold text-black dark:text-white text-xs">996 533 223</a>
+            </div>
+            <div class="flex items-center gap-2">
+              <i class="fas fa-phone text-blue-600 text-xs"></i>
+              <a href="tel:994428965" class="font-semibold text-black dark:text-white text-xs">994 428 965</a>
+            </div>
+          </div>
+          
+          <div class="flex items-center gap-2 mt-1">
+            <i class="fas fa-envelope text-orange-600 text-xs"></i>
+            <a href="mailto:netperu100@hotmail.com" class="font-semibold text-black dark:text-white text-xs">netperu100@hotmail.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- BRAND SUBMENU DEPENDING ON PRODUCT (existing nav improved visually but structure kept) -->
+  <nav class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 shadow-md z-40">
+    <div class="relative">
+      <!-- Horizontal scroll container -->
+      <div id="brand-nav" class="nav-container flex justify-evenly overflow-x-auto py-1 px-4 space-x-2 scrollbar-hide">
+        <!-- Item 1 -->
+        <a href="https://www.ds3comunicaciones.com/panduit/index.html#cables"
+          class="nav-item flex flex-col items-center p-1 rounded-lg min-w-fit flex-shrink-0 transition-all duration-300" data-title="Cables de fibra">
+          <div class="icon-container h-10 w-14 flex items-center justify-center">
+            <img src="./icons/ftthwh.ico" class="nav-icon h-8 w-10 dark-icon-hidden" alt="UniFi" />
+            <img src="./icons/ftth.ico" class="nav-icon h-8 w-10 light-icon-hidden" alt="UniFi" />
+          </div>
+          <span class="text-xs font-semibold text-black dark:text-gray-300 mt-1">Cables de fibra</span>
+        </a>
+
+        <!-- Item 2 -->
+        <a href="https://www.ds3comunicaciones.com/panduit/index.html#patch-cords"
+          class="nav-item flex flex-col items-center p-1 rounded-lg min-w-fit flex-shrink-0 transition-all duration-300" data-title="Patch cords">
+          <div class="icon-container h-10 w-14 flex items-center justify-center">
+            <img src="./icons/patchwh.ico" class="nav-icon h-8 w-10 dark-icon-hidden" alt="PowerBeam" />
+            <img src="./icons/patch.ico" class="nav-icon h-8 w-10 light-icon-hidden" alt="PowerBeam" />
+          </div>
+          <span class="text-xs font-semibold text-black dark:text-gray-300 mt-1">Patch cords / pigtails</span>
+        </a>
+
+        <!-- Item 3 -->
+        <a href="https://www.ds3comunicaciones.com/panduit/index.html#bandejas"
+          class="nav-item flex flex-col items-center p-1 rounded-lg min-w-fit flex-shrink-0 transition-all duration-300" data-title="Bandejas">
+          <div class="icon-container h-10 w-14 flex items-center justify-center">
+            <img src="./icons/bandejaswh.ico" class="nav-icon h-8 w-10 dark-icon-hidden" alt="airFiber" />
+            <img src="./icons/bandeja.ico" class="nav-icon h-8 w-10 light-icon-hidden" alt="airFiber" />
+          </div>
+          <span class="text-xs font-semibold text-black dark:text-gray-300 mt-1">Bandejas</span>
+        </a>
+
+        <!-- Item 4 -->
+        <a href="https://www.ds3comunicaciones.com/panduit/index.html#mufas"
+          class="nav-item flex flex-col items-center p-1 rounded-lg min-w-fit flex-shrink-0 transition-all duration-300" data-title="Mufas">
+          <div class="icon-container h-10 w-14 flex items-center justify-center">
+            <img src="./icons/mufaswh.ico" class="nav-icon h-8 w-10 dark-icon-hidden" alt="Antenas" />
+            <img src="./icons/mufas.ico" class="nav-icon h-8 w-10 light-icon-hidden" alt="Antenas" />
+          </div>
+          <span class="text-xs font-semibold text-black dark:text-gray-300 mt-1">Mufas</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+  <!-- PRODUCT CONTENT -->
+  <main class="min-h-screen bg-gray-50 dark:bg-gray-900 py-6">
+    <!-- RESPONSIVE NAVIGATION CASCADE "BRAND | PRODUCT | NAME" -->
+    <div
+      class="border-b border-gray-200 dark:border-gray-700 px-4 md:px-6 py-3 text-xs md:text-sm text-slate-600 dark:text-gray-300 flex flex-nowrap items-center gap-2 overflow-x-auto scrollbar-hide whitespace-nowrap bg-white dark:bg-gray-800 shadow-sm">
+      <a href="https://www.ds3comunicaciones.com/index.html" class="flex-shrink-0 hover:text-blue-600 transition font-medium" title="Inicio" aria-label="Inicio" data-translate-title="breadcrumb-home" data-translate-aria="breadcrumb-home">
+        <i class="fa-solid fa-house text-[0.9em]"></i>
+      </a>
+      <span class="text-gray-400 flex-shrink-0"><i class="fa-solid fa-chevron-right text-[0.7em]"></i></span>
+      <a href="./lista-de-precios.html"
+        class="flex-shrink-0 hover:underline hover:text-blue-600 transition font-medium" data-translate="breadcrumb-datatronix">
+        Datatronix
+      </a>
+    </div>
+  <!-- PRODUCT CONTENT -->
+  <main class="min-h-screen bg-gray-50 py-6">
+    <!-- RESPONSIVE NAVIGATION CASCADE "BRAND | PRODUCT | NAME" -->
+    <div
+      class="border-b border-gray-200 px-4 md:px-6 py-3 text-xs md:text-sm text-slate-600 flex flex-nowrap items-center gap-2 overflow-x-auto scrollbar-hide whitespace-nowrap bg-white shadow-sm">
+      <a href="https://www.ds3comunicaciones.com/index.html" class="flex-shrink-0 hover:text-blue-600 transition font-medium" title="Inicio" aria-label="Inicio" data-translate-title="breadcrumb-home" data-translate-aria="breadcrumb-home">
+        <i class="fa-solid fa-house text-[0.9em]"></i>
+      </a>
+      <span class="text-gray-400 flex-shrink-0"><i class="fa-solid fa-chevron-right text-[0.7em]"></i></span>
+      <a href="./lista-de-precios.html"
+        class="flex-shrink-0 hover:underline hover:text-blue-600 transition font-medium" data-translate="breadcrumb-datatronix">
+        Datatronix
+      </a>
+    </div>
+    <!-- Mobile dropdown menu - Right side -->
+      <div
+      id="mobile-menu"
+      class="fixed top-0 left-0 h-screen w-56 bg-white shadow-xl z-60 transform -translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto lg:hidden"
+      role="dialog" aria-modal="true" aria-label="Menú móvil"
+    >
+      <!-- Close button -->
+        <div class="flex justify-end p-4">
+        <button id="close-menu" aria-label="Cerrar menú" class="text-gray-500 hover:text-gray-700" data-translate-aria="mobile-menu-close">
+          <i class="fas fa-times text-2xl" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <!-- Mobile menu header -->
+      <div class="px-4 pb-4 border-b border-gray-200">
+        <div class="flex items-center justify-between">
+          <img
+            src="https://www.ds3comunicaciones.com/mikrotik/images/Logo1.jpg"
+            alt="NetPeru Logo"
+            class="h-10"
+          />
+          <div class="text-right text-black">
+            <div class="flex items-center mb-1">
+              <i class="fas fa-phone-alt mr-1 text-xs"></i>
+              <span class="text-xs font-bold"><a href="tel:+515334339">533-4339</a></span>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-envelope mr-1 text-xs"></i>
+              <span class="text-xs font-bold"><a href="mailto:netperu100@hotmail.com">netperu100@hotmail.com</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Language and Currency selectors -->
+      <div class="px-4 pb-4 border-b border-gray-200">
+        <div class="flex justify-between items-center gap-4">
+          <!-- Language selector -->
+          <div class="relative group">
+            <button class="flex items-center gap-2 p-2 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors text-sm font-medium text-gray-700" id="mobile-language-selector-btn">
+              <i class="fas fa-globe text-black"></i>
+              <span class="text-xs text-black" id="mobile-current-language">ES</span>
+            </button>
+            <div class="absolute right-0 mt-2 w-32 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <button class="block w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100" onclick="changeLanguage('es')">Español</button>
+              <button class="block w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100" onclick="changeLanguage('en')">English</button>
+              <button class="block w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100" onclick="changeLanguage('pt')">Português</button>
+            </div>
+          </div>
+
+          <!-- Currency selector -->
+          <div class="relative group">
+            <button class="flex items-center gap-2 p-2 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors text-sm font-medium text-gray-700">
+              <i class="fas fa-dollar-sign text-black"></i>
+              <span class="text-xs text-black" id="mobile-current-currency">USD</span>
+            </button>
+            <div class="absolute right-0 mt-2 w-32 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <button class="block w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100" onclick="changeCurrency('USD')">USD</button>
+              <button class="block w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100" onclick="changeCurrency('PEN')">PEN</button>
+              <button class="block w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100" onclick="changeCurrency('EUR')">EUR</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation menu -->
+      <nav class="px-4 py-4">
+        <div class="space-y-2">
+          <a href="./index.html" class="menu-link border-b w-full block py-2 font-medium text-blue-500 dark:text-blue-400 hover:text-blue-600 transition-colors duration-200 text-sm md:text-base">
+            <span data-translate="nav-home">Inicio</span>
+          </a>
+
+          <a href="./lista-de-precios.html" class="menu-link border-b w-full block py-2 font-medium text-blue-500 dark:text-blue-400 hover:text-blue-600 transition-colors duration-200 text-sm md:text-base">
+            <span data-translate="price-list-datatronix">Lista de Precios Datatronix</span>
+          </a>
+
+          <!-- Categorías de productos -->
+          <details class="group">
+            <summary class="flex justify-between items-center cursor-pointer list-none py-3 border-b">
+              <span data-translate="mobile-menu-categories">Categorías</span>
+              <i class="fas fa-chevron-down text-gray-500 group-open:rotate-180 transition-transform"></i>
+            </summary>
+            <div class="mt-2">
+              <a href="#cable-monomodo" class="menu-link border-b w-full block py-2 font-medium text-blue-500 dark:text-blue-400 hover:text-blue-600 transition-colors duration-200 text-sm md:text-base">
+                <span data-translate="category-cable-monomodo">Cables Monomodo</span>
+              </a>
+              <a href="#cable-multimodo-om3" class="menu-link border-b w-full block py-2 font-medium text-blue-500 dark:text-blue-400 hover:text-blue-600 transition-colors duration-200 text-sm md:text-base">
+                <span data-translate="category-cable-multimodo-om3">Cables Multimodo OM3</span>
+              </a>
+              <a href="#cable-multimodo-om4" class="menu-link border-b w-full block py-2 font-medium text-blue-500 dark:text-blue-400 hover:text-blue-600 transition-colors duration-200 text-sm md:text-base">
+                <span data-translate="category-cable-multimodo-om4">Cables Multimodo OM4</span>
+              </a>
+              <a href="#bandeja-fo" class="menu-link border-b w-full block py-2 font-medium text-blue-500 dark:text-blue-400 hover:text-blue-600 transition-colors duration-200 text-sm md:text-base">
+                <span data-translate="category-bandeja-fo">Bandejas FO</span>
+              </a>
+              <a href="#cajas-riel-din" class="menu-link border-b w-full block py-2 font-medium text-blue-500 dark:text-blue-400 hover:text-blue-600 transition-colors duration-200 text-sm md:text-base">
+                <span data-translate="category-cajas-riel-din">Cajas Riel DIN</span>
+              </a>
+              <a href="#acopladores-monomodo" class="menu-link border-b w-full block py-2 font-medium text-blue-500 hover:text-blue-600 transition-colors duration-200 text-sm md:text-base">
+                <span data-translate="category-acopladores-monomodo">Acopladores Monomodo</span>
+              </a>
+              <a href="#pigtail-monomodo" class="menu-link border-b w-full block py-2 font-medium text-blue-500 hover:text-blue-600 transition-colors duration-200 text-sm md:text-base">
+                <span data-translate="category-pigtail-monomodo">Pigtail Monomodo</span>
+              </a>
+              <a href="#patch-cord-monomodo" class="menu-link border-b w-full block py-2 font-medium text-blue-500 hover:text-blue-600 transition-colors duration-200 text-sm md:text-base">
+                <span data-translate="category-patch-cord-monomodo">Patch Cord Monomodo</span>
+              </a>
+            </div>
+          </details>
+        </div>
+      </nav>
+    </div>
+
+  <!-- Overlay for mobile menu -->
+  <div id="menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden"></div>
+
+  <!-- SEARCH OVERLAY (improvement of overlay shown in screenshots) -->
+  <div id="search-overlay" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="overlay-card" role="document">
+      <div class="overlay-top">
+        <div style="flex:1" class="overlay-search">
+          <input id="overlay-search-input" type="search" placeholder="Search products, brands or codes..." aria-label="Search products brands or codes" data-translate-placeholder="search-placeholder" data-translate-aria="search-placeholder" />
+          <button id="overlay-search-btn" class="px-4 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700" data-translate="search-button">
+            Search
+          </button>
+        </div>
+        <div class="overlay-actions">
+          <button id="overlay-clear" class="px-3 py-2 rounded-md border border-gray-200 text-gray-700" aria-label="Clear search" data-translate="search-clear" data-translate-aria="search-clear">Clear</button>
+          <button id="close-search" class="action-btn" aria-label="Close search" data-translate-aria="search-close">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="icon-grid" id="overlay-icon-grid" aria-hidden="false">
+        <!-- These are same nav items already present in nav bar. JS will allow clicking to navigate. -->
+        <div class="icon-card" data-href="#cable-monomodo" tabindex="0">
+          <i class="fa-solid fa-layer-group text-blue-600 fa-2x"></i>
+          <div>
+            <div class="font-semibold text-sm">Cables Monomodo</div>
+            <div class="text-xs text-slate-500">Fibra óptica</div>
+          </div>
+        </div>
+
+        <div class="icon-card" data-href="#cable-multimodo-om3" tabindex="0">
+          <i class="fa-solid fa-building text-blue-600 fa-2x"></i>
+          <div>
+            <div class="font-semibold text-sm">Cables Multimodo OM3</div>
+            <div class="text-xs text-slate-500">Alta velocidad</div>
+          </div>
+        </div>
+
+        <div class="icon-card" data-href="#bandeja-fo" tabindex="0">
+          <i class="fa-solid fa-industry text-blue-600 fa-2x"></i>
+          <div>
+            <div class="font-semibold text-sm">Bandejas FO</div>
+            <div class="text-xs text-slate-500">Organización</div>
+          </div>
+        </div>
+
+        <div class="icon-card" data-href="#cajas-riel-din" tabindex="0">
+          <i class="fa-solid fa-wifi text-blue-600 fa-2x"></i>
+          <div>
+            <div class="font-semibold text-sm">Cajas Riel DIN</div>
+            <div class="text-xs text-slate-500">Montaje</div>
+          </div>
+        </div>
+
+        <div class="icon-card" data-href="#acopladores-monomodo" tabindex="0">
+          <i class="fa-solid fa-phone text-blue-600 fa-2x"></i>
+          <div>
+            <div class="font-semibold text-sm">Acopladores</div>
+            <div class="text-xs text-slate-500">Conectores</div>
+          </div>
+        </div>
+
+        <div class="icon-card" data-href="#pigtail-monomodo" tabindex="0">
+          <i class="fa-solid fa-cloud text-blue-600 fa-2x"></i>
+          <div>
+            <div class="font-semibold text-sm">Pigtail</div>
+            <div class="text-xs text-slate-500">Conexión</div>
+          </div>
+        </div>
+
+        <div class="icon-card" data-href="#patch-cord-monomodo" tabindex="0">
+          <i class="fa-solid fa-microchip text-blue-600 fa-2x"></i>
+          <div>
+            <div class="font-semibold text-sm">Patch Cord</div>
+            <div class="text-xs text-slate-500">Cables</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <main class="container mx-auto px-4 py-8">
+    <!-- Page Header -->
+    <div class="text-center mb-12">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4 dark:text-white">
+        <i class="fas fa-list-alt mr-3 text-blue-600"></i>
+        <span data-translate="price-list-title">Lista de Precios</span>
+      </h1>
+      <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto" data-translate="price-list-description">
+        Productos de fibra óptica de alta calidad - Cables, acopladores, pigtail, patch cords y más
+      </p>
+    </div>
+
+    <!-- CABLE MONOMODO -->
+    <section id="cable-monomodo" class="mb-16">
+      <div class="category-header">
+        <h2 class="text-2xl font-bold flex items-center">
+          <i class="fas fa-network-wired mr-3"></i>
+          <span data-translate="category-cable-monomodo">CABLE MONOMODO</span>
+        </h2>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="product-card">
+          <div class="product-image-container" onclick="openModal('imagenes/img_productos/producto1.png')">
+            <img src="imagenes/img_productos/producto1.png" alt="FC-LT-91-12" class="product-image" />
+          </div>
+          <div class="product-content">
+            <h3 class="text-lg font-semibold mb-2" data-translate="product-fc-lt-91-12">FC-LT-91-12</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4" data-translate="desc-fc-lt-91-12">
+              Metros de cable de fibra óptica Monomodo (9/125um) de 12 hilos con armadura dieléctrica para ductos, int/ext, chaqueta LSZH, marca DATATRONIX
+            </p>
+            <div class="flex justify-between items-center mt-auto">
+              <span class="price-tag">$1.19</span>
+              <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition" onclick="requestQuote('FC-LT-91-12')">
+                <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image-container" onclick="openModal('imagenes/img_productos/producto2.png')">
+            <img src="imagenes/img_productos/producto2.png" alt="FC-LT-91-24" class="product-image" />
+          </div>
+          <div class="product-content">
+            <h3 class="text-lg font-semibold mb-2" data-translate="product-fc-lt-91-24">FC-LT-91-24</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4" data-translate="desc-fc-lt-91-24">
+              Metros de cable de fibra óptica Monomodo (9/125um) de 24 hilos con armadura dieléctrica para ductos, int/ext, chaqueta LSZH, marca DATATRONIX
+            </p>
+            <div class="flex justify-between items-center mt-auto">
+              <span class="price-tag">$1.59</span>
+              <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition" onclick="requestQuote('FC-LT-91-24')">
+                <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image-container" onclick="openModal('imagenes/img_productos/producto3.png')">
+            <img src="imagenes/img_productos/producto3.png" alt="FC-LTS-91-12" class="product-image" />
+          </div>
+          <div class="product-content">
+            <h3 class="text-lg font-semibold mb-2">FC-LTS-91-12</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+              Metros de cable de fibra óptica Monomodo (9/125um) de 12 hilos con armadura metálica para ductos, int/ext, chaqueta LSZH, marca DATATRONIX
+            </p>
+            <div class="flex justify-between items-center mt-auto">
+              <span class="price-tag">$1.99</span>
+              <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition" onclick="requestQuote('FC-LTS-91-12')">
+                <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CABLE MULTIMODO OM3 -->
+    <section id="cable-multimodo-om3" class="mb-16">
+      <div class="category-header">
+        <h2 class="text-2xl font-bold flex items-center">
+          <i class="fas fa-network-wired mr-3"></i>
+          <span data-translate="category-cable-multimodo-om3">CABLE MULTIMODO OM3</span>
+        </h2>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="product-card">
+          <div class="product-image-container" onclick="openModal('imagenes/img_productos/producto4.png')">
+            <img src="imagenes/img_productos/producto4.png" alt="FC-LT-31-06" class="product-image" />
+          </div>
+          <div class="product-content">
+            <h3 class="text-lg font-semibold mb-2" data-translate="product-fc-lt-31-06">FC-LT-31-06</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4" data-translate="desc-fc-lt-31-06">
+              Metros de cable de fibra óptica Multimodo OM3 de 6 hilos con armadura dieléctrica para ductos, int/ext, chaqueta LSZH, marca DATATRONIX
+            </p>
+            <div class="flex justify-between items-center mt-auto">
+              <span class="price-tag">$2.29</span>
+              <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition" onclick="requestQuote('FC-LT-31-06')">
+                <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image-container" onclick="openModal('imagenes/img_productos/producto5.png')">
+            <img src="imagenes/img_productos/producto5.png" alt="FC-LT-31-12" class="product-image" />
+          </div>
+          <div class="product-content">
+            <h3 class="text-lg font-semibold mb-2">FC-LT-31-12</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+              Metros de cable de fibra óptica Multimodo OM3 de 12 hilos con armadura dieléctrica para ductos, int/ext, chaqueta LSZH, marca DATATRONIX
+            </p>
+            <div class="flex justify-between items-center mt-auto">
+              <span class="price-tag">$2.90</span>
+              <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition" onclick="requestQuote('FC-LT-31-12')">
+                <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image-container" onclick="openModal('imagenes/img_productos/producto6.png')">
+            <img src="imagenes/img_productos/producto6.png" alt="FC-LTS-31-06" class="product-image" />
+          </div>
+          <div class="product-content">
+            <h3 class="text-lg font-semibold mb-2">FC-LTS-31-06</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+              Metros de cable de fibra óptica Multimodo OM3 de 6 hilos con armadura metálica para ductos, int/ext, chaqueta LSZH, marca DATATRONIX
+            </p>
+            <div class="flex justify-between items-center mt-auto">
+              <span class="price-tag">$2.59</span>
+              <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition" onclick="requestQuote('FC-LTS-31-06')">
+                <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image-container" onclick="openModal('imagenes/bandeja.png')">
+            <img src="imagenes/bandeja.png" alt="FC-LTS-31-12" class="product-image" />
+          </div>
+          <div class="product-content">
+            <h3 class="text-lg font-semibold mb-2">FC-LTS-31-12</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+              Metros de cable de fibra óptica Multimodo OM3 de 12 hilos con armadura metálica para ductos, int/ext, chaqueta LSZH, marca DATATRONIX
+            </p>
+            <div class="flex justify-between items-center mt-auto">
+              <span class="price-tag">$3.99</span>
+              <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition" onclick="requestQuote('FC-LTS-31-12')">
+                <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CABLE MULTIMODO OM4 -->
+    <section id="cable-multimodo-om4" class="mb-16">
+      <div class="category-header">
+        <h2 class="text-2xl font-bold flex items-center">
+          <i class="fas fa-network-wired mr-3"></i>
+          <span data-translate="category-cable-multimodo-om4">CABLE MULTIMODO OM4</span>
+        </h2>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="product-card">
+          <h3 class="text-lg font-semibold mb-2" data-translate="product-fc-lt-41-06">FC-LT-41-06</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4" data-translate="desc-fc-lt-41-06">
+            Metros de cable de fibra óptica Multimodo OM4 de 06 hilos con armadura dieléctrica para ductos, int/ext, chaqueta LSZH, marca DATATRONIX
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="price-tag">$2.99</span>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+              <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <h3 class="text-lg font-semibold mb-2">FC-LT-41-12</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Metros de cable de fibra óptica Multimodo OM4 de 12 hilos con armadura dieléctrica para ductos, int/ext, chaqueta LSZH, marca DATATRONIX
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="price-tag">$3.99</span>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+              <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <h3 class="text-lg font-semibold mb-2">FC-LTS-41-06-EU</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Metros de cable de fibra óptica Multimodo OM4 de 06 hilos con armadura metálica para ductos, int/ext, chaqueta LSZH, marca DATATRONIX
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="price-tag">$2.99</span>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+              <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BANDEJA FO -->
+    <section id="bandeja-fo" class="mb-16">
+      <div class="category-header">
+        <h2 class="text-2xl font-bold flex items-center">
+          <i class="fas fa-box mr-3"></i>
+          <span data-translate="category-bandeja-fo">BANDEJA FO</span>
+        </h2>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="product-card">
+          <div class="product-image-container" onclick="openModal('imagenes/bandeja.png')">
+            <img src="imagenes/bandeja.png" alt="CPPR1-02-X1-UL" class="product-image" />
+          </div>
+          <div class="product-content">
+            <h3 class="text-lg font-semibold mb-2" data-translate="product-cppr1-02-x1-ul">CPPR1-02-X1-UL</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4" data-translate="desc-cppr1-02-x1-ul">
+              Bandeja Rackeable 1RU Deslizable para 24 puertos LC-SC, Incluye 01 bandeja de fusion 24 hilos, 02 prensas estopas, 04 tuercas enjauladas y cintillos (sin acopladores), marca DATATRONIX
+            </p>
+            <div class="flex justify-between items-center mt-auto">
+              <span class="price-tag">$65.00</span>
+              <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition" onclick="requestQuote('CPPR1-02-X1-UL')">
+                <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image-container" onclick="openModal('imagenes/accesorios.png')">
+            <img src="imagenes/accesorios.png" alt="SC1BLANK" class="product-image" />
+          </div>
+          <div class="product-content">
+            <h3 class="text-lg font-semibold mb-2">SC1BLANK</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+              Tapas ciegas plásticas SC simplex - LC duplex, marca DATATRONIX
+            </p>
+            <div class="flex justify-between items-center mt-auto">
+              <span class="price-tag">$0.50</span>
+              <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition" onclick="requestQuote('SC1BLANK')">
+                <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image-container" onclick="openModal('imagenes/accesorios.png')">
+            <img src="imagenes/accesorios.png" alt="SCDPXBLANK" class="product-image" />
+          </div>
+          <div class="product-content">
+            <h3 class="text-lg font-semibold mb-2">SCDPXBLANK</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+              Tapas ciegas SC duplex, marca DATATRONIX
+            </p>
+            <div class="flex justify-between items-center mt-auto">
+              <span class="price-tag">$0.50</span>
+              <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition" onclick="requestQuote('SCDPXBLANK')">
+                <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image-container" onclick="openModal('imagenes/accesorios.png')">
+            <img src="imagenes/accesorios.png" alt="MSP6" class="product-image" />
+          </div>
+          <div class="product-content">
+            <h3 class="text-lg font-semibold mb-2">MSP6</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+              Spool rojo circular ordenamiento de fibra, marca DATATRONIX
+            </p>
+            <div class="flex justify-between items-center mt-auto">
+              <span class="price-tag">Consultar</span>
+              <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition" onclick="requestQuote('MSP6')">
+                <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image-container" onclick="openModal('imagenes/accesorios.png')">
+            <img src="imagenes/accesorios.png" alt="FMST24-E" class="product-image" />
+          </div>
+          <div class="product-content">
+            <h3 class="text-lg font-semibold mb-2">FMST24-E</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+              Bandejita de fusión de fibra óptica, color rojo, para bandeja DATATRONIX
+            </p>
+            <div class="flex justify-between items-center mt-auto">
+              <span class="price-tag">Consultar</span>
+              <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition" onclick="requestQuote('FMST24-E')">
+                <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAJAS RIEL DIN -->
+    <section id="cajas-riel-din" class="mb-16">
+      <div class="category-header">
+        <h2 class="text-2xl font-bold flex items-center">
+          <i class="fas fa-cog mr-3"></i>
+          <span data-translate="category-cajas-riel-din">CAJAS RIEL DIN</span>
+        </h2>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="product-card">
+          <div class="product-image-container" onclick="openModal('imagenes/caja.png')">
+            <img src="imagenes/caja.png" alt="DIN-FB-SC-12-UL" class="product-image" />
+          </div>
+          <div class="product-content">
+            <h3 class="text-lg font-semibold mb-2" data-translate="product-din-fb-sc-12-ul">DIN-FB-SC-12-UL</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4" data-translate="desc-din-fb-sc-12-ul">
+              Cajita montaje DIN-RAIL para 6 adaptadores SC Duplex, vacío, (sin acopladores), marca DATATRONIX
+            </p>
+            <div class="flex justify-between items-center mt-auto">
+              <span class="price-tag">$45.00</span>
+              <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition" onclick="requestQuote('DIN-FB-SC-12-UL')">
+                <i class="fas fa-shopping-cart mr-2"></i><span data-translate="button-quote">Cotizar</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image-container" onclick="openModal('imagenes/caja.png')">
+            <img src="imagenes/caja.png" alt="DIN-FB-XX-XX-UL" class="product-image" />
+          </div>
+          <div class="product-content">
+            <h3 class="text-lg font-semibold mb-2">DIN-FB-XX-XX-UL</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+              Cajita montaje DIN-RAIL para 12 adaptadores SC Simplex, sello IP54, color blanco, vacío, (sin acopladores), marca DATATRONIX
+            </p>
+            <div class="flex justify-between items-center mt-auto">
+              <span class="price-tag">$45.00</span>
+              <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition" onclick="requestQuote('DIN-FB-XX-XX-UL')">
+                <i class="fas fa-shopping-cart mr-2"></i><span data-translate="button-quote">Cotizar</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image-container" onclick="openModal('imagenes/caja.png')">
+            <img src="imagenes/caja.png" alt="DIN-FB-XX-XX-UL-2" class="product-image" />
+          </div>
+          <div class="product-content">
+            <h3 class="text-lg font-semibold mb-2">DIN-FB-XX-XX-UL</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+              Cajita montaje DIN-RAIL para 12 adaptadores SC Simplex, sello IP55, color negro, vacío, (sin acopladores), marca DATATRONIX
+            </p>
+            <div class="flex justify-between items-center mt-auto">
+              <span class="price-tag">$45.00</span>
+              <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition" onclick="requestQuote('DIN-FB-XX-XX-UL-2')">
+                <i class="fas fa-shopping-cart mr-2"></i><span data-translate="button-quote">Cotizar</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image-container" onclick="openModal('imagenes/caja.png')">
+            <img src="imagenes/caja.png" alt="DIN-FB-FC-06-UL" class="product-image" />
+          </div>
+          <div class="product-content">
+            <h3 class="text-lg font-semibold mb-2">DIN-FB-FC-06-UL</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+              Cajita montaje DIN-RAIL con 6 adaptadores FC/ST, vacío, (sin acopladores), marca DATATRONIX
+            </p>
+            <div class="flex justify-between items-center mt-auto">
+              <span class="price-tag">$49.00</span>
+              <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition" onclick="requestQuote('DIN-FB-FC-06-UL')">
+                <i class="fas fa-shopping-cart mr-2"></i><span data-translate="button-quote">Cotizar</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MUFA FO -->
+    <section class="mb-16">
+      <div class="category-header">
+        <h2 class="text-2xl font-bold flex items-center">
+          <i class="fas fa-link mr-3"></i>
+          <span data-translate="category-mufa-fo">MUFA FO</span>
+        </h2>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="product-card">
+          <h3 class="text-lg font-semibold mb-2" data-translate="product-dem1-48">DEM1-48</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4" data-translate="desc-dem1-48">
+            Mufa de fibra óptica tipo horizontal para 48 hilos, sello hermetico IP68, marca DATATRONIX
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="price-tag">$95.00</span>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+              <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <h3 class="text-lg font-semibold mb-2">FMST24-E</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Cassette 24 hilos para dome DEM1-48 DATATRONIX
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="price-tag">Consultar</span>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+              <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACOPLADORES MONOMODO -->
+    <section id="acopladores-monomodo" class="mb-16">
+      <div class="category-header">
+        <h2 class="text-2xl font-bold flex items-center">
+          <i class="fas fa-plug mr-3"></i>
+          <span data-translate="category-acopladores-monomodo">ACOPLADORES MONOMODO</span>
+        </h2>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="product-card">
+          <h3 class="text-lg font-semibold mb-2" data-translate="product-cad-02-9-2-25">CAD-02-9-2/25</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4" data-translate="desc-cad-02-9-2-25">
+            Acoplador Monomodo SC duplex, azul, marca DATATRONIX
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="price-tag">$4.90</span>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+              <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <h3 class="text-lg font-semibold mb-2">CAD-02-9-1/25</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Acoplador Monomodo SC simplex, marca DATATRONIX
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="price-tag">$3.90</span>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+              <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <h3 class="text-lg font-semibold mb-2">CAD-00-9-2/25</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Acoplador Monomodo LC duplex, azul, marca DATATRONIX
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="price-tag">$4.90</span>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+              <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <h3 class="text-lg font-semibold mb-2">CAD-00-9-1/25</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Acoplador Monomodo LC simplex, marca DATATRONIX
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="price-tag">$3.90</span>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+              <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACOPLADORES MULTIMODO -->
+    <section id="acopladores-multimodo" class="mb-16">
+      <div class="category-header">
+        <h2 class="text-2xl font-bold flex items-center">
+          <i class="fas fa-plug mr-3"></i>
+          <span data-translate="category-acopladores-multimodo">ACOPLADORES MULTIMODO</span>
+        </h2>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="product-card">
+          <h3 class="text-lg font-semibold mb-2">CAD-02-3-1</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Acoplador de fibra óptica Multimodo SC simplex aqua con metal, marca DATATRONIX
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="price-tag">$3.90</span>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+              <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <h3 class="text-lg font-semibold mb-2">CAD-02-3-2</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Acoplador de fibra óptica Multimodo SC simplex BEIGE con metal, marca DATATRONIX
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="price-tag">$3.90</span>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+              <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <h3 class="text-lg font-semibold mb-2">CAD-02-3-2</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Acoplador de fibra óptica Multimodo SC duplex con metal, marca DATATRONIX
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="price-tag">$4.90</span>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+              <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <h3 class="text-lg font-semibold mb-2">CAD-00-3-2</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Acoplador de fibra óptica Multimodo duplex LC, (Aqua), marca DATATRONIX
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="price-tag">$4.90</span>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+              <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <h3 class="text-lg font-semibold mb-2">CAD-00-3-1</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Acoplador de fibra óptica Multimodo Simplex LC, (Aqua), marca DATATRONIX
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="price-tag">$3.90</span>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+              <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <h3 class="text-lg font-semibold mb-2">CAD-00-2-2/25</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Acoplador de fibra óptica Multimodo MM LC, Beige, marca DATATRONIX
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="price-tag">$4.90</span>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+              <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PIGTAIL MONOMODO -->
+    <section id="pigtail-monomodo" class="mb-16">
+      <div class="category-header">
+        <h2 class="text-2xl font-bold flex items-center">
+          <i class="fas fa-ethernet mr-3"></i>
+          <span data-translate="category-pigtail-monomodo">PIGTAIL MONOMODO</span>
+        </h2>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="product-card">
+          <h3 class="text-lg font-semibold mb-2">PT-02-9-01</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Pigtail de fibra óptica Monomodo SC de 1 metro, LSZH, marca DATATRONIX
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="price-tag">$3.90</span>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+              <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <h3 class="text-lg font-semibold mb-2">PT-00-9-01</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Pigtail de fibra óptica Monomodo LC de 1 metro, LSZH, marca DATATRONIX
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="price-tag">$3.90</span>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+              <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PIGTAIL MULTIMODO -->
+    <section id="pigtail-multimodo" class="mb-16">
+      <div class="category-header">
+        <h2 class="text-2xl font-bold flex items-center">
+          <i class="fas fa-ethernet mr-3"></i>
+          <span data-translate="category-pigtail-multimodo">PIGTAIL MULTIMODO</span>
+        </h2>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="product-card">
+          <h3 class="text-lg font-semibold mb-2">PT-00-1-01</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Pigtail de fibra óptica Multimodo OM1 LC de 1 metro, LSZH, marca DATATRONIX
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="price-tag">$3.90</span>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+              <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <h3 class="text-lg font-semibold mb-2">PT-04-1-01</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Pigtail de Fibra óptica Multimodo OM1 ST de 1 metro, LSZH, marca DATATRONIX
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="price-tag">$3.90</span>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+              <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <h3 class="text-lg font-semibold mb-2">PT-00-3-01</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Pigtail de fibra óptica Multimodo OM3 LC de 1 metro, LSZH, marca DATATRONIX
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="price-tag">$3.90</span>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+              <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <h3 class="text-lg font-semibold mb-2">PT-02-3-01</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Pigtail de fibra óptica Multimodo OM3 SC de 1 metro, LSZH, marca DATATRONIX
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="price-tag">$3.90</span>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+              <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <h3 class="text-lg font-semibold mb-2">PT-00-4-01</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Pigtail de fibra óptica Multimodo OM4 LC de 1 metro, LSZH, color violeta, marca DATATRONIX
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="price-tag">$4.90</span>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+              <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <h3 class="text-lg font-semibold mb-2">PT-02-4-01</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Pigtail de fibra óptica Multimodo OM4 SC de 1 metro, LSZH, color violeta, marca DATATRONIX
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="price-tag">$4.90</span>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+              <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PATCH CORD MONOMODO -->
+    <section id="patch-cord-monomodo" class="mb-16">
+      <div class="category-header">
+        <h2 class="text-2xl font-bold flex items-center">
+          <i class="fas fa-network-wired mr-3"></i>
+          <span data-translate="category-patch-cord-monomodo">PATCH CORD MONOMODO</span>
+        </h2>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="product-card">
+          <h3 class="text-lg font-semibold mb-2">PCF-0000-92-02</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Patch Cord de fibra óptica Monomodo de 02 metros LC/LC, Duplex, LSZH, 2mm, marca DATATRONIX
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="price-tag">$20.00</span>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+              <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <h3 class="text-lg font-semibold mb-2">PCF-0202-92-02</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Patch Cord de fibra óptica Monomodo de 02 metros SC/SC, Duplex, LSZH, 2mm, marca DATATRONIX
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="price-tag">$20.00</span>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+              <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <h3 class="text-lg font-semibold mb-2">PCF-0002-92-02</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Patch Cord de fibra óptica Monomodo de 02 metros LC/SC, Duplex, LSZH, 2mm, marca DATATRONIX
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="price-tag">$20.00</span>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+              <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <h3 class="text-lg font-semibold mb-2">PCF-0000-92-03</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Patch Cord de fibra óptica Monomodo de 03 metros LC/LC, Duplex, LSZH, 2mm, marca DATATRONIX
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="price-tag">$21.00</span>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+              <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <h3 class="text-lg font-semibold mb-2">PCF-0202-92-03</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Patch Cord de fibra óptica Monomodo de 03 metros SC/SC, Duplex, LSZH, 2mm, marca DATATRONIX
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="price-tag">$21.00</span>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+              <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <h3 class="text-lg font-semibold mb-2">PCF-0002-92-03</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Patch Cord de fibra óptica Monomodo de 03 metros LC/SC, Duplex, LSZH, 2mm, marca DATATRONIX
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="price-tag">$21.00</span>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+              <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <h3 class="text-lg font-semibold mb-2">PCF-0000-92-05</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Patch Cord de fibra óptica Monomodo de 05 metros LC/LC, Duplex, LSZH, 2mm, marca DATATRONIX
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="price-tag">$27.00</span>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+              <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <h3 class="text-lg font-semibold mb-2">PCF-0000-92-10</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Patch Cord de fibra óptica Monomodo de 10 metros LC/LC, Duplex, LSZH, 2mm, marca DATATRONIX
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="price-tag">$33.00</span>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+              <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <h3 class="text-lg font-semibold mb-2">PCF-0000-92-15</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Patch Cord de fibra óptica Monomodo de 15 metros LC/LC, Duplex, LSZH, 2mm, marca DATATRONIX
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="price-tag">$41.00</span>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+              <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <h3 class="text-lg font-semibold mb-2">PCF-0000-92-20</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Patch Cord de fibra óptica Monomodo de 20 metros LC/LC, Duplex, LSZH, 2mm, marca DATATRONIX
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="price-tag">$49.00</span>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+              <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PATCH CORD MULTIMODO -->
+    <section id="patch-cord-multimodo" class="mb-16">
+      <div class="category-header">
+        <h2 class="text-2xl font-bold flex items-center">
+          <i class="fas fa-network-wired mr-3"></i>
+          PATCH CORD MULTIMODO
+        </h2>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="product-card">
+          <h3 class="text-lg font-semibold mb-2">PCF-0000-32-02</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Patch Cord de fibra óptica Multimodo de 02 metros OM3 LC/LC, Duplex, 2mm, 50 µm, LSZH, marca DATATRONIX
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="price-tag">$20.00</span>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+              <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <h3 class="text-lg font-semibold mb-2">PCF-0202-32-02</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Patch Cord de fibra óptica Multimodo de 02 metros OM3 SC/SC, Duplex, 2mm, 50 µm, LSZH, marca DATATRONIX
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="price-tag">$20.00</span>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+              <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <h3 class="text-lg font-semibold mb-2">PCF-0002-32-02</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Patch Cord de fibra óptica Multimodo de 02 metros OM3 LC/SC, Duplex, 2mm, 50 µm, LSZH, marca DATATRONIX
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="price-tag">$20.00</span>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+              <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <h3 class="text-lg font-semibold mb-2">PCF-0000-32-03</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Patch Cord de fibra óptica Multimodo de 03 metros OM3 LC/LC, Duplex, 2mm, 50 µm, LSZH, marca DATATRONIX
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="price-tag">$21.00</span>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+              <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <h3 class="text-lg font-semibold mb-2">PCF-0202-32-03</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Patch Cord de fibra óptica Multimodo de 03 metros OM3 SC/SC, Duplex, 2mm, 50 µm, LSZH, marca DATATRONIX
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="price-tag">$21.00</span>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+              <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <h3 class="text-lg font-semibold mb-2">PCF-0002-32-03</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Patch Cord de fibra óptica Multimodo de 03 metros OM3 LC/SC, Duplex, 2mm, 50 µm, LSZH, marca DATATRONIX
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="price-tag">$21.00</span>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+              <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <h3 class="text-lg font-semibold mb-2">PCF-0004-32-03</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Patch Cord de fibra óptica Multimodo de 03 metros OM3 LC/ST, Duplex, 50 µm, LSZH, marca DATATRONIX
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="price-tag">$21.00</span>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+              <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <h3 class="text-lg font-semibold mb-2">PCF-0000-32-05</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Patch Cord de fibra óptica Multimodo de 05 metros OM3 LC/LC, Duplex, 2mm, 50 µm, LSZH, marca DATATRONIX
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="price-tag">$25.00</span>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+              <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <h3 class="text-lg font-semibold mb-2">PCF-0000-32-10</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Patch Cord de fibra óptica Multimodo de 10 metros OM3 LC/LC, Duplex, 2mm, 50 µm, LSZH, marca DATATRONIX
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="price-tag">$30.00</span>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+              <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <h3 class="text-lg font-semibold mb-2">PCF-0000-32-15</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Patch Cord de fibra óptica Multimodo de 15 metros OM3 LC/LC, Duplex, 2mm, 50 µm, LSZH, marca DATATRONIX
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="price-tag">$39.00</span>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+              <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <h3 class="text-lg font-semibold mb-2">PCF-0000-32-20</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Patch Cord de fibra óptica Multimodo de 20 metros OM3 LC/LC, Duplex, 2mm, 50 µm, LSZH, marca DATATRONIX
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="price-tag">$45.00</span>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+              <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <h3 class="text-lg font-semibold mb-2">PCF-0000-42-02</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Patch Cord de fibra óptica Multimodo de 02 metros OM4 LC/LC, Duplex, 2mm, 50 µm, LSZH, color violeta, marca DATATRONIX
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="price-tag">$21.00</span>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+              <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <h3 class="text-lg font-semibold mb-2">PCF-0000-42-03</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Patch Cord de fibra óptica Multimodo de 03 metros OM4 LC/LC, Duplex, 2mm, 50 µm, LSZH, color violeta, marca DATATRONIX
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="price-tag">$21.00</span>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+              <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <h3 class="text-lg font-semibold mb-2">PCF-0000-42-05</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Patch Cord de fibra óptica Multimodo de 05 metros OM4 LC/LC, Duplex, 2mm, 50 µm, LSZH, color violeta, marca DATATRONIX
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="price-tag">$27.00</span>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+              <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <h3 class="text-lg font-semibold mb-2">PCF-0000-42-10</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Patch Cord de fibra óptica Multimodo de 10 metros OM4 LC/LC, Duplex, 2mm, 50 µm, LSZH, color violeta, marca DATATRONIX
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="price-tag">$33.00</span>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+              <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <h3 class="text-lg font-semibold mb-2">PCF-0000-42-15</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Patch Cord de fibra óptica Multimodo de 15 metros OM4 LC/LC, Duplex, 2mm, 50 µm, LSZH, color violeta, marca DATATRONIX
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="price-tag">$41.00</span>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+              <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <h3 class="text-lg font-semibold mb-2">PCF-0000-42-20</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Patch Cord de fibra óptica Multimodo de 20 metros OM4 LC/LC, Duplex, 2mm, 50 µm, LSZH, color violeta, marca DATATRONIX
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="price-tag">$49.00</span>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+              <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cable DROP FTTH -->
+    <section id="cable-drop-ftth" class="mb-16">
+      <div class="category-header">
+        <h2 class="text-2xl font-bold flex items-center">
+          <i class="fas fa-network-wired mr-3"></i>
+          CABLE DROP FTTH
+        </h2>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="product-card">
+          <h3 class="text-lg font-semibold mb-2">CFR-LDRF-A1-1B-1</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Bobina de 2,000 metros de cable DROP Monomodo FTTH de 1 hilo 9/125um, marca DATATRONIX
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="price-tag">$980.00</span>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+              <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <h3 class="text-lg font-semibold mb-2">CFR-LDRF-A1-1B-2</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Bobina de 2,000 metros de cable DROP Monomodo FTTH de 2 hilos 9/125um, marca DATATRONIX
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="price-tag">$980.00</span>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+              <i class="fas fa-shopping-cart mr-2"></i>Cotizar
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Image Modal -->
+  <div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+      <img id="modalImage" class="modal-image" src="" alt="Product Image">
+    </div>
+  </div>
+
+  <!-- Quote Modal -->
+  <div id="quoteModal" class="modal">
+    <div class="modal-content" style="background: var(--surface); padding: 2rem; border-radius: 12px; max-width: 500px;">
+      <span class="close" onclick="closeQuoteModal()">&times;</span>
+      <h3 class="text-2xl font-bold mb-4" style="color: var(--text);">Solicitar Cotización</h3>
+      <form id="quoteForm" onsubmit="submitQuote(event)">
+        <div class="mb-4">
+          <label class="block text-sm font-medium mb-2" style="color: var(--text);">Producto</label>
+          <input type="text" id="quoteProduct" readonly class="w-full px-3 py-2 border rounded-lg" style="background: var(--input-bg); color: var(--text); border-color: var(--border);">
+        </div>
+        <div class="mb-4">
+          <label class="block text-sm font-medium mb-2" style="color: var(--text);">Nombre</label>
+          <input type="text" required class="w-full px-3 py-2 border rounded-lg" style="background: var(--input-bg); color: var(--text); border-color: var(--border);">
+        </div>
+        <div class="mb-4">
+          <label class="block text-sm font-medium mb-2" style="color: var(--text);">Email</label>
+          <input type="email" required class="w-full px-3 py-2 border rounded-lg" style="background: var(--input-bg); color: var(--text); border-color: var(--border);">
+        </div>
+        <div class="mb-4">
+          <label class="block text-sm font-medium mb-2" style="color: var(--text);">Teléfono</label>
+          <input type="tel" required class="w-full px-3 py-2 border rounded-lg" style="background: var(--input-bg); color: var(--text); border-color: var(--border);">
+        </div>
+        <div class="mb-4">
+          <label class="block text-sm font-medium mb-2" style="color: var(--text);">Cantidad</label>
+          <input type="number" min="1" value="1" required class="w-full px-3 py-2 border rounded-lg" style="background: var(--input-bg); color: var(--text); border-color: var(--border);">
+        </div>
+        <div class="mb-4">
+          <label class="block text-sm font-medium mb-2" style="color: var(--text);">Mensaje</label>
+          <textarea rows="3" class="w-full px-3 py-2 border rounded-lg" style="background: var(--input-bg); color: var(--text); border-color: var(--border);"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">
+          Enviar Solicitud
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- FOOTER MEJORADO -->
+  <footer class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-3 px-2 sm:px-4 lg:px-8 w-full relative overflow-hidden">
+    <!-- Background pattern -->
+    <div class="absolute inset-0 opacity-5">
+      <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.4"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+    </div>
+    
+    <div class="w-full relative z-10 px-2">
+      <!-- Main content - ultra compacto en móvil -->
+      <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-2 sm:gap-3 md:gap-4 mb-3">
+        
+        <!-- Columna 1: Logo -->
+        <div class="space-y-1">
+          <img src="https://www.ds3comunicaciones.com/mikrotik/images/Logo1.jpg" alt="DS3 Comunicaciones" class="w-20 h-auto rounded-lg shadow-lg" loading="lazy" />
+          <p class="text-xs text-gray-300 leading-tight hidden sm:block">
+            Líderes en redes con 15+ años.
+          </p>
+        </div>
+
+        <!-- Columna 2: Productos Principales -->
+        <div>
+          <h4 class="text-xs font-bold text-white mb-1 flex items-center gap-1">
+            <i class="fas fa-box text-blue-400 text-xs"></i>
+            Productos
+          </h4>
+          <ul class="space-y-0.5 text-gray-300 text-xs">
+            <li><a href="https://www.ds3comunicaciones.com/cisco/index.html" class="footer-link-modern"><i class="fas fa-chevron-right text-xs mr-1"></i>Cisco</a></li>
+            <li><a href="https://www.ds3comunicaciones.com/ubiquiti/index.html" class="footer-link-modern"><i class="fas fa-chevron-right text-xs mr-1"></i>Ubiquiti</a></li>
+            <li><a href="https://www.ds3comunicaciones.com/mikrotik/index.html" class="footer-link-modern"><i class="fas fa-chevron-right text-xs mr-1"></i>Mikrotik</a></li>
+            <li><a href="https://www.ds3comunicaciones.com/trendnet/MediaConvert.html" class="footer-link-modern"><i class="fas fa-chevron-right text-xs mr-1"></i>Media Converters</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 3: Más Productos -->
+        <div>
+          <h4 class="text-xs font-bold text-white mb-1 flex items-center gap-1">
+            <i class="fas fa-network-wired text-blue-400 text-xs"></i>
+            Equipamiento
+          </h4>
+          <ul class="space-y-0.5 text-gray-300 text-xs">
+            <li><a href="#" class="footer-link-modern"><i class="fas fa-chevron-right text-xs mr-1"></i>Switches</a></li>
+            <li><a href="#" class="footer-link-modern"><i class="fas fa-chevron-right text-xs mr-1"></i>Routers</a></li>
+            <li><a href="#" class="footer-link-modern"><i class="fas fa-chevron-right text-xs mr-1"></i>Access Points</a></li>
+            <li><a href="#" class="footer-link-modern"><i class="fas fa-chevron-right text-xs mr-1"></i>Fibra Óptica</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 4: Servicios -->
+        <div>
+          <h4 class="text-xs font-bold text-white mb-1 flex items-center gap-1">
+            <i class="fas fa-cog text-blue-400 text-xs"></i>
+            Servicios
+          </h4>
+          <ul class="space-y-0.5 text-gray-300 text-xs">
+            <li><a href="https://www.ds3comunicaciones.com/soporte.html" class="footer-link-modern"><i class="fas fa-chevron-right text-xs mr-1"></i>Soporte Técnico</a></li>
+            <li><a href="#" class="footer-link-modern"><i class="fas fa-chevron-right text-xs mr-1"></i>Instalación</a></li>
+            <li><a href="#" class="footer-link-modern"><i class="fas fa-chevron-right text-xs mr-1"></i>Consultoría</a></li>
+            <li><a href="#" class="footer-link-modern"><i class="fas fa-chevron-right text-xs mr-1"></i>Mantenimiento</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 5: Contacto -->
+        <div>
+          <h4 class="text-xs font-bold text-white mb-1 flex items-center gap-1">
+            <i class="fas fa-phone-alt text-blue-400 text-xs"></i>
+            Contacto
+          </h4>
+          <div class="space-y-0.5 text-xs">
+            <div class="flex items-center gap-1.5">
+              <i class="fas fa-phone text-green-400 footer-icon-small"></i>
+              <a href="https://wa.me/994428965?text=Hola necesito ayuda" class="footer-contact-modern">994 428 965</a>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <i class="fas fa-phone text-blue-400 footer-icon-small"></i>
+              <a href="https://wa.me/996533223?text=Hola necesito ayuda" class="footer-contact-modern">996 533 223</a>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <i class="fas fa-envelope text-orange-400 footer-icon-small"></i>
+              <a href="mailto:netperu100@hotmail.com" class="footer-contact-modern">Email</a>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <i class="fas fa-clock text-purple-400 footer-icon-small"></i>
+              <span class="text-gray-400">Lun-Vie 9:00-18:00</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Columna 6: Newsletter y Redes -->
+        <div>
+          <h4 class="text-xs font-bold text-white mb-1 flex items-center gap-1">
+            <i class="fas fa-envelope text-blue-400 text-xs"></i>
+            Conectados
+          </h4>
+          <div class="bg-slate-800/50 rounded-lg p-1.5 border border-slate-700 mb-2">
+            <p class="text-xs text-gray-300 mb-1">
+              Ofertas exclusivas.
+            </p>
+            <form action="https://www.ds3comunicaciones.com/subscribe" method="post" class="space-y-1">
+              <input 
+                type="email" 
+                name="email" 
+                placeholder="Email" 
+                required 
+                class="w-full px-1.5 py-1 bg-slate-900/50 border border-slate-600 rounded text-white placeholder-gray-400 text-xs focus:outline-none focus:ring-1 focus:ring-blue-500" 
+              />
+              <button type="submit" class="w-full px-1.5 py-1 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded hover:from-blue-700 hover:to-blue-800 transition text-xs font-semibold">
+                Suscribir
+              </button>
+            </form>
+          </div>
+          <div class="flex items-center gap-1">
+            <a href="#" class="social-btn-modern social-btn-small" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://wa.me/994428965?text=Hola necesito ayuda" class="social-btn-modern whatsapp social-btn-small" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="#" class="social-btn-modern social-btn-small" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="social-btn-modern social-btn-small" aria-label="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="border-t border-slate-700 mb-2"></div>
+
+      <!-- Bottom section ultra compacto -->
+      <div class="flex flex-col md:flex-row items-center justify-between gap-2">
+        <div class="text-center md:text-left">
+          <p class="text-xs text-gray-400">
+            &copy; <span id="currentYear">2023</span> DS3 Comunicaciones. Todos los derechos reservados.
+          </p>
+        </div>
+        
+        <div class="flex items-center gap-3 text-xs">
+          <a href="https://www.ds3comunicaciones.com/politica-privacidad" class="text-gray-400 hover:text-white transition-colors">
+            Privacidad
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white transition-colors">
+            Términos
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CARGA DE JAVASCRIPT SECUNDARIA-->
+  <script src="./js/change_tabs.js"></script>
+  <script src="./js/translation.js"></script>
+
+  <!-- Inline JS implementing functionality for search overlay, dark mode and enhancements (kept inside index.html) -->
+  <script>
+    (function () {
+      // Dark mode toggle (persistent in localStorage)
+      const darkToggle = document.getElementById('dark-toggle');
+      const darkIcon = document.getElementById('dark-icon');
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const stored = localStorage.getItem('ds3-dark');
+
+      function setDark(on) {
+        if (on) {
+          // Add .dark to html element only (Tailwind + our CSS read .dark on html)
+          document.documentElement.classList.add('dark');
+          darkToggle.setAttribute('aria-pressed', 'true');
+          // use solid icons to ensure visibility
+          darkIcon.className = 'fa-solid fa-sun';
+          darkIcon.style.color = '#FBBF24'; // yellow-400
+        } else {
+          document.documentElement.classList.remove('dark');
+          darkToggle.setAttribute('aria-pressed', 'false');
+          darkIcon.className = 'fa-solid fa-moon';
+          darkIcon.style.color = '';
+        }
+      }
+
+      // initialize: stored value takes precedence, otherwise follow system preference
+      if (stored === null) {
+        setDark(prefersDark);
+      } else {
+        setDark(stored === 'true');
+      }
+
+      darkToggle.addEventListener('click', function () {
+        const isDark = document.documentElement.classList.contains('dark');
+        setDark(!isDark);
+        localStorage.setItem('ds3-dark', (!isDark).toString());
+      });
+
+      // Mobile menu functionality
+      const mobileMenuBtn = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const closeMenuBtn = document.getElementById('close-menu');
+      const menuOverlay = document.getElementById('menu-overlay');
+
+      function openMobileMenu() {
+        mobileMenu.classList.remove('-translate-x-full');
+        mobileMenu.classList.add('translate-x-0');
+        menuOverlay.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        mobileMenuBtn.setAttribute('aria-expanded', 'true');
+      }
+
+      function closeMobileMenu() {
+        mobileMenu.classList.add('-translate-x-full');
+        mobileMenu.classList.remove('translate-x-0');
+        menuOverlay.classList.add('hidden');
+        document.body.style.overflow = '';
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+      }
+
+      if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', openMobileMenu);
+      }
+
+      if (closeMenuBtn) {
+        closeMenuBtn.addEventListener('click', closeMobileMenu);
+      }
+
+      if (menuOverlay) {
+        menuOverlay.addEventListener('click', closeMobileMenu);
+      }
+
+      // Close mobile menu when clicking on menu links
+      const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+      mobileMenuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          closeMobileMenu();
+        });
+      });
+
+      // Close mobile menu on Escape key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !mobileMenu.classList.contains('-translate-x-full')) {
+          closeMobileMenu();
+        }
+      });
+      const openSearch = document.getElementById('open-search');
+      const searchOverlay = document.getElementById('search-overlay');
+      const closeSearch = document.getElementById('close-search');
+      const overlayInput = document.getElementById('overlay-search-input');
+      const overlayBtn = document.getElementById('overlay-search-btn');
+      const overlayClear = document.getElementById('overlay-clear');
+      const iconGrid = document.getElementById('overlay-icon-grid');
+
+      function showSearch() {
+        searchOverlay.style.display = 'flex';
+        searchOverlay.setAttribute('aria-hidden', 'false');
+        // focus input
+        setTimeout(() => overlayInput.focus(), 120);
+        // prevent body scroll
+        document.body.style.overflow = 'hidden';
+      }
+
+      function hideSearch() {
+        searchOverlay.style.display = 'none';
+        searchOverlay.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+
+      openSearch.addEventListener('click', showSearch);
+      closeSearch.addEventListener('click', hideSearch);
+      overlayClear.addEventListener('click', () => {
+        overlayInput.value = '';
+        overlayInput.focus();
+        filterIconGrid('');
+      });
+
+      // Close overlay on Esc
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') hideSearch();
+        // quick open with slash
+        if (e.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
+          e.preventDefault();
+          showSearch();
+        }
+      });
+
+      // Overlay search action: simple redirect to search results page (if available) or filter the icon grid
+      overlayBtn.addEventListener('click', function () {
+        const q = overlayInput.value.trim();
+        if (!q) {
+          overlayInput.focus();
+          return;
+        }
+        // If the site has a search results page, redirect (example path); otherwise, try to filter
+        const searchUrl = '/search?q=' + encodeURIComponent(q);
+        window.location.href = searchUrl;
+      });
+
+      // Filter icon grid by input
+      overlayInput.addEventListener('input', function (e) {
+        filterIconGrid(e.target.value);
+      });
+
+      function filterIconGrid(term) {
+        term = (term || '').toLowerCase().trim();
+        const cards = iconGrid.querySelectorAll('.icon-card');
+        cards.forEach(card => {
+          const text = (card.textContent || '').toLowerCase();
+          if (!term || text.indexOf(term) !== -1) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      }
+
+      // Make icon cards clickable + accessible (Enter key)
+      iconGrid.querySelectorAll('.icon-card').forEach(card => {
+        card.addEventListener('click', function () {
+          const href = this.getAttribute('data-href');
+          if (href && href !== '#') {
+            window.open(href, '_self');
+          }
+        });
+        card.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            this.click();
+          }
+        });
+      });
+
+      // Improve brand nav keyboard accessibility: allow focus and Enter navigation
+      document.querySelectorAll('#brand-nav a').forEach(a => {
+        a.setAttribute('tabindex', '0');
+        a.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter') a.click();
+        });
+      });
+
+      // Small UX: clicking outside overlay-card closes overlay
+      searchOverlay.addEventListener('click', function (e) {
+        if (e.target === searchOverlay) hideSearch();
+      });
+
+      // Update current year in footer
+      const yearEl = document.getElementById('currentYear');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+      // "Ver más marcas" toggle (simple show/hide)
+      const verMasBtn = document.getElementById('ver-mas-marcas');
+      if (verMasBtn) {
+        verMasBtn.addEventListener('click', function (e) {
+          e.preventDefault();
+          const more = document.getElementById('more-brands');
+          if (!more) return;
+          if (more.classList.contains('hidden')) {
+            more.classList.remove('hidden');
+            verMasBtn.innerHTML = '<i class="fas fa-angle-up mr-2"></i>Ver menos';
+          } else {
+            more.classList.add('hidden');
+            verMasBtn.innerHTML = '<i class="fas fa-ellipsis-h mr-2"></i>Ver más marcas';
+          }
+        });
+      }
+
+      // Back to top
+      const backTop = document.getElementById('back-to-top');
+      if (backTop) {
+        backTop.addEventListener('click', (e) => {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+    })();
+  </script>
+  <script src="js/translate-currency.js"></script>
+</body>
+</html>

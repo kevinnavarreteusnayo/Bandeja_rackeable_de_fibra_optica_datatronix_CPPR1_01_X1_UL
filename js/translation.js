@@ -212,7 +212,47 @@ class TranslationSystem {
                 'footer-terms': 'Términos',
                 'footer-email': 'Email',
                 'footer-media-converters': 'Media Converters',
-                'mobile-menu-access-points': 'Access points'
+                'mobile-menu-access-points': 'Access points',
+                
+                // Lista de precios
+                'price-list-title': 'Lista de Precios',
+                'price-list-description': 'Productos de fibra óptica de alta calidad - Cables, acopladores, pigtail, patch cords y más',
+                'category-cable-monomodo': 'CABLE MONOMODO',
+                'category-cable-multimodo-om3': 'CABLE MULTIMODO OM3',
+                'category-cable-multimodo-om4': 'CABLE MULTIMODO OM4',
+                'category-bandeja-fo': 'BANDEJA FO',
+                'category-cajas-riel-din': 'CAJAS RIEL DIN',
+                'category-acopladores-monomodo': 'ACOPLADORES MONOMODO',
+                'category-acopladores-multimodo': 'ACOPLADORES MULTIMODO',
+                'category-pigtail-monomodo': 'PIGTAIL MONOMODO',
+                'category-pigtail-multimodo': 'PIGTAIL MULTIMODO',
+                'category-patch-cord-monomodo': 'PATCH CORD MONOMODO',
+                'category-patch-cord-multimodo': 'PATCH CORD MULTIMODO',
+                'category-cable-drop-ftth': 'CABLE DROP FTTH',
+                'category-mufa-fo': 'MUFA FO',
+                'category-acopladores-multimodo': 'ACOPLADORES MULTIMODO',
+                'mobile-menu-categories': 'Categorías',
+                'nav-home': 'Inicio',
+                'button-quote': 'Cotizar',
+                'button-request-quote': 'Solicitar Cotización',
+                
+                // Productos - Títulos y descripciones
+                'product-fc-lt-91-12': 'FC-LT-91-12',
+                'desc-fc-lt-91-12': 'Metros de cable de fibra óptica Monomodo (9/125um) de 12 hilos con armadura dieléctrica para ductos, int/ext, chaqueta LSZH, marca DATATRONIX',
+                'product-fc-lt-91-24': 'FC-LT-91-24',
+                'desc-fc-lt-91-24': 'Metros de cable de fibra óptica Monomodo (9/125um) de 24 hilos con armadura dieléctrica para ductos, int/ext, chaqueta LSZH, marca DATATRONIX',
+                'product-fc-lt-31-06': 'FC-LT-31-06',
+                'desc-fc-lt-31-06': 'Metros de cable de fibra óptica Multimodo OM3 de 06 hilos, chaqueta LSZH, para ductos, marca DATATRONIX',
+                'product-fc-lt-41-06': 'FC-LT-41-06',
+                'desc-fc-lt-41-06': 'Metros de cable de fibra óptica Multimodo OM4 de 06 hilos con armadura dieléctrica para ductos, int/ext, chaqueta LSZH, marca DATATRONIX',
+                'product-cppr1-02-x1-ul': 'CPPR1-02-X1-UL',
+                'desc-cppr1-02-x1-ul': 'Bandeja Rackeable 1RU Deslizable para 24 puertos LC-SC, Incluye 01 bandeja de fusion 24 hilos, 02 prensas estopas, 04 tuercas enjauladas y cintillos (sin acopladores), marca DATATRONIX',
+                'product-din-fb-sc-12-ul': 'DIN-FB-SC-12-UL',
+                'desc-din-fb-sc-12-ul': 'Cajita montaje DIN-RAIL para 6 adaptadores SC Duplex, vacío, (sin acopladores), marca DATATRONIX',
+                'product-dem1-48': 'DEM1-48',
+                'desc-dem1-48': 'Mufa de fibra óptica tipo horizontal para 48 hilos, sello hermetico IP68, marca DATATRONIX',
+                'product-cad-02-9-2-25': 'CAD-02-9-2/25',
+                'desc-cad-02-9-2-25': 'Acoplador Monomodo SC duplex, azul, marca DATATRONIX'
             },
             en: {
                 // Navegación principal
@@ -422,7 +462,47 @@ class TranslationSystem {
                 'footer-business-hours': 'Mon-Fri 9:00-18:00',
                 'footer-email': 'Email',
                 'footer-media-converters': 'Media Converters',
-                'mobile-menu-access-points': 'Access points'
+                'mobile-menu-access-points': 'Access points',
+                
+                // Lista de precios
+                'price-list-title': 'Price List',
+                'price-list-description': 'High quality fiber optic products - Cables, couplers, pigtail, patch cords and more',
+                'category-cable-monomodo': 'SINGLE MODE CABLE',
+                'category-cable-multimodo-om3': 'MULTIMODE OM3 CABLE',
+                'category-cable-multimodo-om4': 'MULTIMODE OM4 CABLE',
+                'category-bandeja-fo': 'FO TRAY',
+                'category-cajas-riel-din': 'DIN RAIL BOXES',
+                'category-acopladores-monomodo': 'SINGLE MODE COUPLERS',
+                'category-acopladores-multimodo': 'MULTIMODE COUPLERS',
+                'category-pigtail-monomodo': 'SINGLE MODE PIGTAIL',
+                'category-pigtail-multimodo': 'MULTIMODE PIGTAIL',
+                'category-patch-cord-monomodo': 'SINGLE MODE PATCH CORD',
+                'category-patch-cord-multimodo': 'MULTIMODE PATCH CORD',
+                'category-cable-drop-ftth': 'FTTH DROP CABLE',
+                'category-mufa-fo': 'FO MUFA',
+                'category-acopladores-multimodo': 'MULTIMODE COUPLERS',
+                'mobile-menu-categories': 'Categories',
+                'nav-home': 'Home',
+                'button-quote': 'Quote',
+                'button-request-quote': 'Request Quote',
+                
+                // Productos - Títulos y descripciones
+                'product-fc-lt-91-12': 'FC-LT-91-12',
+                'desc-fc-lt-91-12': 'Meters of Single mode fiber optic cable (9/125um) 12 fibers with dielectric armor for ducts, indoor/outdoor, LSZH jacket, DATATRONIX brand',
+                'product-fc-lt-91-24': 'FC-LT-91-24',
+                'desc-fc-lt-91-24': 'Meters of Single mode fiber optic cable (9/125um) 24 fibers with dielectric armor for ducts, indoor/outdoor, LSZH jacket, DATATRONIX brand',
+                'product-fc-lt-31-06': 'FC-LT-31-06',
+                'desc-fc-lt-31-06': 'Meters of Multimode OM3 fiber optic cable 06 fibers, LSZH jacket, for ducts, DATATRONIX brand',
+                'product-fc-lt-41-06': 'FC-LT-41-06',
+                'desc-fc-lt-41-06': 'Meters of Multimode OM4 fiber optic cable 06 fibers with dielectric armor for ducts, indoor/outdoor, LSZH jacket, DATATRONIX brand',
+                'product-cppr1-02-x1-ul': 'CPPR1-02-X1-UL',
+                'desc-cppr1-02-x1-ul': '1RU Rackable Sliding Tray for 24 LC-SC ports, Includes 01 24-fiber fusion tray, 02 cable glands, 04 cage nuts and ties (without couplers), DATATRONIX brand',
+                'product-din-fb-sc-12-ul': 'DIN-FB-SC-12-UL',
+                'desc-din-fb-sc-12-ul': 'DIN-RAIL mounting box for 6 SC Duplex adapters, empty, (without couplers), DATATRONIX brand',
+                'product-dem1-48': 'DEM1-48',
+                'desc-dem1-48': 'Horizontal fiber optic splice closure for 48 fibers, hermetic seal IP68, DATATRONIX brand',
+                'product-cad-02-9-2-25': 'CAD-02-9-2/25',
+                'desc-cad-02-9-2-25': 'Single mode SC duplex coupler, blue, DATATRONIX brand'
             }
         };
         
@@ -519,6 +599,23 @@ class TranslationSystem {
     // Get translation for a specific key
     translate(key) {
         return this.translations[this.currentLanguage][key] || key;
+    }
+    
+    getCurrentLanguage() {
+        return this.currentLanguage;
+    }
+}
+
+// Global functions for language and currency switching
+function changeLanguage(language) {
+    if (window.translationSystem) {
+        window.translationSystem.setLanguage(language);
+    }
+}
+
+function changeCurrency(currency) {
+    if (window.currencySystem) {
+        window.currencySystem.setCurrency(currency);
     }
 }
 
